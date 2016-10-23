@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="Sqlite (Xerial) - temp.db">
+  <database-model serializer="dbm" rdbms="SQLITE" format-version="2.6">
+    <schema id="1">
+      <visible>1</visible>
+    </schema>
+    <table id="2" parent="1" name="activity"/>
+    <table id="3" parent="1" name="user"/>
+    <column id="4" parent="2" name="name">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(0,-1)|12</data-type>
+    </column>
+    <column id="5" parent="2" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INT(0,-1)|4</data-type>
+    </column>
+    <column id="6" parent="2" name="numbers">
+      <mandatory>1</mandatory>
+      <data-type>INT(0,-1)|4</data-type>
+    </column>
+    <column id="7" parent="2" name="award">
+      <data-type>VARCHAR(0,-1)|12</data-type>
+    </column>
+    <column id="8" parent="2" name="type">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(0,-1)|12</data-type>
+    </column>
+    <column id="9" parent="2" name="picture">
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="10" parent="2" name="sports">
+      <data-type>VARCHAR(0,-1)|12</data-type>
+    </column>
+    <key id="11" parent="2">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="12" parent="3" name="username">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(0,-1)|12</data-type>
+    </column>
+    <column id="13" parent="3" name="password">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(0,-1)|12</data-type>
+    </column>
+    <column id="14" parent="3" name="level">
+      <mandatory>1</mandatory>
+      <data-type>INT(0,-1)|4</data-type>
+      <default-expression>0</default-expression>
+    </column>
+    <column id="15" parent="3" name="credit">
+      <mandatory>1</mandatory>
+      <data-type>INT(0,-1)|4</data-type>
+      <default-expression>0</default-expression>
+    </column>
+    <column id="16" parent="3" name="name">
+      <data-type>VARCHAR(0,-1)|12</data-type>
+    </column>
+    <column id="17" parent="3" name="gender">
+      <data-type>INT(0,-1)|4</data-type>
+    </column>
+    <column id="18" parent="3" name="birth">
+      <data-type>DATE(0,-1)|12</data-type>
+    </column>
+    <column id="19" parent="3" name="location">
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="20" parent="3" name="interest">
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="21" parent="3" name="motto">
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <key id="22" parent="3">
+      <columns>username</columns>
+      <primary>1</primary>
+    </key>
+  </database-model>
+</dataSource>

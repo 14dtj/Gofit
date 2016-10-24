@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="Sqlite (Xerial) - temp.db">
+  <database-model serializer="dbm" rdbms="SQLITE" format-version="2.6">
+    <schema id="1">
+      <visible>1</visible>
+    </schema>
+    <table id="2" parent="1" name="activity"/>
+    <table id="3" parent="1" name="single2single"/>
+    <table id="4" parent="1" name="sleep_condition"/>
+    <table id="5" parent="1" name="sports_record"/>
+    <table id="6" parent="1" name="team"/>
+    <table id="7" parent="1" name="team2team"/>
+    <table id="8" parent="1" name="user"/>
+    <table id="9" parent="1" name="user_activity"/>
+    <table id="10" parent="1" name="user_follower"/>
+    <table id="11" parent="1" name="user_following"/>
+    <table id="12" parent="1" name="user_team"/>
+    <table id="13" parent="1" name="weekly_goal"/>
+    <column id="14" parent="2" name="name">
+      <mandatory>1</mandatory>
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="15" parent="2" name="id">
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="16" parent="2" name="number">
+      <mandatory>1</mandatory>
+      <data-type>INT(0,-1)|4</data-type>
+    </column>
+    <column id="17" parent="2" name="award">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(0,-1)|12</data-type>
+    </column>
+    <column id="18" parent="2" name="type">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(0,-1)|12</data-type>
+    </column>
+    <column id="19" parent="2" name="picture">
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="20" parent="2" name="sports">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(0,-1)|12</data-type>
+    </column>
+    <column id="21" parent="2" name="organizer">
+      <data-type>VARCHAR(0,-1)|12</data-type>
+    </column>
+    <column id="22" parent="2" name="introduction">
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="23" parent="2" name="start_time">
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="24" parent="2" name="end_time">
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <key id="25" parent="2">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="26" parent="3" name="activity">
+      <mandatory>1</mandatory>
+      <data-type>INT(0,-1)|4</data-type>
+    </column>
+    <column id="27" parent="3" name="organizer">
+      <mandatory>1</mandatory>
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="28" parent="3" name="player">
+      <mandatory>1</mandatory>
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <key id="29" parent="3">
+      <columns>activity</columns>
+      <primary>1</primary>
+    </key>
+    <column id="30" parent="4" name="username">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(0,-1)|12</data-type>
+    </column>
+    <column id="31" parent="4" name="date">
+      <mandatory>1</mandatory>
+      <data-type>DATE(0,-1)|12</data-type>
+    </column>
+    <column id="32" parent="4" name="start_time">
+      <mandatory>1</mandatory>
+      <data-type>TIME(0,-1)|12</data-type>
+    </column>
+    <column id="33" parent="4" name="end_time">
+      <mandatory>1</mandatory>
+      <data-type>TIME(0,-1)|12</data-type>
+    </column>
+    <column id="34" parent="4" name="rate">
+      <mandatory>1</mandatory>
+      <data-type>REAL(0,-1)|6</data-type>
+      <default-expression>0</default-expression>
+    </column>
+    <column id="35" parent="5" name="date">
+      <mandatory>1</mandatory>
+      <data-type>DATE(0,-1)|12</data-type>
+    </column>
+    <column id="36" parent="5" name="distance">
+      <data-type>DOUBLE(0,-1)|6</data-type>
+    </column>
+    <column id="37" parent="5" name="time">
+      <data-type>INT(0,-1)|4</data-type>
+    </column>
+    <column id="38" parent="5" name="calorie">
+      <data-type>DOUBLE(0,-1)|6</data-type>
+    </column>
+    <column id="39" parent="5" name="steps">
+      <data-type>INT(0,-1)|4</data-type>
+    </column>
+    <column id="40" parent="5" name="username">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(0,-1)|12</data-type>
+    </column>
+    <column id="41" parent="5" name="achieved_goal">
+      <mandatory>1</mandatory>
+      <data-type>INT(0,-1)|4</data-type>
+      <default-expression>0</default-expression>
+    </column>
+    <key id="42" parent="5">
+      <columns>username</columns>
+      <primary>1</primary>
+    </key>
+    <column id="43" parent="6" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="44" parent="6" name="leader">
+      <mandatory>1</mandatory>
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <key id="45" parent="6">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="46" parent="7" name="activity">
+      <mandatory>1</mandatory>
+      <data-type>INT(0,-1)|4</data-type>
+    </column>
+    <column id="47" parent="7" name="team_organize">
+      <mandatory>1</mandatory>
+      <data-type>INT(0,-1)|4</data-type>
+    </column>
+    <column id="48" parent="7" name="team_join">
+      <mandatory>1</mandatory>
+      <data-type>INT(0,-1)|4</data-type>
+    </column>
+    <key id="49" parent="7">
+      <columns>activity</columns>
+      <primary>1</primary>
+    </key>
+    <column id="50" parent="8" name="username">
+      <mandatory>1</mandatory>
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="51" parent="8" name="password">
+      <mandatory>1</mandatory>
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="52" parent="8" name="level">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+      <default-expression>0</default-expression>
+    </column>
+    <column id="53" parent="8" name="credit">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+      <default-expression>0</default-expression>
+    </column>
+    <column id="54" parent="8" name="name">
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="55" parent="8" name="gender">
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="56" parent="8" name="birth">
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="57" parent="8" name="location">
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="58" parent="8" name="interest">
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="59" parent="8" name="motto">
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="60" parent="8" name="weight">
+      <data-type>REAL(0,-1)|6</data-type>
+    </column>
+    <column id="61" parent="8" name="height">
+      <data-type>REAL(0,-1)|6</data-type>
+    </column>
+    <column id="62" parent="8" name="avatar">
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <key id="63" parent="8">
+      <columns>username</columns>
+      <primary>1</primary>
+    </key>
+    <column id="64" parent="9" name="activity_id">
+      <mandatory>1</mandatory>
+      <data-type>INT(0,-1)|4</data-type>
+    </column>
+    <column id="65" parent="9" name="username">
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="66" parent="10" name="username">
+      <mandatory>1</mandatory>
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="67" parent="10" name="follower">
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="68" parent="11" name="username">
+      <mandatory>1</mandatory>
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="69" parent="11" name="following">
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="70" parent="12" name="team_id">
+      <mandatory>1</mandatory>
+      <data-type>INT(0,-1)|4</data-type>
+    </column>
+    <column id="71" parent="12" name="username">
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="72" parent="13" name="username">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(0,-1)|12</data-type>
+    </column>
+    <column id="73" parent="13" name="date">
+      <mandatory>1</mandatory>
+      <data-type>DATE(0,-1)|12</data-type>
+    </column>
+    <column id="74" parent="13" name="type">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(0,-1)|12</data-type>
+    </column>
+    <column id="75" parent="13" name="value">
+      <mandatory>1</mandatory>
+      <data-type>DOUBLE(0,-1)|6</data-type>
+    </column>
+    <key id="76" parent="13">
+      <columns>date</columns>
+      <primary>1</primary>
+    </key>
+  </database-model>
+</dataSource>

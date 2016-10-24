@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="Sqlite (Xerial) - temp.db" uuid="3ca0a17d-c8d0-4575-9d3e-6cbca6f50c45">
+    <data-source source="LOCAL" name="Sqlite (Xerial) - temp.db" uuid="519f22d6-98f6-45fe-89b7-11acbd06518b">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/php/temp.db</jdbc-url>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/temp.db</jdbc-url>
     </data-source>
   </component>
 </project>

@@ -1,14 +1,9 @@
 <?php
 $Database = new PDO("sqlite:temp.db");
 
-$SelectQuery = "SELECT * FROM user;";
+$SelectQuery = "INSERT INTO activity(name,number,award,type,sports) 
+VALUES ('running man',12,'kindle','team','running');";
 
 $Statement = $Database->prepare($SelectQuery);
 $Statement->execute();
-
-while ($Data = $Statement->fetch(PDO::FETCH_ASSOC)) {
-    echo "username:" . $Data['username'] . "<br>";
-    echo "password:" . $Data['password'] . "<br>";
-    echo "level:" . $Data['level'] . "<br>";
-}
 ?>

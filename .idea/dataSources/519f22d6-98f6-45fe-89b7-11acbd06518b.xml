@@ -97,31 +97,31 @@
     </column>
     <column id="35" parent="5" name="date">
       <mandatory>1</mandatory>
-      <data-type>DATE(0,-1)|12</data-type>
+      <data-type>TEXT(0,-1)|12</data-type>
     </column>
     <column id="36" parent="5" name="distance">
-      <data-type>DOUBLE(0,-1)|6</data-type>
+      <data-type>REAL(0,-1)|6</data-type>
     </column>
     <column id="37" parent="5" name="time">
-      <data-type>INT(0,-1)|4</data-type>
+      <data-type>INTEGER(0,-1)|4</data-type>
     </column>
     <column id="38" parent="5" name="calorie">
-      <data-type>DOUBLE(0,-1)|6</data-type>
+      <data-type>REAL(0,-1)|6</data-type>
     </column>
     <column id="39" parent="5" name="steps">
-      <data-type>INT(0,-1)|4</data-type>
+      <data-type>INTEGER(0,-1)|4</data-type>
     </column>
     <column id="40" parent="5" name="username">
       <mandatory>1</mandatory>
-      <data-type>VARCHAR(0,-1)|12</data-type>
+      <data-type>TEXT(0,-1)|12</data-type>
     </column>
     <column id="41" parent="5" name="achieved_goal">
       <mandatory>1</mandatory>
-      <data-type>INT(0,-1)|4</data-type>
+      <data-type>INTEGER(0,-1)|4</data-type>
       <default-expression>0</default-expression>
     </column>
     <key id="42" parent="5">
-      <columns>username</columns>
+      <columns>date</columns>
       <primary>1</primary>
     </key>
     <column id="43" parent="6" name="id">
@@ -203,7 +203,7 @@
     </key>
     <column id="64" parent="9" name="activity_id">
       <mandatory>1</mandatory>
-      <data-type>INT(0,-1)|4</data-type>
+      <data-type>INTEGER(0,-1)|4</data-type>
     </column>
     <column id="65" parent="9" name="username">
       <data-type>TEXT(0,-1)|12</data-type>

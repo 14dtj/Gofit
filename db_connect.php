@@ -6,4 +6,3 @@ VALUES ('running man',12,'kindle','team','running');";
 
 $Statement = $Database->prepare($SelectQuery);
 $Statement->execute();
-?>

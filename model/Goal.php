@@ -6,7 +6,7 @@
  * Date: 2016/10/24
  * Time: 23:30
  */
-class goal{
+class Goal{
     public $username;
     public $date;
     public $type;

@@ -6,7 +6,7 @@
  * Date: 2016/10/24
  * Time: 23:24
  */
-class sports_record{
+class SportsRecord{
     public $date;
     public $distance;
     public $time;

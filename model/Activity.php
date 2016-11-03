@@ -6,7 +6,7 @@
  * Date: 2016/10/24
  * Time: 22:45
  */
-class activity{
+class Activity{
     public $name;
     /**
      * @var参与人数

@@ -21,9 +21,19 @@ class UserController
         $query = "select * from user where username='$username' and password='$password';";
         $statement = $this->pdo->prepare($query);
         $statement->execute();
+        $results = array();
         while ($data = $statement->fetch(PDO::FETCH_ASSOC)) {
-            echo "IntValue:" . $data['username'] . "";
+            $results[] = $data;
         }
+        return json_encode($results);
+    }
+
+
+    function register($username, $password)
+    {
+        $query = "insert into user(username,password) values('$username','$password');";
+        $statement = $this->pdo->prepare($query);
+        $statement->execute();
     }
 
 

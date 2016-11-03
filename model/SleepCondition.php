@@ -6,7 +6,7 @@
  * Date: 2016/10/24
  * Time: 23:27
  */
-class sleep_condition{
+class SleepCondition{
     public $username;
     public $date;
     public $start_time;

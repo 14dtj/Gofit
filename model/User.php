@@ -6,7 +6,7 @@
  * Date: 2016/10/24
  * Time: 22:09
  */
-class user{
+class User{
     public $username;
     public $password;
     public $level;

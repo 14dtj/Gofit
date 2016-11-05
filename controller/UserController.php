@@ -18,14 +18,14 @@ class UserController
 
     function login($username, $password)
     {
-        $query = "select * from user where username='$username' and password='$password';";
+        $query = "select username from user where username='$username' and password='$password';";
         $statement = $this->pdo->prepare($query);
         $statement->execute();
-        $results = array();
-        while ($data = $statement->fetch(PDO::FETCH_ASSOC)) {
-            $results[] = $data;
+        $results = $statement->fetchAll();
+        if ($results) {
+            return 1;
         }
-        return json_encode($results);
+        return 0;
     }
 
 

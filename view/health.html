@@ -7,19 +7,17 @@
     <meta name="keywords" content=""/>
     <link rel="stylesheet" href="css/w3.css">
     <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900,300italic" rel="stylesheet"/>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery.dropotron.js"></script>
-    <script src="js/config.js"></script>
-    <script src="js/skel.min.js"></script>
-    <script src="js/skel-panels.min.js"></script>
-    <noscript>
-        <link rel="stylesheet" href="css/skel-noscript.css"/>
-        <link rel="stylesheet" href="css/style.css"/>
-        <link rel="stylesheet" href="css/style-desktop.css"/>
-    </noscript>
+    <script src="/view/js/jquery.min.js"></script>
+    <script src="/view/js/jquery.dropotron.js"></script>
+    <script src="/view/js/skel.min.js"></script>
+    <script src="/view/js/skel-panels.min.js"></script>
+    <link rel="stylesheet" href="/view/css/skel-noscript.css"/>
+    <link rel="stylesheet" href="/view/css/style.css"/>
+    <link rel="stylesheet" href="/view/css/style-desktop.css"/>
+
     <!--[if lte IE 8]>
-    <script src="js/html5shiv.js"></script>
-    <link rel="stylesheet" href="css/ie8.css"/>
+    <script src="/view/js/html5shiv.js"></script>
+    <link rel="stylesheet" href="/view/css/ie8.css"/>
     <![endif]-->
     <style>
         .w3-myfont {
@@ -45,7 +43,7 @@
                     <nav id="nav">
                         <ul>
                             <li><a href="index.html">Home</a></li>
-                            <li class="current_page_item"><a href="health.html">Health</a></li>
+                            <li class="current_page_item"><a href="/health">Health</a></li>
                             <li><a href="sports.html">Sports</a></li>
                             <li><a href="activity.html">Activity</a></li>
                             <li><a href="friends.html">Friends</a></li>
@@ -107,7 +105,7 @@
                                             <h3>BMI</h3>
                                         </header>
                                         <h4>BMI:18.7</h4><br>
-                                        <div>Weight: <input type="text" name="weight"/> kg</div>
+                                        <div>Weight: <input id="weight" type="text" name="weight"/> kg</div>
                                         <br>
                                         <div>Height: <input type="text" name="height"/> cm</div>
                                         <br>
@@ -125,18 +123,21 @@
 
                                 <!-- Sidebar -->
                                 <section class="box">
-                                    <a class="image image-full"><img src="images/avatar/xinyuan.jpeg"
+                                    <a class="image image-full"><img src="/view/images/avatar/xinyuan.jpeg"
                                                                      alt=""/></a>
                                     <header>
                                         <a href="my_profile.html"><h3>gakki</h3></a>
                                     </header>
                                     <div>
-                                        <div><img src="images/friend_icon.png" class="image image-icon"/> friends: 0
+                                        <div><img src="/view/images/friend_icon.png" class="image image-icon"/> friends:
+                                            0
                                         </div>
                                         <br>
-                                        <div><img src="images/level_icon.png" class="image image-icon"/> level: 0</div>
+                                        <div><img src="/view/images/level_icon.png" class="image image-icon"/> level: 0
+                                        </div>
                                         <br>
-                                        <div><img src="images/money_icon.png" class="image image-icon"/> credit: 0</div>
+                                        <div><img src="/view/images/money_icon.png" class="image image-icon"/> credit: 0
+                                        </div>
                                         <br>
                                     </div>
                                 </section>
@@ -169,8 +170,7 @@
             </div>
         </div>
     </section>
-
 </div>
-
+<script src="/view/js/main.js"></script>
 </body>
 </html>

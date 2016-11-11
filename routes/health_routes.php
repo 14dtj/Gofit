@@ -15,11 +15,11 @@ $app->get('/health', function (Request $request, Response $response, $args) use 
     if (isset($_SESSION['user'])) {
         $username = $_SESSION['user'];
         $controller = new HealthController();
-        $result = $controller->getWeight($username);
-        return $this->view->render($response,'health.html', array(
-            'name' => 'John',
-            'email' => '[email blocked]',
-            'active' => true
-        ));
+        $result = $controller->getBMI($username);
+        $obj = json_decode($result);
+        return $obj->{'weight'};
+    } else {
+        return $this->view->render($response, 'login.html');
     }
+
 });

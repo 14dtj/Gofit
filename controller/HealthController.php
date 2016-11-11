@@ -15,9 +15,9 @@ class HealthController
         $this->pdo = db::getPdo();
     }
 
-    function getWeight($username)
+    function getBMI($username)
     {
-        $query = "select weight from user where username='$username';";
+        $query = "select weight,height from user where username='$username';";
         $statement = $this->pdo->prepare($query);
         $statement->execute();
         $row = $statement->fetch(PDO::FETCH_ASSOC);

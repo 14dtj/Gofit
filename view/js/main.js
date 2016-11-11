@@ -6,7 +6,7 @@ $(document).ready(function () {
     $.ajax(url, {
         type: 'GET',
         success: function (data) {
-            alert(data.name);
+            alert(data);
         }
     })
 });

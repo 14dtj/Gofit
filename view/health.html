@@ -42,7 +42,7 @@
                     <nav id="nav">
                         <ul>
                             <li><a href="/view/index.html">Home</a></li>
-                            <li class="current_page_item"><a href="/health">Health</a></li>
+                            <li class="current_page_item"><a href="/view/health.html">Health</a></li>
                             <li><a href="/view/sports.html">Sports</a></li>
                             <li><a href="/view/activity.html">Activity</a></li>
                             <li><a href="/view/friends.html">Friends</a></li>
@@ -77,8 +77,10 @@
                                         <header>
                                             <h3>Sleep condition</h3>
                                         </header>
-                                        <h4><font color=#6495ed>Well sleep:0 nights</font></h4><br>
-                                        <div><input type="date"></div>
+                                        <h4 ><font color=#6495ed id="wellSleep">Well sleep:0 nights</font></h4><br>
+                                        <div>
+                                            <input id="sleepDate" type="date">
+                                        </div>
                                         <br>
                                         <table border="1">
                                             <tr>
@@ -89,11 +91,11 @@
                                                 <td>high-quality sleeping time</td>
                                             </tr>
                                             <tr>
-                                                <td>0%</td>
-                                                <td>0</td>
-                                                <td>0</td>
-                                                <td>0</td>
-                                                <td>0</td>
+                                                <td id="rate">0%</td>
+                                                <td id="startTime">0</td>
+                                                <td id="endTime">0</td>
+                                                <td id="sleepTime">0</td>
+                                                <td id="highTime">0</td>
                                             </tr>
                                         </table>
                                     </section>
@@ -102,16 +104,16 @@
                                         <header>
                                             <h3>BMI</h3>
                                         </header>
-                                        <h4>BMI:18.7</h4><br>
+                                        <h4 id="bmi">BMI:18.7</h4><br>
                                         <div>Weight: <input id="weight" type="text" name="weight"/> kg</div>
                                         <br>
-                                        <div>Height: <input type="text" name="height"/> cm</div>
+                                        <div>Height: <input id="height" type="text" name="height"/> cm</div>
                                         <br>
                                         <button class="w3-btn w3-red">Save</button>
                                         <div></div>
                                         <br>
                                         <div class="w3-container w3-light-grey">
-                                            <span class="byline">Your ideal weight is 51kg, do pay attention on a reasonable diet.</span>
+                                            <span id="advice" class="byline">Your ideal weight is 51kg, do pay attention on a reasonable diet.</span>
                                         </div>
                                     </section>
                                 </article>

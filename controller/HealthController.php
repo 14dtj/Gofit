@@ -23,4 +23,22 @@ class HealthController
         $row = $statement->fetch(PDO::FETCH_ASSOC);
         return json_encode($row);
     }
+
+    function getSleepCondition($username, $date)
+    {
+        $query = "select start_time,end_time,rate,sleep_time from sleep_condition where username='$username' and date='$date';";
+        $statement = $this->pdo->prepare($query);
+        $statement->execute();
+        $row = $statement->fetch(PDO::FETCH_ASSOC);
+        return json_encode($row);
+    }
+
+    function getWellSleepNights($username)
+    {
+        $query = "select count(*) as counts from sleep_condition where username='$username' and rate>=0.5;";
+        $statement = $this->pdo->prepare($query);
+        $statement->execute();
+        $row = $statement->fetch(PDO::FETCH_ASSOC);
+        return json_encode($row);
+    }
 }

@@ -36,5 +36,10 @@ class UserController
         $statement->execute();
     }
 
+    function editProfile($username, $name, $gender, $birth, $loc, $interest, $motto)
+    {
+
+    }
+
 
 }

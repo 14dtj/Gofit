@@ -15,4 +15,6 @@ $container['view'] = function ($container) {
 
 require 'routes/user_routes.php';
 require 'routes/health_routes.php';
+require 'routes/sports_routes.php';
+require 'routes/friends_routes.php';
 $app->run();

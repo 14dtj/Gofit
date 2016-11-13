@@ -104,21 +104,8 @@
                                             <h3>Following</h3>
                                         </header>
                                         <div>
-                                            <ul class="w3-ul w3-card-4">
-                                                <li class="w3-padding-16">
-                                                    <img src="images/avatar/xinyuan.jpeg"
-                                                         class="w3-left w3-circle w3-margin-right"
-                                                         style="width:60px">
-                                                    <a href="other_profile.html"><span class="w3-xlarge">1 Gakki</span></a><br>
-                                                    <span>Web Designer</span>
-                                                </li>
-                                                <li class="w3-padding-16">
-                                                    <img src="images/avatar/haoran.jpg"
-                                                         class="w3-left w3-circle w3-margin-right"
-                                                         style="width:60px">
-                                                    <a href="other_profile.html"><span class="w3-xlarge">2 Jill</span></a><br>
-                                                    <span>Support</span>
-                                                </li>
+                                            <ul id="list" class="w3-ul w3-card-4">
+
                                             </ul>
                                         </div>
                                     </article>
@@ -153,5 +140,23 @@
     </section>
 
 </div>
+<script>
+    $(document).ready(function () {
+        $.ajax("/friend/following", {
+            type: 'GET',
+            dataType:"json",
+            success: function (data) {
+                for (var i = 0; i < data.length; i++) {
+                    var a = "<li class=\"w3-padding-16\"> " +
+                            "<img src=\"images/avatar/" + data[i].avatar + "\"class=\"w3-left w3-circle w3-margin-right\"style=\"width:60px\"> " +
+                            "<a href=\"other_profile.html\">" +
+                            "<span class=\"w3-xlarge\">" + data[i].following + "</span></a><br><span>" + data[i].motto
+                    "</span></li>";
+                    $('#list').append(a);
+                }
+            }
+        });
+    });
+</script>
 </body>
 </html>

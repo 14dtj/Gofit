@@ -236,23 +236,19 @@
     </column>
     <column id="73" parent="13" name="username">
       <mandatory>1</mandatory>
-      <data-type>VARCHAR(0,-1)|12</data-type>
+      <data-type>TEXT(0,-1)|12</data-type>
     </column>
     <column id="74" parent="13" name="date">
       <mandatory>1</mandatory>
-      <data-type>DATE(0,-1)|12</data-type>
+      <data-type>TEXT(0,-1)|12</data-type>
     </column>
     <column id="75" parent="13" name="type">
       <mandatory>1</mandatory>
-      <data-type>VARCHAR(0,-1)|12</data-type>
+      <data-type>TEXT(0,-1)|12</data-type>
     </column>
     <column id="76" parent="13" name="value">
       <mandatory>1</mandatory>
-      <data-type>DOUBLE(0,-1)|6</data-type>
+      <data-type>REAL(0,-1)|6</data-type>
     </column>
-    <key id="77" parent="13">
-      <columns>date</columns>
-      <primary>1</primary>
-    </key>
   </database-model>
 </dataSource>

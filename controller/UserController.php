@@ -38,7 +38,18 @@ class UserController
 
     function editProfile($username, $name, $gender, $birth, $loc, $interest, $motto)
     {
+        $query = "update user set name='$name',gender='$gender',birth='$birth',location='$loc',interest='$interest',motto='$motto' where username='$username';";
+        $statement = $this->pdo->prepare($query);
+        $statement->execute();
+    }
 
+    function showBasicInfo($username)
+    {
+        $query = "select name,gender,birth,location,interest,motto from user where username='$username';";
+        $statement = $this->pdo->prepare($query);
+        $statement->execute();
+        $row = $statement->fetch(PDO::FETCH_ASSOC);
+        return json_encode($row);
     }
 
 

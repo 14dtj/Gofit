@@ -25,6 +25,14 @@
         .w3-myfont {
             font-family: "Comic Sans MS", cursive, sans-serif;
         }
+
+        hr.hr15 {
+            height: 15px;
+            border: none;
+            margin: 0px;
+            padding: 0px;
+            width: 100%;
+        }
     </style>
 </head>
 <body class="no-sidebar">
@@ -67,7 +75,6 @@
                     <div class="w3-container w3-myfont">
                         <div class="row">
                             <div class="12u skel-cell-mainContent">
-
                                 <!-- Content -->
                                 <article class="box is-post">
                                     <header>
@@ -77,45 +84,47 @@
                                     <header>
                                         <h3>Basic information</h3>
                                     </header>
-                                    <div>name <input type="text" style="margin-left: 10px"></div>
-                                    <br>
-                                    <div>
-                                        gender
-                                        <input name="gender" type="radio" value="0"
-                                               checked='checked' style="margin-left: 10px">&nbsp;female</input>
-                                        &nbsp; <input name="gender" type="radio" value="1">&nbsp;male</input>
-                                    </div>
-                                    <br>
-                                    <div>birth <input type="date" style="margin-left: 10px"></div>
-                                    <br>
-                                    <div>location <input type="text" style="margin-left: 10px"></div>
-                                    <br>
-                                    <div>interest <input type="text" style="margin-left: 10px"></div>
-                                    <br>
-                                    <div>sports motto<br>
-                                        <form>
-                                            <input class="w3-input w3-border" type="text" style="height:80px;">
-                                        </form>
-                                    </div>
-                                    <br>
-                                    <div align="center">
-                                        <Button class="w3-red" style="align-self: center">Save</Button>
-                                    </div>
+                                    <form method="post" action="/editProfile">
+                                        name <input id="name" name="name" type="text" style="margin-left: 10px">
+                                        <hr class="hr15">
+                                        gender <input id="gender" name="gender" type="text">
+                                        <hr class="hr15">
+                                        birth <input id="birth" name="birth" type="date" style="margin-left: 10px">
+                                        <hr class="hr15">
+                                        location <input id="location" name="location" type="text"
+                                                        style="margin-left: 10px">
+                                        <hr class="hr15">
+                                        interest <input id="interest" name="interest" type="text"
+                                                        style="margin-left: 10px">
+                                        <hr class="hr15">
+                                        sports motto<br>
+                                        <input id="motto" name="motto" class="w3-input w3-border" type="text"
+                                               style="height:80px;">
+                                        <hr class="hr15">
+                                        <input type="submit" class="w3-red" style="align-self: center"
+                                               value="Save">
+                                        </input>
+
+                                    </form>
                                     <br>
                                     <hr>
                                     <header>
                                         <h3>Avatar</h3>
                                     </header>
-                                    <div align="center"><img src="images/avatar/avatar.jpeg" class="image-centered"></div>
-                                    <div align="center"> <input type="file"></div><br>
-                                    <div align="center"><Button class="w3-red">Upload</Button></div>
+                                    <div align="center"><img src="images/avatar/avatar.jpeg" class="image-centered">
+                                    </div>
+                                    <div align="center">
+                                        <form enctype="multipart/form-data" method="post" action="/uploadAvatar">
+                                            <input name="avatar" id="avatar" onchange="previewImage()" type="file">
+                                            <hr class="hr15">
+                                            <input value="Upload" type="submit" class="w3-red">
+                                        </form>
+                                    </div>
                                 </article>
-
                             </div>
                         </div>
                     </div>
                 </section>
-
             </div>
         </div>
     </div>
@@ -141,6 +150,6 @@
     </section>
 
 </div>
-
+<script src="/view/js/profile.js"></script>
 </body>
 </html>

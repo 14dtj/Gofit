@@ -68,22 +68,37 @@ $app->get('/showBasicInfo', function (Request $request, Response $response) use 
 });
 
 $app->post('/uploadAvatar', function (Request $request, Response $response) use ($app) {
-    $target_dir = "view/images/avatar/";
-    $target_file = $target_dir . basename($_FILES['avatar']['name']);
-    $uploadOk = 1;
-    $imageFileType = pathinfo($target_file, PATHINFO_EXTENSION);
-// Check if image file is a actual image or fake image
+    session_start();
+    if (isset($_SESSION['user'])) {
+        $target_dir = "view/images/avatar/";
+        $target_file = $target_dir . basename($_FILES['avatar']['name']);
 
-    $check = getimagesize($_FILES['avatar']['tmp_name']);
-    if ($check !== false) {
-        if (move_uploaded_file($_FILES["avatar"]["tmp_name"], $target_file)) {
-            echo "The file " . basename($_FILES["avatar"]["name"]) . " has been uploaded.";
+        $check = getimagesize($_FILES['avatar']['tmp_name']);
+        if ($check !== false) {
+            if (move_uploaded_file($_FILES["avatar"]["tmp_name"], $target_file)) {
+                $username = $_SESSION['user'];
+                $controller = new UserController();
+                $controller->storeAvatar($username, $_FILES['avatar']['name']);
+                $response->getBody()->write("<script>alert('Uploaded successfully'); history.go(-1);</script>");
+            } else {
+                echo "Sorry, there was an error uploading your file.";
+            }
         } else {
-            echo "Sorry, there was an error uploading your file.";
+            $response->getBody()->write("<script>alert('File is not an image.'); history.go(-1);</script>");
         }
     } else {
-        $response->getBody()->write("<script>alert('File is not an image.'); history.go(-1);</script>");
+        return $this->view->render($response, 'login.html');
     }
-
-
 });
+$app->get('/getBriefInfo', function (Request $request, Response $response) use ($app) {
+    session_start();
+    if (isset($_SESSION['user'])) {
+        $username = $_SESSION['user'];
+        $controller = new UserController();
+        $result = $controller->getBriefInfo($username);
+        return $result;
+    } else {
+        return $this->view->render($response, 'login.html');
+    }
+});
+

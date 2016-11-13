@@ -52,5 +52,20 @@ class UserController
         return json_encode($row);
     }
 
+    function storeAvatar($username, $avatar)
+    {
+        $query = "update user set avatar='$avatar' where username='$username';";
+        $statement = $this->pdo->prepare($query);
+        $statement->execute();
+    }
+
+    function getBriefInfo($username)
+    {
+        $query = "select user.username,count(*) as friends,avatar,level,credit from user,user_follower where user.username='$username' and user_follower.username='$username' group by user_follower.username;";
+        $statement = $this->pdo->prepare($query);
+        $statement->execute();
+        $row = $statement->fetch(PDO::FETCH_ASSOC);
+        return json_encode($row);
+    }
 
 }

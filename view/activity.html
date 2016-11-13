@@ -71,20 +71,22 @@
                             <div class="row">
                                 <div class="4u">
                                     <section class="box">
-                                        <div class="image image-full"><img src="images/avatar/xinyuan.jpeg"
-                                                                           alt=""/></div>
+                                        <div class="image image-full" id="avatar"></div>
                                         <header>
-                                            <h3>gakki</h3>
+                                            <h3 id="username">gakki</h3>
                                         </header>
                                         <table>
                                             <tr>
-                                                <td>Level: 0</td>
-                                                <td>Success rate: 0%</td>
+                                                <td id="level">Level:</td>
+                                                <td id="credit">credit:</td>
                                             </tr>
                                         </table>
                                         <div>
-                                            <a href="organize_activity.html"><button class="w3-btn w3-red">Organize an activity</button></a>
-                                        </div><br>
+                                            <a href="organize_activity.html">
+                                                <button class="w3-btn w3-red">Organize an activity</button>
+                                            </a>
+                                        </div>
+                                        <br>
                                         <ul class="divided">
                                             <div class="w3-container w3-section">
                                                 <div class="w3-border w3-round w3-padding w3-grey">
@@ -137,42 +139,6 @@
                                                 </table>
                                             </div>
                                         </div>
-                                        <div class="w3-container w3-section">
-                                            <div class="w3-border w3-round w3-padding w3-light-grey">
-                                                <table>
-                                                    <tr>
-                                                        <td>name</td>
-                                                        <td>numbers</td>
-                                                        <td>award</td>
-                                                        <td>type</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>test</td>
-                                                        <td>0</td>
-                                                        <td>10</td>
-                                                        <td>running</td>
-                                                    </tr>
-                                                </table>
-                                            </div>
-                                        </div>
-                                        <div class="w3-container w3-section">
-                                            <div class="w3-border w3-round w3-padding w3-light-grey">
-                                                <table>
-                                                    <tr>
-                                                        <td>name</td>
-                                                        <td>numbers</td>
-                                                        <td>award</td>
-                                                        <td>type</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>test</td>
-                                                        <td>0</td>
-                                                        <td>10</td>
-                                                        <td>running</td>
-                                                    </tr>
-                                                </table>
-                                            </div>
-                                        </div>
                                     </article>
 
                                 </div>
@@ -205,7 +171,20 @@
     </section>
 
 </div>
-
-
+<script>
+    $(document).ready(function () {
+        $.ajax("/getBriefInfo", {
+            type: 'GET',
+            dataType: 'json',
+            success: function (data) {
+                $('#username').html(data.username);
+                $('#friends').append(data.friends);
+                $('#credit').append(data.credit);
+                $('#level').append(data.level);
+                $('#avatar').append("<img src=\"images/avatar/" + data.avatar + "\" />");
+            }
+        });
+    });
+</script>
 </body>
 </html>

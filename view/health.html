@@ -77,7 +77,7 @@
                                         <header>
                                             <h3>Sleep condition</h3>
                                         </header>
-                                        <h4 ><font color=#6495ed id="wellSleep">Well sleep:0 nights</font></h4><br>
+                                        <h4><font color=#6495ed id="wellSleep">Well sleep:0 nights</font></h4><br>
                                         <div>
                                             <input id="sleepDate" type="date">
                                         </div>
@@ -123,20 +123,21 @@
 
                                 <!-- Sidebar -->
                                 <section class="box">
-                                    <a class="image image-full"><img src="/view/images/avatar/xinyuan.jpeg"
-                                                                     alt=""/></a>
+                                    <a class="image image-full" id="avatar"></a>
                                     <header>
-                                        <a href="my_profile.html"><h3>gakki</h3></a>
+                                        <a href="my_profile.html"><h3 id="username">gakki</h3></a>
                                     </header>
                                     <div>
-                                        <div><img src="/view/images/friend_icon.png" class="image image-icon"/> friends:
-                                            0
+                                        <div id="friends"><img src="/view/images/friend_icon.png"
+                                                               class="image image-icon"/> friends:
                                         </div>
                                         <br>
-                                        <div><img src="/view/images/level_icon.png" class="image image-icon"/> level: 0
+                                        <div id="level"><img src="/view/images/level_icon.png"
+                                                             class="image image-icon"/> level:
                                         </div>
                                         <br>
-                                        <div><img src="/view/images/money_icon.png" class="image image-icon"/> credit: 0
+                                        <div id="credit"><img src="/view/images/money_icon.png"
+                                                              class="image image-icon"/> credit:
                                         </div>
                                         <br>
                                     </div>
@@ -172,5 +173,20 @@
     </section>
 </div>
 <script src="/view/js/main.js"></script>
+<script>
+    $(document).ready(function () {
+        $.ajax("/getBriefInfo", {
+            type: 'GET',
+            dataType: 'json',
+            success: function (data) {
+                $('#username').html(data.username);
+                $('#friends').append(data.friends);
+                $('#credit').append(data.credit);
+                $('#level').append(data.level);
+                $('#avatar').append("<img src=\"images/avatar/" + data.avatar + "\" />");
+            }
+        });
+    });
+</script>
 </body>
 </html>

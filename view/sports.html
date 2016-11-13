@@ -158,18 +158,22 @@
 
                                 <!-- Sidebar -->
                                 <section class="box">
-                                    <a class="image image-full"><img src="images/avatar/xinyuan.jpeg"
-                                                                     alt=""/></a>
+                                    <a class="image image-full" id="avatar"></a>
                                     <header>
-                                        <a href="my_profile.html"><h3>gakki</h3></a>
+                                        <a href="my_profile.html"><h3 id="username">gakki</h3></a>
                                     </header>
                                     <div>
-                                        <div><img src="images/friend_icon.png" class="image image-icon"/> friends: 0
+                                        <div id="friends"><img src="images/friend_icon.png" class="image image-icon"/>
+                                            friends:
                                         </div>
                                         <br>
-                                        <div><img src="images/level_icon.png" class="image image-icon"/> level: 0</div>
+                                        <div id="level"><img src="images/level_icon.png" class="image image-icon"/>
+                                            level:
+                                        </div>
                                         <br>
-                                        <div><img src="images/money_icon.png" class="image image-icon"/> credit: 0</div>
+                                        <div id="credit"><img src="images/money_icon.png" class="image image-icon"/>
+                                            credit:
+                                        </div>
                                         <br>
                                     </div>
                                 </section>
@@ -206,6 +210,20 @@
 </div>
 <script src="/view/js/sports.js"></script>
 <script>
+    $(document).ready(function () {
+        $.ajax("/getBriefInfo", {
+            type: 'GET',
+            dataType: 'json',
+            success: function (data) {
+                $('#username').html(data.username);
+                $('#friends').append(data.friends);
+                $('#credit').append(data.credit);
+                $('#level').append(data.level);
+                $('#avatar').append("<img src=\"images/avatar/" + data.avatar + "\" />");
+            }
+        });
+    });
+
     function saveGoal() {
         $.ajax("/sports/saveGoal", {
             type: 'POST',

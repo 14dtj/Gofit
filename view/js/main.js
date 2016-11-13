@@ -12,7 +12,7 @@ $(document).ready(function () {
             var bmi = data.weight / temp;
             $('#bmi').html("BMI:" + bmi);
             if (bmi < 18.5) {
-                $('#advice').html("You should put on weight!");
+                $('#advice').html("You should put on some weight!");
             } else if (bmi > 24.99) {
                 $('#advice').html("You should exercise more and pay attention on a healthy diet!");
             } else {
@@ -44,6 +44,5 @@ $(document).ready(function () {
             }
         })
     });
-
 
 });

@@ -109,7 +109,7 @@
                                         <br>
                                         <div>Height: <input id="height" type="text" name="height"/> cm</div>
                                         <br>
-                                        <button class="w3-btn w3-red">Save</button>
+                                        <input onclick="updateBMI()" type="submit" value="Save" class="w3-btn w3-red">
                                         <div></div>
                                         <br>
                                         <div class="w3-container w3-light-grey">
@@ -187,6 +187,18 @@
             }
         });
     });
+    function updateBMI() {
+        var weight = $('#weight').val();
+        var height = $('#height').val();
+        $.ajax("/health/editBMI/" + weight + "/" + height, {
+            type: 'GET',
+            success: function (data) {
+                alert('Update BMI successfully');
+                $('#weight').val(weight);
+                $('#height').val(height);
+            }
+        });
+    }
 </script>
 </body>
 </html>

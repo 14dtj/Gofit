@@ -41,4 +41,11 @@ class HealthController
         $row = $statement->fetch(PDO::FETCH_ASSOC);
         return json_encode($row);
     }
+
+    function updateBMI($username, $weight, $height)
+    {
+        $query = "update user set weight='$weight',height='$height' where username='$username';";
+        $statement = $this->pdo->prepare($query);
+        $statement->execute();
+    }
 }

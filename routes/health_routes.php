@@ -47,3 +47,17 @@ $app->get('/health/sleepNights', function (Request $request, Response $response)
         return $this->view->render($response, 'login.html');
     }
 });
+$app->get('/health/editBMI/{weight}/{height}', function (Request $request, Response $response) use ($app) {
+    session_start();
+    if (isset($_SESSION['user'])) {
+        $username = $_SESSION['user'];
+        $weight = $request->getAttribute("weight");
+        $height = $request->getAttribute("height");
+        $controller = new HealthController();
+        $controller->updateBMI($username, $weight, $height);
+        $response->getBody()->write("<script>alert('Update successfully');history.go(-1);</script>");
+        return $response;
+    } else {
+        return $this->view->render($response, 'login.html');
+    }
+});

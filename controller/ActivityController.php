@@ -63,4 +63,29 @@ class ActivityController
         }
     }
 
+    function getOrganized($username)
+    {
+        $query = "select id,name,type,number,picture from activity where organizer='$username';";
+        $statement = $this->pdo->prepare($query);
+        $statement->execute();
+        $results = $statement->fetchAll();
+        return json_encode($results);
+    }
+
+    function getJoined($username)
+    {
+        $query = "select id,name,type,number,picture from activity,user_activity where username='$username' and activity_id=id;";
+        $statement = $this->pdo->prepare($query);
+        $statement->execute();
+        $results = $statement->fetchAll();
+        return json_encode($results);
+    }
+
+    function createActivity($name, $number, $award, $type, $pic, $sports, $organizer, $intro, $start, $end)
+    {
+        $query = "insert into activity(name,number,award,type,picture,sports,organizer,introduction,start_time,end_time) values('$name','$number','$award','$type','$pic','$sports','$organizer','$intro','$start','$end');";
+        $statement = $this->pdo->prepare($query);
+        $statement->execute();
+    }
+
 }

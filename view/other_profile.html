@@ -5,21 +5,47 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <meta name="description" content=""/>
     <meta name="keywords" content=""/>
-    <link rel="stylesheet" href="css/w3.css">
+    <link rel="stylesheet" href="/view/css/w3.css">
     <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900,300italic" rel="stylesheet"/>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery.dropotron.js"></script>
-    <script src="js/config.js"></script>
-    <script src="js/skel.min.js"></script>
-    <script src="js/skel-panels.min.js"></script>
-    <noscript>
-        <link rel="stylesheet" href="css/skel-noscript.css"/>
-        <link rel="stylesheet" href="css/style.css"/>
-        <link rel="stylesheet" href="css/style-desktop.css"/>
-    </noscript>
+    <script src="/view/js/jquery.min.js"></script>
+    <script src="/view/js/jquery.dropotron.js"></script>
+    <script src="/view/js/skel.min.js"></script>
+    <script src="/view/js/skel-panels.min.js"></script>
+    <script>
+        window._skel_config = {
+            preset: 'standard',
+            prefix: '/view/css/style',
+            resetCSS: false,
+            breakpoints: {
+                'desktop': {
+                    grid: {
+                        gutters: 50
+                    }
+                }
+            }
+        };
+
+        window._skel_panels_config = {
+            preset: 'standard'
+        };
+
+        jQuery(function () {
+            $('#nav > ul').dropotron({
+                offsetY: -17,
+                offsetX: -1,
+                mode: 'fade',
+                noOpenerFade: true,
+                detach: false
+            });
+        });
+    </script>
+    <link rel="stylesheet" href="/view/css/skel-noscript.css"/>
+    <link rel="stylesheet" href="/view/css/style.css"/>
+    <link rel="stylesheet" href="/view/css/style-desktop.css"/>
+
     <!--[if lte IE 8]>
-    <script src="js/html5shiv.js"></script>
-    <link rel="stylesheet" href="css/ie8.css"/>
+    <script src="/view/js/html5shiv.js"></script>
+    <link rel="stylesheet" href="/view/css/ie8.css"/>
     <![endif]-->
     <style>
         .w3-myfont {
@@ -45,7 +71,7 @@
                             <li><a href="health.html">Health</a></li>
                             <li><a href="sports.html">Sports</a></li>
                             <li><a href="activity.html">Activity</a></li>
-                            <li><a href="friends.html">Friends</a></li>
+                            <li class="current_page_item"><a href="friends.html">Friends</a></li>
                         </ul>
                     </nav>
 
@@ -71,42 +97,47 @@
                                 <!-- Content -->
                                 <article class="box is-post">
                                     <div>
-                                        <img src="images/avatar/haoran.jpg"
-                                             class="w3-left w3-circle w3-margin-right"
-                                             style="width:100px">
-                                        <span class="w3-xxxlarge">Jill</span><br><br>
-                                        <span class="w3-xlarge">Life lies in movement!</span>
-                                    </div><br>
+                                        <span id="avatar"></span>
+                                        <span id="username" class="w3-xxxlarge">JIll</span><br><br>
+                                        <span id="motto" class="w3-xlarge">Life lies in movement!</span>
+                                    </div>
+                                    <br>
                                     <div>
-                                        <img src="images/location_icon.png" class="image-icon"> Beijing
-                                        <img src="images/ball_icon.png" class="image-icon" style="margin-left: 3%"> running<br>
-                                        <span>Follower:12</span>
-                                        <span style="margin-left: 3%">Following:9</span>
-                                        <span style="margin-left: 3%">Level:2</span>
-                                        <Button style="margin-left: 3%" class="w3-red">follow</Button>
+                                        <img src="/view/images/location_icon.png" class="image-icon"> <span
+                                            id="location">Beijing</span>
+                                        <img src="/view/images/ball_icon.png" class="image-icon"
+                                             style="margin-left: 3%"><span
+                                            id="interest">running</span><br>
+                                        <span id="follower">Follower: </span>
+                                        <span id="following" style="margin-left: 3%">Following: </span>
+                                        <span id="level" style="margin-left: 3%">Level: </span>
+                                        <Button id="actionBtn" style="margin-left: 3%" class="w3-red">follow</Button>
                                     </div>
                                     <hr>
                                     <section>
                                         <header>
                                             <h3>In Gofit</h3>
                                         </header>
-                                        <h4><font color="#e9967a">He has achieved 0 goals</font></h4><br>
+                                        <h4><font id="goal" color="#e9967a"></font></h4><br>
                                         <table border="1">
                                             <tr>
-                                                <td><img src="images/distance_icon.png" class="image image-icon"/></td>
+                                                <td><img src="/view/images/distance_icon.png" class="image image-icon"/>
+                                                </td>
                                                 <td>Accumulative running distance</td>
-                                                <td><img src="images/time_icon.png" class="image image-icon"/></td>
+                                                <td><img src="/view/images/time_icon.png" class="image image-icon"/>
+                                                </td>
                                                 <td>Accumulative exercise time</td>
-                                                <td><img src="images/calorie_icon.png" class="image image-icon"/></td>
+                                                <td><img src="/view/images/calorie_icon.png" class="image image-icon"/>
+                                                </td>
                                                 <td>Accumulative burning calories</td>
                                             </tr>
                                             <tr>
                                                 <td></td>
-                                                <td>0 km</td>
+                                                <td id="distance">0 km</td>
                                                 <td></td>
-                                                <td>0</td>
+                                                <td id="time">0</td>
                                                 <td></td>
-                                                <td>0</td>
+                                                <td id="calorie">0</td>
                                             </tr>
                                         </table>
                                     </section>
@@ -142,6 +173,6 @@
     </section>
 
 </div>
-
+<script src="/view/js/friend_info.js"></script>
 </body>
 </html>

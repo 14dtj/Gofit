@@ -125,134 +125,142 @@
       <data-type>INTEGER(0,-1)|4</data-type>
       <default-expression>0</default-expression>
     </column>
-    <key id="43" parent="5">
-      <columns>date</columns>
-      <primary>1</primary>
-    </key>
-    <column id="44" parent="6" name="id">
+    <column id="43" parent="6" name="id">
       <mandatory>1</mandatory>
       <data-type>INTEGER(0,-1)|4</data-type>
     </column>
-    <column id="45" parent="6" name="leader">
+    <column id="44" parent="6" name="leader">
       <mandatory>1</mandatory>
       <data-type>TEXT(0,-1)|12</data-type>
     </column>
-    <key id="46" parent="6">
+    <key id="45" parent="6">
       <columns>id</columns>
       <primary>1</primary>
     </key>
-    <column id="47" parent="7" name="activity">
+    <column id="46" parent="7" name="activity">
       <mandatory>1</mandatory>
       <data-type>INT(0,-1)|4</data-type>
     </column>
-    <column id="48" parent="7" name="team_organize">
+    <column id="47" parent="7" name="team_organize">
       <mandatory>1</mandatory>
       <data-type>INT(0,-1)|4</data-type>
     </column>
-    <column id="49" parent="7" name="team_join">
+    <column id="48" parent="7" name="team_join">
       <mandatory>1</mandatory>
       <data-type>INT(0,-1)|4</data-type>
     </column>
-    <key id="50" parent="7">
+    <key id="49" parent="7">
       <columns>activity</columns>
       <primary>1</primary>
     </key>
-    <column id="51" parent="8" name="username">
+    <column id="50" parent="8" name="username">
       <mandatory>1</mandatory>
       <data-type>TEXT(0,-1)|12</data-type>
     </column>
-    <column id="52" parent="8" name="password">
+    <column id="51" parent="8" name="password">
       <mandatory>1</mandatory>
       <data-type>TEXT(0,-1)|12</data-type>
     </column>
-    <column id="53" parent="8" name="level">
-      <mandatory>1</mandatory>
-      <data-type>INTEGER(0,-1)|4</data-type>
-      <default-expression>0</default-expression>
-    </column>
-    <column id="54" parent="8" name="credit">
+    <column id="52" parent="8" name="level">
       <mandatory>1</mandatory>
       <data-type>INTEGER(0,-1)|4</data-type>
       <default-expression>0</default-expression>
     </column>
-    <column id="55" parent="8" name="name">
+    <column id="53" parent="8" name="credit">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+      <default-expression>0</default-expression>
+    </column>
+    <column id="54" parent="8" name="name">
       <data-type>TEXT(0,-1)|12</data-type>
     </column>
-    <column id="56" parent="8" name="gender">
+    <column id="55" parent="8" name="gender">
       <data-type>INTEGER(0,-1)|4</data-type>
     </column>
-    <column id="57" parent="8" name="birth">
+    <column id="56" parent="8" name="birth">
       <data-type>TEXT(0,-1)|12</data-type>
     </column>
-    <column id="58" parent="8" name="location">
+    <column id="57" parent="8" name="location">
       <data-type>TEXT(0,-1)|12</data-type>
     </column>
-    <column id="59" parent="8" name="interest">
+    <column id="58" parent="8" name="interest">
       <data-type>TEXT(0,-1)|12</data-type>
     </column>
-    <column id="60" parent="8" name="motto">
+    <column id="59" parent="8" name="motto">
       <data-type>TEXT(0,-1)|12</data-type>
     </column>
-    <column id="61" parent="8" name="weight">
+    <column id="60" parent="8" name="weight">
       <data-type>REAL(0,-1)|6</data-type>
     </column>
-    <column id="62" parent="8" name="height">
+    <column id="61" parent="8" name="height">
       <data-type>REAL(0,-1)|6</data-type>
     </column>
-    <column id="63" parent="8" name="avatar">
+    <column id="62" parent="8" name="avatar">
       <data-type>TEXT(0,-1)|12</data-type>
     </column>
-    <key id="64" parent="8">
+    <key id="63" parent="8">
       <columns>username</columns>
       <primary>1</primary>
     </key>
-    <column id="65" parent="9" name="username">
+    <column id="64" parent="9" name="username">
       <mandatory>1</mandatory>
       <data-type>TEXT(0,-1)|12</data-type>
     </column>
-    <column id="66" parent="9" name="activity_id">
+    <column id="65" parent="9" name="activity_id">
       <mandatory>1</mandatory>
       <data-type>INTEGER(0,-1)|4</data-type>
     </column>
-    <key id="67" parent="9">
+    <key id="66" parent="9">
       <columns>username
 activity_id</columns>
       <primary>1</primary>
     </key>
-    <column id="68" parent="10" name="username">
+    <column id="67" parent="10" name="username">
       <mandatory>1</mandatory>
       <data-type>TEXT(0,-1)|12</data-type>
     </column>
-    <column id="69" parent="10" name="follower">
+    <column id="68" parent="10" name="follower">
+      <mandatory>1</mandatory>
       <data-type>TEXT(0,-1)|12</data-type>
     </column>
+    <key id="69" parent="10">
+      <columns>username
+follower</columns>
+      <primary>1</primary>
+    </key>
     <column id="70" parent="11" name="username">
       <mandatory>1</mandatory>
       <data-type>TEXT(0,-1)|12</data-type>
     </column>
     <column id="71" parent="11" name="following">
+      <mandatory>1</mandatory>
       <data-type>TEXT(0,-1)|12</data-type>
     </column>
-    <column id="72" parent="12" name="team_id">
+    <key id="72" parent="11">
+      <columns>username
+following</columns>
+      <primary>1</primary>
+    </key>
+    <column id="73" parent="12" name="team_id">
       <mandatory>1</mandatory>
       <data-type>INT(0,-1)|4</data-type>
     </column>
-    <column id="73" parent="12" name="username">
+    <column id="74" parent="12" name="username">
       <data-type>TEXT(0,-1)|12</data-type>
     </column>
-    <column id="74" parent="13" name="username">
+    <column id="75" parent="13" name="username">
       <mandatory>1</mandatory>
       <data-type>TEXT(0,-1)|12</data-type>
     </column>
-    <column id="75" parent="13" name="date">
+    <column id="76" parent="13" name="date">
       <mandatory>1</mandatory>
       <data-type>TEXT(0,-1)|12</data-type>
     </column>
-    <column id="76" parent="13" name="type">
+    <column id="77" parent="13" name="type">
       <mandatory>1</mandatory>
       <data-type>TEXT(0,-1)|12</data-type>
     </column>
-    <column id="77" parent="13" name="value">
+    <column id="78" parent="13" name="value">
       <mandatory>1</mandatory>
       <data-type>REAL(0,-1)|6</data-type>
     </column>

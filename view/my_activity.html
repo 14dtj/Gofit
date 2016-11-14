@@ -26,6 +26,10 @@
         .w3-myfont {
             font-family: "Comic Sans MS", cursive, sans-serif;
         }
+
+        .LinkUl {
+            float: left;
+        }
     </style>
 </head>
 <body class="left-sidebar">
@@ -71,15 +75,14 @@
                             <div class="row">
                                 <div class="4u">
                                     <section class="box">
-                                        <div class="image image-full"><img src="images/avatar/xinyuan.jpeg"
-                                                                           alt=""/></div>
+                                        <div class="image image-full" id="avatar"></div>
                                         <header>
-                                            <h3>gakki</h3>
+                                            <h3 id="username">gakki</h3>
                                         </header>
                                         <table>
                                             <tr>
-                                                <td>Level: 0</td>
-                                                <td>Success rate: 0%</td>
+                                                <td id="level">Level:</td>
+                                                <td id="credit">credit:</td>
                                             </tr>
                                         </table>
                                         <div>
@@ -101,17 +104,17 @@
                                             </div>
                                             <div class="w3-container w3-section">
                                                 <div class="w3-border w3-round w3-padding w3-grey">
-                                                    <a href="activity.html">Single to single</a>
+                                                    <a href="activity_single.html">Single to single</a>
                                                 </div>
                                             </div>
                                             <div class="w3-container w3-section">
                                                 <div class="w3-border w3-round w3-padding w3-grey">
-                                                    <a href="activity.html">Team to team</a>
+                                                    <a href="activity_team.html">Team to team</a>
                                                 </div>
                                             </div>
                                             <div class="w3-container w3-section">
                                                 <div class="w3-border w3-round w3-padding w3-grey">
-                                                    <a href="activity.html">Multi players</a>
+                                                    <a href="activity_multi.html">Multi players</a>
                                                 </div>
                                             </div>
                                         </ul>
@@ -120,69 +123,12 @@
                                 </div>
                                 <div class="8u skel-cell-mainContent">
 
-
-                                    <article class="box is-post">
+                                    <article id="organizedList" class="box is-post">
                                         Activities that I organized
-                                        <div class="w3-container w3-section">
-                                            <div class="w3-border w3-round w3-padding w3-light-grey">
-                                                <Button class="w3-btn w3-white w3-border">Delete</Button>
-                                                <a href="edit_activity.html"><Button class="w3-btn w3-white w3-border">Edit</Button></a>
-                                                <table>
-                                                    <tr>
-                                                        <td>name</td>
-                                                        <td>numbers</td>
-                                                        <td>award</td>
-                                                        <td>type</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>test</td>
-                                                        <td>0</td>
-                                                        <td>10</td>
-                                                        <td>running</td>
-                                                    </tr>
-                                                </table>
-                                            </div>
-                                        </div>
-                                        <div class="w3-container w3-section">
-                                            <div class="w3-border w3-round w3-padding w3-light-grey">
-                                                <Button class="w3-btn w3-white w3-border">Delete</Button>
-                                                <Button class="w3-btn w3-white w3-border">Edit</Button>
-                                                <table>
-                                                    <tr>
-                                                        <td>name</td>
-                                                        <td>numbers</td>
-                                                        <td>award</td>
-                                                        <td>type</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>test</td>
-                                                        <td>0</td>
-                                                        <td>10</td>
-                                                        <td>running</td>
-                                                    </tr>
-                                                </table>
-                                            </div>
-                                        </div>
-                                        <br>
+                                    </article>
+                                    <br>
+                                    <article id="joinedList" class="box is-post">
                                         Activities that I joined
-                                        <div class="w3-container w3-section">
-                                            <div class="w3-border w3-round w3-padding w3-light-grey">
-                                                <table>
-                                                    <tr>
-                                                        <td>name</td>
-                                                        <td>numbers</td>
-                                                        <td>award</td>
-                                                        <td>type</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>test</td>
-                                                        <td>0</td>
-                                                        <td>10</td>
-                                                        <td>running</td>
-                                                    </tr>
-                                                </table>
-                                            </div>
-                                        </div>
                                     </article>
 
                                 </div>
@@ -215,7 +161,6 @@
     </section>
 
 </div>
-
-
+<script src="/view/js/activity_mine.js"></script>
 </body>
 </html>

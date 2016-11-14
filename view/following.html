@@ -71,12 +71,23 @@
                             <div class="row">
                                 <div class="4u">
                                     <section class="box">
-                                        <div class="image image-full"><img src="images/avatar/xinyuan.jpeg"
-                                                                           alt=""/></div>
+                                        <div class="image image-full" id="avatar"></div>
                                         <header>
-                                            <a href="my_profile.html"><h3>gakki</h3></a>
+                                            <h3 id="username">gakki</h3>
                                         </header>
+                                        <table>
+                                            <tr>
+                                                <td id="level">Level:</td>
+                                                <td id="credit">credit:</td>
+                                            </tr>
+                                        </table>
+                                        <br>
                                         <ul class="divided">
+                                            <div class="w3-container w3-section">
+                                                <div class="w3-border w3-round w3-padding w3-grey">
+                                                    <a href="friends.html">ranking</a>
+                                                </div>
+                                            </div>
                                             <div class="w3-container w3-section">
                                                 <div class="w3-border w3-round w3-padding w3-grey">
                                                     <a href="following.html">following</a>
@@ -85,11 +96,6 @@
                                             <div class="w3-container w3-section">
                                                 <div class="w3-border w3-round w3-padding w3-grey">
                                                     <a href="follower.html">followers</a>
-                                                </div>
-                                            </div>
-                                            <div class="w3-container w3-section">
-                                                <div class="w3-border w3-round w3-padding w3-grey">
-                                                    <a href="friends.html">ranking</a>
                                                 </div>
                                             </div>
                                         </ul>
@@ -144,16 +150,27 @@
     $(document).ready(function () {
         $.ajax("/friend/following", {
             type: 'GET',
-            dataType:"json",
+            dataType: "json",
             success: function (data) {
                 for (var i = 0; i < data.length; i++) {
                     var a = "<li class=\"w3-padding-16\"> " +
                             "<img src=\"images/avatar/" + data[i].avatar + "\"class=\"w3-left w3-circle w3-margin-right\"style=\"width:60px\"> " +
-                            "<a href=\"other_profile.html\">" +
+                            "<a href=\"other_profile.html?name="+data[i].following+"\">" +
                             "<span class=\"w3-xlarge\">" + data[i].following + "</span></a><br><span>" + data[i].motto
                     "</span></li>";
                     $('#list').append(a);
                 }
+            }
+        });
+        $.ajax("/getBriefInfo", {
+            type: 'GET',
+            dataType: 'json',
+            success: function (data) {
+                $('#username').html(data.username);
+                $('#friends').append(data.friends);
+                $('#credit').append(data.credit);
+                $('#level').append(data.level);
+                $('#avatar').append("<img src=\"images/avatar/" + data.avatar + "\" />");
             }
         });
     });

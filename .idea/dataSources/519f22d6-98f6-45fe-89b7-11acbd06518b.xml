@@ -206,47 +206,53 @@
       <columns>username</columns>
       <primary>1</primary>
     </key>
-    <column id="65" parent="9" name="activity_id">
+    <column id="65" parent="9" name="username">
+      <mandatory>1</mandatory>
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="66" parent="9" name="activity_id">
       <mandatory>1</mandatory>
       <data-type>INTEGER(0,-1)|4</data-type>
     </column>
-    <column id="66" parent="9" name="username">
-      <data-type>TEXT(0,-1)|12</data-type>
-    </column>
-    <column id="67" parent="10" name="username">
+    <key id="67" parent="9">
+      <columns>username
+activity_id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="68" parent="10" name="username">
       <mandatory>1</mandatory>
       <data-type>TEXT(0,-1)|12</data-type>
     </column>
-    <column id="68" parent="10" name="follower">
+    <column id="69" parent="10" name="follower">
       <data-type>TEXT(0,-1)|12</data-type>
     </column>
-    <column id="69" parent="11" name="username">
+    <column id="70" parent="11" name="username">
       <mandatory>1</mandatory>
       <data-type>TEXT(0,-1)|12</data-type>
     </column>
-    <column id="70" parent="11" name="following">
+    <column id="71" parent="11" name="following">
       <data-type>TEXT(0,-1)|12</data-type>
     </column>
-    <column id="71" parent="12" name="team_id">
+    <column id="72" parent="12" name="team_id">
       <mandatory>1</mandatory>
       <data-type>INT(0,-1)|4</data-type>
     </column>
-    <column id="72" parent="12" name="username">
+    <column id="73" parent="12" name="username">
       <data-type>TEXT(0,-1)|12</data-type>
     </column>
-    <column id="73" parent="13" name="username">
+    <column id="74" parent="13" name="username">
       <mandatory>1</mandatory>
       <data-type>TEXT(0,-1)|12</data-type>
     </column>
-    <column id="74" parent="13" name="date">
+    <column id="75" parent="13" name="date">
       <mandatory>1</mandatory>
       <data-type>TEXT(0,-1)|12</data-type>
     </column>
-    <column id="75" parent="13" name="type">
+    <column id="76" parent="13" name="type">
       <mandatory>1</mandatory>
       <data-type>TEXT(0,-1)|12</data-type>
     </column>
-    <column id="76" parent="13" name="value">
+    <column id="77" parent="13" name="value">
       <mandatory>1</mandatory>
       <data-type>REAL(0,-1)|6</data-type>
     </column>

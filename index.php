@@ -17,4 +17,5 @@ require 'routes/user_routes.php';
 require 'routes/health_routes.php';
 require 'routes/sports_routes.php';
 require 'routes/friends_routes.php';
+require 'routes/activity_routes.php';
 $app->run();

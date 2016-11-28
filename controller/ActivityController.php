@@ -88,4 +88,20 @@ class ActivityController
         $statement->execute();
     }
 
+    function getActivity($id)
+    {
+        $query = "select * from activity where id='$id';";
+        $statement = $this->pdo->prepare($query);
+        $statement->execute();
+        $row = $statement->fetch(PDO::FETCH_ASSOC);
+        return json_encode($row);
+    }
+
+    function quitActivity($id, $username)
+    {
+        $query = "delete from user_activity where activity_id='$id' and username='$username';";
+        $statement = $this->pdo->prepare($query);
+        $statement->execute();
+    }
+
 }

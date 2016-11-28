@@ -20,11 +20,11 @@ $(document).ready(function () {
             for (var i = 0; i < data.length; i++) {
                 var a = "<div class=\"w3-container w3-section\">" +
                     "<div class=\"w3-border w3-round w3-padding w3-light-grey\">" +
-                    "<ol>" +
+                    "<ul style=\"list-style-type:none\">" +
                     "<img class=\"LinkUl\" src=\"images/activity/" + data[i].picture + "\" width=\"200px\" height=\"100px\">" +
                     "<li><h2>" + data[i].name + "</h2></li><hr>" +
                     "<li class=\"LinkUl\">number of people:" + data[i].number + "(" + data[i].type + ")" + "</li>" +
-                    "<li><button style=\"margin-left: 50px\">Join</button></li></ol></div></div>";
+                    "<li><button style=\"margin-left: 50px\">Join</button></li></ul></div></div>";
                 $('#list').append(a);
             }
         }

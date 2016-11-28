@@ -103,3 +103,19 @@ $app->post('/createActivity', function (Request $request, Response $response) us
         return $this->view->render($response, 'login.html');
     }
 });
+$app->get('/activity/specific/{id}', function (Request $request, Response $response) use ($app) {
+    $id = $request->getAttribute("id");
+    $controller = new ActivityController();
+    return $controller->getActivity($id);
+});
+$app->get('/activity/quit/{id}', function (Request $request, Response $response) use ($app) {
+    session_start();
+    if (isset($_SESSION['user'])) {
+        $username = $_SESSION['user'];
+        $id = $request->getAttribute("id");
+        $controller = new ActivityController();
+        return $controller->quitActivity($id, $username);
+    } else {
+        return $this->view->render($response, 'login.html');
+    }
+});

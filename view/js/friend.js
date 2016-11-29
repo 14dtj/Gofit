@@ -67,7 +67,7 @@ function displayData(data) {
             "class=\"w3-left w3-circle w3-margin-right\" style=\"width:60px\"> " +
             "<a href=\"other_profile.html\">" +
             "<span class=\"w3-xlarge\">" + j + " " + data[i].username + "</span></a><br>" +
-            "<span>" + data[i].motto + "</span></li>";
+            "<span>" + data[i].motto + "</span><span style='margin-left: 500px'>" + data[i].sum_distance + "km</span></li>";
         $('#list').append(a);
         if (data[i].username == myname) {
             myIndex = j;

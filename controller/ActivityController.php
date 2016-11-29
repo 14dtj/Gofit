@@ -59,6 +59,12 @@ class ActivityController
         if (!$result) {
             return 'You have joined the activity already!';
         } else {
+            $query = "update user set credit=credit+10 where username='$username';";
+            $statement = $this->pdo->prepare($query);
+            $statement->execute();
+            $query = "update user set level=level+1,credit = credit-30 where username='$username' and credit>=30;";
+            $statement = $this->pdo->prepare($query);
+            $statement->execute();
             return 'Joined successfully!';
         }
     }
@@ -109,5 +115,18 @@ class ActivityController
         $query = "update activity set name='$name',number='$number',award='$award',type='$type',sports='$sports',introduction='$intro',start_time='$start',end_time='$end' where id='$id';";
         $statement = $this->pdo->prepare($query);
         $statement->execute();
+    }
+
+    function isQualified($username)
+    {
+        $query = "select level from user where username='$username' and level>1;";
+        $statement = $this->pdo->prepare($query);
+        $statement->execute();
+        $row = $statement->fetch(PDO::FETCH_ASSOC);
+        if ($row) {
+            return 1;
+        } else {
+            return 0;
+        }
     }
 }

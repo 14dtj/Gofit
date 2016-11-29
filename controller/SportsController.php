@@ -41,5 +41,11 @@ class SportsController
 
         $statement = $this->pdo->prepare($query);
         $statement->execute();
+        $query = "update user set credit=credit+5 where username='$username';";
+        $statement = $this->pdo->prepare($query);
+        $statement->execute();
+        $query = "update user set level=level+1,credit = credit-30 where username='$username' and credit>=30;";
+        $statement = $this->pdo->prepare($query);
+        $statement->execute();
     }
 }

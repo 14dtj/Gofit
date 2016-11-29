@@ -141,8 +141,4 @@ class FriendController
         return json_encode($results);
     }
 
-    function getRank($username)
-    {
-
-    }
 }

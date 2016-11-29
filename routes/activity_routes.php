@@ -69,7 +69,12 @@ $app->post('/createActivity', function (Request $request, Response $response) us
     $data = $request->getParsedBody();
     session_start();
     if (isset($_SESSION['user'])) {
+        $controller = new ActivityController();
         $username = $_SESSION['user'];
+        if ($controller->isQualified($username)==0) {
+            $response->getBody()->write("<script>alert('Sorry, your level is too low to create an activity!'); history.go(-1);</script>");
+            return $response;
+        }
         $name = filter_var($data['name'], FILTER_SANITIZE_STRING);
         $type = filter_var($data['type'], FILTER_SANITIZE_STRING);
         $sports = filter_var($data['sports'], FILTER_SANITIZE_STRING);
@@ -90,7 +95,6 @@ $app->post('/createActivity', function (Request $request, Response $response) us
         if ($check !== false) {
             if (move_uploaded_file($_FILES["picture"]["tmp_name"], $target_file)) {
                 $pic = $_FILES['picture']['name'];
-                $controller = new ActivityController();
                 $controller->createActivity($name, $number, $award, $type, $pic, $sports, $username, $intro, $start, $end);
                 $response->getBody()->write("<script>alert('Start activity successfully'); history.go(-1);</script>");
             } else {

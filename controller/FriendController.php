@@ -123,8 +123,7 @@ class FriendController
 
     function getLastWeekRank()
     {
-        $today = date("Y-m-d");
-        $query = "select user.username,avatar,motto,sum(distance) as sum_distance from user,sports_record where sports_record.username=user.username and '$today'-date(date)<=7 GROUP by sports_record.username order by sum_distance DESC ;";
+        $query = "select user.username,avatar,motto,sum(distance) as sum_distance from user,sports_record where sports_record.username=user.username GROUP by sports_record.username order by sum_distance DESC ;";
         $statement = $this->pdo->prepare($query);
         $statement->execute();
         $results = $statement->fetchAll();
@@ -133,8 +132,7 @@ class FriendController
 
     function getLastMonthRank()
     {
-        $today = date("Y-m-d");
-        $query = "select user.username,avatar,motto,sum(distance) as sum_distance from user,sports_record where sports_record.username=user.username and '$today'-date(date)<=30 GROUP by sports_record.username order by sum_distance DESC ;";
+        $query = "select user.username,avatar,motto,sum(distance) as sum_distance from user,sports_record where sports_record.username=user.username GROUP by sports_record.username order by sum_distance DESC ;";
         $statement = $this->pdo->prepare($query);
         $statement->execute();
         $results = $statement->fetchAll();

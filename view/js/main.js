@@ -44,5 +44,61 @@ $(document).ready(function () {
             }
         })
     });
+    $.ajax("/health/weekSleep", {
+        type: 'GET',
+        dataType: "json",
+        success: function (data) {
+            var test = new Array()
+            for (var i = 0; i < data.length; i++) {
+                test[i] = data[i].sleep_time;
+            }
+            var myChart = echarts.init(document.getElementById('main'));
+            var option = {
+                tooltip: {
+                    trigger: 'axis'
+                },
+                toolbox: {
+                    feature: {
+                        saveAsImage: {}
+                    }
+                },
+                grid: {
+                    left: '3%',
+                    right: '4%',
+                    bottom: '3%',
+                    containLabel: true
+                },
+                xAxis: [
+                    {
+                        type: 'category',
+                        boundaryGap: false,
+                        data: ['7 days ago', '6', '5', '4', '3', '2', '1']
+                    }
+                ],
+                yAxis: [
+                    {
+                        type: 'value'
+                    }
+                ],
+                series: [
+                    {
+                        name: 'sleep',
+                        type: 'line',
+                        stack: '总量',
+                        label: {
+                            normal: {
+                                show: true,
+                                position: 'top'
+                            }
+                        },
+                        areaStyle: {normal: {}},
+                        data: test
+                    }
+                ]
+            };
+
+            myChart.setOption(option);
+        }
+    });
 
 });

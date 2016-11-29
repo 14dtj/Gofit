@@ -61,3 +61,14 @@ $app->get('/health/editBMI/{weight}/{height}', function (Request $request, Respo
         return $this->view->render($response, 'login.html');
     }
 });
+$app->get('/health/weekSleep', function (Request $request, Response $response) use ($app) {
+    session_start();
+    if (isset($_SESSION['user'])) {
+        $username = $_SESSION['user'];
+        $controller = new HealthController();
+        $result = $controller->getLastWeekSleep($username);
+        return $result;
+    } else {
+        return $this->view->render($response, 'login.html');
+    }
+});

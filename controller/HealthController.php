@@ -48,4 +48,14 @@ class HealthController
         $statement = $this->pdo->prepare($query);
         $statement->execute();
     }
+
+    function getLastWeekSleep($username)
+    {
+
+        $query = "select sleep_time from sleep_condition where username='$username' order by date desc limit 7;";
+        $statement = $this->pdo->prepare($query);
+        $statement->execute();
+        $results = $statement->fetchAll();
+        return json_encode($results);
+    }
 }

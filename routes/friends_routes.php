@@ -79,3 +79,15 @@ $app->get('/friend/isFollow/{name}', function (Request $request, Response $respo
         return $this->view->render($response, 'login.html');
     }
 });
+$app->get('/friend/today', function (Request $request, Response $response) use ($app) {
+    $controller = new FriendController();
+    return $controller->getTodayRank();
+});
+$app->get('/friend/week', function (Request $request, Response $response) use ($app) {
+    $controller = new FriendController();
+    return $controller->getLastWeekRank();
+});
+$app->get('/friend/month', function (Request $request, Response $response) use ($app) {
+    $controller = new FriendController();
+    return $controller->getLastMonthRank();
+});

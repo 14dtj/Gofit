@@ -110,4 +110,39 @@ class FriendController
             return "follow";
         }
     }
+
+    function getTodayRank()
+    {
+        $today = date("Y-m-d");
+        $query = "select user.username,avatar,motto,sum(distance) as sum_distance from user,sports_record where sports_record.username=user.username and date='$today' GROUP by sports_record.username order by sum_distance DESC ;";
+        $statement = $this->pdo->prepare($query);
+        $statement->execute();
+        $results = $statement->fetchAll();
+        return json_encode($results);
+    }
+
+    function getLastWeekRank()
+    {
+        $today = date("Y-m-d");
+        $query = "select user.username,avatar,motto,sum(distance) as sum_distance from user,sports_record where sports_record.username=user.username and '$today'-date(date)<=7 GROUP by sports_record.username order by sum_distance DESC ;";
+        $statement = $this->pdo->prepare($query);
+        $statement->execute();
+        $results = $statement->fetchAll();
+        return json_encode($results);
+    }
+
+    function getLastMonthRank()
+    {
+        $today = date("Y-m-d");
+        $query = "select user.username,avatar,motto,sum(distance) as sum_distance from user,sports_record where sports_record.username=user.username and '$today'-date(date)<=30 GROUP by sports_record.username order by sum_distance DESC ;";
+        $statement = $this->pdo->prepare($query);
+        $statement->execute();
+        $results = $statement->fetchAll();
+        return json_encode($results);
+    }
+
+    function getRank($username)
+    {
+
+    }
 }

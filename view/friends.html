@@ -108,160 +108,22 @@
 
                                 </div>
                                 <div class="8u skel-cell-mainContent">
-
-                                    <!-- Content -->
                                     <article class="box is-post">
-                                        <table>
-                                            <tr>
-                                                <td>
-                                                    <header>
-                                                        <h3><img src="images/rank.png" class="image-icon"> You ranked 0
-                                                            in Gofit</h3>
-                                                    </header>
-                                                    <ul class="w3-navbar w3-light-grey">
-                                                        <li><a href="#" class="tablink"
-                                                               onclick="openRank(event, 'today');">today</a></li>
-                                                        <li><a href="#" class="tablink" onclick="openRank(event, '7');">7
-                                                            days</a></li>
-                                                        <li><a href="#" class="tablink"
-                                                               onclick="openRank(event, '30');">30 days</a></li>
-                                                    </ul>
-                                                    <br>
-                                                    <div id="today" class="rank-tab">
-                                                        <ul class="w3-ul w3-card-4">
-                                                            <li class="w3-padding-16">
-                                                                <img src="images/avatar/xinyuan.jpeg"
-                                                                     class="w3-left w3-circle w3-margin-right"
-                                                                     style="width:60px">
-                                                                <a href="other_profile.html"><span class="w3-xlarge">Gakki</span></a><br>
-                                                                <span>Web Designer</span>
-                                                            </li>
-                                                            <li class="w3-padding-16">
-                                                                <img src="images/avatar/haoran.jpg"
-                                                                     class="w3-left w3-circle w3-margin-right"
-                                                                     style="width:60px">
-                                                                <a href="other_profile.html"><span class="w3-xlarge">Jill</span></a><br>
-                                                                <span>Support</span>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
 
-                                                    <div id="7" class="rank-tab">
-                                                        <ul class="w3-ul w3-card-4">
-                                                            <li class="w3-padding-16">
-                                                                <img src="images/avatar/xinyuan.jpeg"
-                                                                     class="w3-left w3-circle w3-margin-right"
-                                                                     style="width:60px">
-                                                                <a href="other_profile.html"><span class="w3-xlarge">Gakki</span></a><br>
-                                                                <span>Web Designer</span>
-                                                            </li>
-                                                            <li class="w3-padding-16">
-                                                                <img src="images/avatar/haoran.jpg"
-                                                                     class="w3-left w3-circle w3-margin-right"
-                                                                     style="width:60px">
-                                                                <a href="other_profile.html"><span class="w3-xlarge">Jill</span></a><br>
-                                                                <span>Support</span>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
+                                        <header>
+                                            <h3 id="head"><img src="images/rank.png" class="image-icon"> You ranked 0
+                                                in Gofit</h3>
+                                        </header>
+                                        <select name="type" id="selectid">
+                                            <option value="today">today</option>
+                                            <option value="7">7 days</option>
+                                            <option value="30">30 days</option>
+                                        </select>
+                                        <hr>
 
-                                                    <div id="30" class="rank-tab">
-                                                        <ul class="w3-ul w3-card-4">
-                                                            <li class="w3-padding-16">
-                                                                <img src="images/avatar/xinyuan.jpeg"
-                                                                     class="w3-left w3-circle w3-margin-right"
-                                                                     style="width:60px">
-                                                                <a href="other_profile.html"><span class="w3-xlarge">Gakki</span></a><br>
-                                                                <span>Web Designer</span>
-                                                            </li>
-                                                            <li class="w3-padding-16">
-                                                                <img src="images/avatar/haoran.jpg"
-                                                                     class="w3-left w3-circle w3-margin-right"
-                                                                     style="width:60px">
-                                                                <a href="other_profile.html"><span class="w3-xlarge">Jill</span></a><br>
-                                                                <span>Support</span>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </td>
-                                                <td>&nbsp;</td>
-                                                <td>
-                                                    <header>
-                                                        <h3><img src="images/rank.png" class="image-icon"> You ranked 0
-                                                            within friends</h3>
-                                                    </header>
-                                                    <ul class="w3-navbar w3-light-grey">
-                                                        <li><a href="#" class="tablink"
-                                                               onclick="openRank(event, 'today_f');">today</a></li>
-                                                        <li><a href="#" class="tablink"
-                                                               onclick="openRank(event, '7_f');">7
-                                                            days</a></li>
-                                                        <li><a href="#" class="tablink"
-                                                               onclick="openRank(event, '30_f');">30 days</a></li>
-                                                    </ul>
-                                                    <br>
-                                                    <div id="today_f" class="rank-tab">
-                                                        <ul class="w3-ul w3-card-4">
-                                                            <li class="w3-padding-16">
-                                                                <img src="images/avatar/xinyuan.jpeg"
-                                                                     class="w3-left w3-circle w3-margin-right"
-                                                                     style="width:60px">
-                                                                <span class="w3-xlarge">Gakki</span><br>
-                                                                <span>Web Designer</span>
-                                                            </li>
-                                                            <li class="w3-padding-16">
-                                                                <img src="images/avatar/haoran.jpg"
-                                                                     class="w3-left w3-circle w3-margin-right"
-                                                                     style="width:60px">
-                                                                <span class="w3-xlarge">Jill</span><br>
-                                                                <span>Support</span>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
+                                        <ul id="list" class="w3-ul w3-card-4">
+                                        </ul>
 
-                                                    <div id="7_f" class="rank-tab">
-                                                        <ul class="w3-ul w3-card-4">
-                                                            <li class="w3-padding-16">
-                                                                <img src="images/avatar/xinyuan.jpeg"
-                                                                     class="w3-left w3-circle w3-margin-right"
-                                                                     style="width:60px">
-                                                                <span class="w3-xlarge">Gakki</span><br>
-                                                                <span>Web Designer</span>
-                                                            </li>
-                                                            <li class="w3-padding-16">
-                                                                <img src="images/avatar/haoran.jpg"
-                                                                     class="w3-left w3-circle w3-margin-right"
-                                                                     style="width:60px">
-                                                                <span class="w3-xlarge">Jill</span><br>
-                                                                <span>Support</span>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-
-                                                    <div id="30_f" class="rank-tab">
-                                                        <ul class="w3-ul w3-card-4">
-                                                            <li class="w3-padding-16">
-                                                                <img src="images/avatar/xinyuan.jpeg"
-                                                                     class="w3-left w3-circle w3-margin-right"
-                                                                     style="width:60px">
-                                                                <span class="w3-xlarge">Gakki</span><br>
-                                                                <span>Web Designer</span>
-                                                            </li>
-                                                            <li class="w3-padding-16">
-                                                                <img src="images/avatar/haoran.jpg"
-                                                                     class="w3-left w3-circle w3-margin-right"
-                                                                     style="width:60px">
-                                                                <span class="w3-xlarge">Jill</span><br>
-                                                                <span>Support</span>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-
-                                            </tr>
-                                        </table>
                                     </article>
 
                                 </div>
@@ -294,21 +156,6 @@
     </section>
 
 </div>
-<script>
-    function openRank(evt, cityName) {
-        var i, x, tablinks;
-        x = document.getElementsByClassName("rank-tab");
-        for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
-        }
-        tablinks = document.getElementsByClassName("tablink");
-        for (i = 0; i < x.length; i++) {
-            tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
-        }
-        document.getElementById(cityName).style.display = "block";
-        evt.currentTarget.className += " w3-red";
-    }
-</script>
 <script src="/view/js/friend.js"></script>
 </body>
 </html>

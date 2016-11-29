@@ -65,7 +65,7 @@ function displayData(data) {
         var a = "<li class=\"w3-padding-16\">" +
             "<img src=\"images/avatar/" + data[i].avatar + "\"" +
             "class=\"w3-left w3-circle w3-margin-right\" style=\"width:60px\"> " +
-            "<a href=\"other_profile.html\">" +
+            "<a href=\"other_profile.html?name=" + data[i].username + "\">" +
             "<span class=\"w3-xlarge\">" + j + " " + data[i].username + "</span></a><br>" +
             "<span>" + data[i].motto + "</span><span style='margin-left: 500px'>" + data[i].sum_distance + "km</span></li>";
         $('#list').append(a);

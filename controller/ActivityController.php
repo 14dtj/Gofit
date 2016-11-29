@@ -104,4 +104,10 @@ class ActivityController
         $statement->execute();
     }
 
+    function editActivity($id, $name, $number, $award, $type, $sports, $intro, $start, $end)
+    {
+        $query = "update activity set name='$name',number='$number',award='$award',type='$type',sports='$sports',introduction='$intro',start_time='$start',end_time='$end' where id='$id';";
+        $statement = $this->pdo->prepare($query);
+        $statement->execute();
+    }
 }

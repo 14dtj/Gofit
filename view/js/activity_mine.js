@@ -27,7 +27,7 @@ $(document).ready(function () {
                     "<img class=\"LinkUl\" src=\"images/activity/" + data[i].picture + "\" width=\"200px\" height=\"100px\">" +
                     "<li><h2>" + data[i].name + "</h2></li><hr>" +
                     "<li class=\"LinkUl\">number of people:" + data[i].number + "(" + data[i].type + ")" + "</li>" +
-                    "<li><button style=\"margin-left: 50px\">Edit</button></li></ul></div></div>";
+                    "<li><button style=\"margin-left: 50px\"><a href=\"/view/edit_activity.html?id="+data[i].id+"\">Edit</a></button></li></ul></div></div>";
                 $('#organizedList').append(a);
             }
         }

@@ -119,3 +119,27 @@ $app->get('/activity/quit/{id}', function (Request $request, Response $response)
         return $this->view->render($response, 'login.html');
     }
 });
+$app->post('/activity/edit/{id}', function (Request $request, Response $response) use ($app) {
+    $data = $request->getParsedBody();
+    session_start();
+    if (isset($_SESSION['user'])) {
+        $id = $request->getAttribute("id");
+        $name = filter_var($data['name'], FILTER_SANITIZE_STRING);
+        $type = filter_var($data['type'], FILTER_SANITIZE_STRING);
+        $sports = filter_var($data['sports'], FILTER_SANITIZE_STRING);
+        $intro = filter_var($data['introduction'], FILTER_SANITIZE_STRING);
+        $startDate = filter_var($data['startDate'], FILTER_SANITIZE_STRING);
+        $startTime = filter_var($data['startTime'], FILTER_SANITIZE_STRING);
+        $start = $startDate . " " . $startTime;
+        $endDate = filter_var($data['endDate'], FILTER_SANITIZE_STRING);
+        $endTime = filter_var($data['endTime'], FILTER_SANITIZE_STRING);
+        $end = $endDate . " " . $endTime;
+        $award = filter_var($data['award'], FILTER_SANITIZE_STRING);
+        $number = filter_var($data['number'], FILTER_SANITIZE_STRING);
+        $controller = new ActivityController();
+        $controller->editActivity($id, $name, $number, $award, $type, $sports, $intro, $start, $end);
+        return "Edit activity successfully!";
+    } else {
+        return $this->view->render($response, 'login.html');
+    }
+});

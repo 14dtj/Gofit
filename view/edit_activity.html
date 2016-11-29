@@ -71,17 +71,22 @@
                             <div class="row">
                                 <div class="4u">
                                     <section class="box">
-                                        <div class="image image-full"><img src="images/avatar/xinyuan.jpeg"
-                                                                           alt=""/></div>
+                                        <div class="image image-full" id="avatar"></div>
                                         <header>
-                                            <h3>gakki</h3>
+                                            <h3 id="username">gakki</h3>
+                                            <a href="/view/login.html">logout</a>
                                         </header>
                                         <table>
                                             <tr>
-                                                <td>Level: 0</td>
-                                                <td>Success rate: 0%</td>
+                                                <td id="level">Level:</td>
+                                                <td id="credit">credit:</td>
                                             </tr>
                                         </table>
+                                        <div>
+                                            <a href="organize_activity.html">
+                                                <button class="w3-btn w3-red">Organize an activity</button>
+                                            </a>
+                                        </div>
                                         <br>
                                         <ul class="divided">
                                             <div class="w3-container w3-section">
@@ -96,17 +101,17 @@
                                             </div>
                                             <div class="w3-container w3-section">
                                                 <div class="w3-border w3-round w3-padding w3-grey">
-                                                    <a href="activity.html">Single to single</a>
+                                                    <a href="activity_single.html">Single to single</a>
                                                 </div>
                                             </div>
                                             <div class="w3-container w3-section">
                                                 <div class="w3-border w3-round w3-padding w3-grey">
-                                                    <a href="activity.html">Team to team</a>
+                                                    <a href="activity_team.html">Team to team</a>
                                                 </div>
                                             </div>
                                             <div class="w3-container w3-section">
                                                 <div class="w3-border w3-round w3-padding w3-grey">
-                                                    <a href="activity.html">Multi players</a>
+                                                    <a href="activity_multi.html">Multi players</a>
                                                 </div>
                                             </div>
                                         </ul>
@@ -117,35 +122,35 @@
 
                                     <!-- Content -->
                                     <article class="box is-post">
-                                        <div>Type
-                                            <select id="selectid">
+                                        <form id="form" enctype="multipart/form-data">
+                                            Name<input id="name" name="name" type="text">
+                                            Type
+                                            <select id="type" name="type" id="selectid">
                                                 <option value="single">single</option>
                                                 <option value="team">team</option>
                                                 <option value="multi">multi players</option>
                                             </select>
-                                        </div>
-                                        <br>
-                                        Introduction
-                                        <form>
-                                            <input class="w3-input w3-border" type="text" style="height:80px;">
-                                        </form>
-                                        <br>
-                                        Time
-                                        <form>
-                                            <input type="date">
-                                            <input type="time">
+                                            <hr>
+                                            Sports<input id="sports" name="sports" type="text">
+                                            <hr>
+                                            Introduction
+                                            <input id="introduction" name="introduction" class="w3-input w3-border" type="text" style="height:80px;">
+                                            <br>
+                                            Time
+                                            <input id="start_date" name="startDate" type="date">
+                                            <input id="start_time" name="startTime" type="time">
                                             To
-                                            <input type="date">
-                                            <input type="time">
+                                            <input id="end_date" name="endDate" type="date">
+                                            <input id="end_time" name="endTime" type="time">
+                                            <hr>
+                                            Award
+                                            <input id="award" name="award" type="text">
+                                            <hr>
+                                            Number of participants<input id="number" name="number" type="number">
+                                            <hr>
+                                            <br>
+                                            <input value="Edit" type="submit" class="w3-red">
                                         </form>
-                                        <br>
-                                        Performance Bond
-                                        <form>
-                                            <input type="number">
-                                        </form>
-                                        <br>
-                                        <Button class="w3-red">Save</Button>
-                                        <a style="padding-left: 10px" href="my_activity.html"><Button class="w3-light-grey">cancel</Button></a>
                                     </article>
 
                                 </div>
@@ -178,7 +183,6 @@
     </section>
 
 </div>
-
-
+<script src="/view/js/activity_edit.js"></script>
 </body>
 </html>

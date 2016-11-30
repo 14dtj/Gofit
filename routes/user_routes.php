@@ -23,7 +23,11 @@ $app->post('/login', function (Request $request, Response $response) use ($app) 
     } else {
         session_start();
         $_SESSION['user'] = $username;
-        return $this->view->render($response, 'index.html');
+        if ($username == "admin") {
+            return $response->withStatus(302)->withHeader('Location', '/user/getAllUsers');
+        } else {
+            return $this->view->render($response, 'index.html');
+        }
     }
 });
 $app->post('/register', function (Request $request, Response $response) use ($app) {
@@ -101,4 +105,19 @@ $app->get('/getBriefInfo', function (Request $request, Response $response) use (
         return $this->view->render($response, 'login.html');
     }
 });
-
+$app->get('/user/getAll', function (Request $request, Response $response) use ($app) {
+    $controller = new UserController();
+    return $controller->getAllUsers();
+});
+$app->get('/user/getAllUsers', function (Request $request, Response $response) use ($app) {
+    return $this->view->render($response, 'admin.html');
+});
+$app->post('/user/changeLevel', function (Request $request, Response $response) use ($app) {
+    $data = $request->getParsedBody();
+    $level = filter_var($data['level'], FILTER_SANITIZE_STRING);
+    $username = filter_var($data['name'], FILTER_SANITIZE_STRING);
+    $password = filter_var($data['password'], FILTER_SANITIZE_STRING);
+    $controller = new UserController();
+    $controller->updateUserInfo($username, $password, $level);
+    return $this->view->render($response, 'admin.html');
+});

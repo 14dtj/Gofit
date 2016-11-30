@@ -68,4 +68,19 @@ class UserController
         return json_encode($row);
     }
 
+    function getAllUsers()
+    {
+        $query = "select username,password,level,credit  from user;";
+        $statement = $this->pdo->prepare($query);
+        $statement->execute();
+        $results = $statement->fetchAll();
+        return json_encode($results);
+    }
+
+    function updateUserInfo($username, $password, $level)
+    {
+        $query = "update user set password='$password',level='$level' where username='$username';";
+        $statement = $this->pdo->prepare($query);
+        $statement->execute();
+    }
 }

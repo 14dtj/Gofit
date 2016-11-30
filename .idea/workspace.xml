@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b41dbd6-61df-4a44-bd32-e011987ffff3" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/view/images/avatar/IMG_8574-2.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/images/avatar/avatar.jpeg" afterPath="$PROJECT_DIR$/view/images/avatar/avatar.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/ActivityController.php" afterPath="$PROJECT_DIR$/controller/ActivityController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/activity_routes.php" afterPath="$PROJECT_DIR$/routes/activity_routes.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/temp.db" afterPath="$PROJECT_DIR$/temp.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/activity_specific.html" afterPath="$PROJECT_DIR$/view/activity_specific.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/js/activity_specific.js" afterPath="$PROJECT_DIR$/view/js/activity_specific.js" />
     </list>
     <ignored path="Gofit.iws" />
@@ -88,11 +83,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activity_specific.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="activity_specific.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/activity_specific.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="140" column="82" selection-start-line="140" selection-start-column="82" selection-end-line="140" selection-end-column="82" />
+            <state relative-caret-position="-292">
+              <caret line="145" column="38" selection-start-line="145" selection-start-column="38" selection-end-line="145" selection-end-column="38" />
               <folding>
                 <element signature="n#style#0;n#ul#0;n#article#0;n#div#1;n#div#0;n#div#0;n#section#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -100,13 +95,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activity_specific.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="activity_specific.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/view/js/activity_specific.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="336">
-              <caret line="32" column="38" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
+              <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
               <folding>
-                <marker date="1480485193269" expanded="true" signature="1509:1519" ph="..." />
+                <marker date="1480487018866" expanded="true" signature="1955:1965" ph="..." />
               </folding>
             </state>
           </provider>
@@ -188,8 +183,8 @@
         <option value="$PROJECT_DIR$/view/admin.html" />
         <option value="$PROJECT_DIR$/controller/ActivityController.php" />
         <option value="$PROJECT_DIR$/routes/activity_routes.php" />
-        <option value="$PROJECT_DIR$/view/js/activity_specific.js" />
         <option value="$PROJECT_DIR$/view/activity_specific.html" />
+        <option value="$PROJECT_DIR$/view/js/activity_specific.js" />
       </list>
     </option>
   </component>
@@ -504,12 +499,12 @@
       <workItem from="1480343692672" duration="6639000" />
       <workItem from="1480386245961" duration="29251000" />
       <workItem from="1480427659124" duration="1371000" />
-      <workItem from="1480472913979" duration="8818000" />
+      <workItem from="1480472913979" duration="9603000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="287766000" />
+    <option name="totallyTimeSpent" value="288551000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -912,16 +907,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/js/activity.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="32" column="32" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
-          <folding>
-            <marker date="1480350093554" expanded="true" signature="828:848" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/6cb73dc0/519f22d6-98f6-45fe-89b7-11acbd06518b/user">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1072,19 +1057,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/6cb73dc0/519f22d6-98f6-45fe-89b7-11acbd06518b/activity">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/activity_routes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="446">
@@ -1135,22 +1107,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/js/activity_specific.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="32" column="38" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
-          <folding>
-            <marker date="1480485193269" expanded="true" signature="1509:1519" ph="..." />
-          </folding>
+    <entry file="dbDummy://dbtable:/6cb73dc0/519f22d6-98f6-45fe-89b7-11acbd06518b/activity">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/view/activity_specific.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="140" column="82" selection-start-line="140" selection-start-column="82" selection-end-line="140" selection-end-column="82" />
+        <state relative-caret-position="-292">
+          <caret line="145" column="38" selection-start-line="145" selection-start-column="38" selection-end-line="145" selection-end-column="38" />
           <folding>
             <element signature="n#style#0;n#ul#0;n#article#0;n#div#1;n#div#0;n#div#0;n#section#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/js/activity.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="14" column="7" selection-start-line="4" selection-start-column="3" selection-end-line="14" selection-end-column="7" />
+          <folding>
+            <marker date="1480350093554" expanded="true" signature="828:848" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/js/activity_specific.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+          <folding>
+            <marker date="1480487018866" expanded="true" signature="1955:1965" ph="..." />
           </folding>
         </state>
       </provider>

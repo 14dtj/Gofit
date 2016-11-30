@@ -2,6 +2,17 @@
  * Created by tjDu on 2016/11/28.
  */
 $(document).ready(function () {
+        $.ajax("/getBriefInfo", {
+            type: 'GET',
+            dataType: 'json',
+            success: function (data) {
+                $('#username').html(data.username);
+                $('#friends').append(data.friends);
+                $('#credit').append(data.credit);
+                $('#level').append(data.level);
+                $('#avatar').append("<img src=\"images/avatar/" + data.avatar + "\" />");
+            }
+        });
         var str = window.location.search;
         var index = str.indexOf("=");
         var id = str.substring(index + 1);

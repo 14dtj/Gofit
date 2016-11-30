@@ -129,4 +129,13 @@ class ActivityController
             return 0;
         }
     }
+
+    function getJoinedUsers($id)
+    {
+        $query = "select user.username,user.avatar from user,user_activity where user.username=user_activity.username and activity_id='$id';";
+        $statement = $this->pdo->prepare($query);
+        $statement->execute();
+        $results = $statement->fetchAll();
+        return json_encode($results);
+    }
 }

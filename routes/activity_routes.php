@@ -71,7 +71,7 @@ $app->post('/createActivity', function (Request $request, Response $response) us
     if (isset($_SESSION['user'])) {
         $controller = new ActivityController();
         $username = $_SESSION['user'];
-        if ($controller->isQualified($username)==0) {
+        if ($controller->isQualified($username) == 0) {
             $response->getBody()->write("<script>alert('Sorry, your level is too low to create an activity!'); history.go(-1);</script>");
             return $response;
         }
@@ -146,4 +146,9 @@ $app->post('/activity/edit/{id}', function (Request $request, Response $response
     } else {
         return $this->view->render($response, 'login.html');
     }
+});
+$app->get('/activity/joinedUser/{id}', function (Request $request, Response $response) use ($app) {
+    $id = $request->getAttribute("id");
+    $controller = new ActivityController();
+    return $controller->getJoinedUsers($id);
 });

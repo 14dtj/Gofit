@@ -27,5 +27,19 @@ $(document).ready(function () {
                 }
             })
         });
+        $.ajax("/activity/joinedUser/" + id, {
+            type: 'GET',
+            dataType: 'json',
+            success: function (data) {
+                for (var i = 0; i < data.length; i++) {
+                    var a = "<li class=\"w3-padding-16\">" +
+                        "<img src=\"images/avatar/" + data[i].avatar + "\"" +
+                        "class=\"w3-left w3-circle w3-margin-right\" style=\"width:60px\"> " +
+                        "<a href=\"other_profile.html?name=" + data[i].username + "\">" +
+                        "<span class=\"w3-xlarge\">" + data[i].username + "</span></a><br></li>";
+                    $('#list').append(a);
+                }
+            }
+        });
     }
 );

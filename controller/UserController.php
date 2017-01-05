@@ -61,7 +61,7 @@ class UserController
 
     function getBriefInfo($username)
     {
-        $query = "select user.username,count(*) as friends,avatar,level,credit from user,user_follower where user.username='$username' and user_follower.username='$username' group by user_follower.username;";
+        $query = "select user.username,count(user_follower.username) as friends,avatar,level,credit from user left outer join user_follower on user_follower.username=user.username where user.username='$username' group by user_follower.username;";
         $statement = $this->pdo->prepare($query);
         $statement->execute();
         $row = $statement->fetch(PDO::FETCH_ASSOC);

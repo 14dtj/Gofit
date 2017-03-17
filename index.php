@@ -5,7 +5,7 @@ use \Psr\Http\Message\ResponseInterface as Response;
 require 'vendor/autoload.php';
 $app = new \Slim\App();
 $app->get('/', function (Request $request, Response $response) {
-    return $this->view->render($response, 'index.html');
+    return $this->view->render($response, '/html/login.html');
 });
 $container = $app->getContainer();
 

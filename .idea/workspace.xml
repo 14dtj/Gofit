@@ -2,9 +2,59 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b41dbd6-61df-4a44-bd32-e011987ffff3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/newUI/activity.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/css/bootstrap/bootstrap-overrides.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/css/bootstrap/bootstrap-responsive.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/css/bootstrap/bootstrap-theme.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/css/bootstrap/bootstrap.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/css/code-editor.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/css/compiled/calendar.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/css/compiled/chart-showcase.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/css/compiled/elements.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/css/compiled/form-showcase.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/css/compiled/form-wizard.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/css/compiled/gallery.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/css/compiled/grids.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/css/compiled/index.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/css/compiled/new-user.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/css/compiled/personal-info.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/css/compiled/signin.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/css/compiled/signup.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/css/compiled/tables.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/css/compiled/ui-elements.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/css/compiled/user-list.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/css/compiled/user-profile.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/css/compiled/web-app-icons.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/css/elements.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/css/icons.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/css/layout.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/css/lib/bootstrap-wysihtml5.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/css/lib/bootstrap.datepicker.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/css/lib/font-awesome.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/css/lib/fullcalendar.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/css/lib/fullcalendar.print.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/css/lib/jquery-ui-1.10.2.custom.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/css/lib/morris.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/css/lib/select2.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/css/lib/uniform.default.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/view/login.html" afterPath="$PROJECT_DIR$/view/html/login.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/temp.db" afterPath="$PROJECT_DIR$/temp.db" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/newUI/html/activity/newActivity.html" afterPath="$PROJECT_DIR$/newUI/html/activity/newActivity.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/newUI/html/login.html" afterPath="$PROJECT_DIR$/newUI/html/login.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/activity.html" afterPath="$PROJECT_DIR$/view/activity.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/activity_multi.html" afterPath="$PROJECT_DIR$/view/activity_multi.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/activity_single.html" afterPath="$PROJECT_DIR$/view/activity_single.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/activity_specific.html" afterPath="$PROJECT_DIR$/view/activity_specific.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/activity_team.html" afterPath="$PROJECT_DIR$/view/activity_team.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/admin.html" afterPath="$PROJECT_DIR$/view/admin.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/edit_activity.html" afterPath="$PROJECT_DIR$/view/edit_activity.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/follower.html" afterPath="$PROJECT_DIR$/view/follower.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/following.html" afterPath="$PROJECT_DIR$/view/following.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/friends.html" afterPath="$PROJECT_DIR$/view/friends.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/health.html" afterPath="$PROJECT_DIR$/view/health.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/index.html" afterPath="$PROJECT_DIR$/view/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/my_activity.html" afterPath="$PROJECT_DIR$/view/my_activity.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/organize_activity.html" afterPath="$PROJECT_DIR$/view/organize_activity.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/sports.html" afterPath="$PROJECT_DIR$/view/sports.html" />
     </list>
     <ignored path="Gofit.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,11 +83,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/login.html">
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/view/html/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
+            <state relative-caret-position="1215">
+              <caret line="81" column="89" selection-start-line="81" selection-start-column="89" selection-end-line="81" selection-end-column="89" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/newUI/html/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="109" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -46,7 +106,7 @@
       <file leaf-file-name="health.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/health.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
+            <state relative-caret-position="135">
               <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
               <folding />
             </state>
@@ -56,18 +116,8 @@
       <file leaf-file-name="activity.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/activity.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
+            <state relative-caret-position="165">
               <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/newUI/activity.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -76,7 +126,7 @@
       <file leaf-file-name="activity_edit.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/js/activity_edit.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="984">
+            <state relative-caret-position="615">
               <caret line="41" column="29" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
               <folding />
             </state>
@@ -86,7 +136,7 @@
       <file leaf-file-name="activity_routes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/activity_routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3000">
+            <state relative-caret-position="1875">
               <caret line="131" column="23" selection-start-line="131" selection-start-column="23" selection-end-line="131" selection-end-column="23" />
               <folding />
             </state>
@@ -96,7 +146,7 @@
       <file leaf-file-name="other_profile.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/other_profile.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
+            <state relative-caret-position="375">
               <caret line="25" column="10" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
               <folding />
             </state>
@@ -106,15 +156,9 @@
       <file leaf-file-name="db_connect.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db_connect.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1248">
+            <state relative-caret-position="780">
               <caret line="52" column="23" selection-start-line="52" selection-start-column="23" selection-end-line="52" selection-end-column="23" />
-              <folding>
-                <marker date="1480422795644" expanded="true" signature="1319:1551" ph="INSERT INTO user... " />
-                <marker date="1480422795644" expanded="true" signature="2071:2230" ph="INSERT INTO sports_record... " />
-                <marker date="1480422795644" expanded="true" signature="2738:2885" ph="INSERT INTO sleep_condition... " />
-                <marker date="1480422795644" expanded="true" signature="3271:3322" ph="UPDATE user " />
-                <marker date="1480422795644" expanded="true" signature="3785:3945" ph="INSERT INTO sports_record... " />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -141,8 +185,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/routes/sports_routes.php" />
-        <option value="$PROJECT_DIR$/view/js/friends.js" />
         <option value="$PROJECT_DIR$/view/js/following.js" />
         <option value="$PROJECT_DIR$/view/js/profile.js" />
         <option value="$PROJECT_DIR$/index.php" />
@@ -192,6 +234,8 @@
         <option value="$PROJECT_DIR$/controller/UserController.php" />
         <option value="$PROJECT_DIR$/newUI/activity.html" />
         <option value="$PROJECT_DIR$/view/activity.html" />
+        <option value="$PROJECT_DIR$/view/login.html" />
+        <option value="$PROJECT_DIR$/view/html/login.html" />
       </list>
     </option>
   </component>
@@ -206,10 +250,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 7" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1938" />
-    <option name="height" value="1048" />
+    <option name="width" value="1440" />
+    <option name="height" value="896" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -237,7 +279,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -266,12 +307,63 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Gofit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Gofit" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="html" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Gofit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Gofit" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="newUI" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Gofit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Gofit" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="newUI" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -279,27 +371,28 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SearchEverywhereHistoryKey" value="data&#9;ACTION&#9;ActivateDatabaseToolWindow&#10;da&#9;ACTION&#9;ActivateDatabaseToolWindow&#10;intro-lead-in&#9;null&#9;null" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="Sqlite (Xerial)&#10;Derby (Embedded)" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\projects\Gofit\newUI" />
-      <recent name="G:\Gofit" />
-      <recent name="G:\Gofit\view" />
-      <recent name="G:\Gofit\images\avatar" />
-      <recent name="G:\Gofit\html" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/view/css" />
       <recent name="D:\projects\Gofit\newUI" />
       <recent name="G:\Gofit\view\js" />
       <recent name="G:\Gofit\view\images\activity" />
       <recent name="G:\Gofit" />
-      <recent name="G:\Gofit\php" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/view/html" />
+      <recent name="D:\projects\Gofit\newUI" />
+      <recent name="G:\Gofit" />
+      <recent name="G:\Gofit\view" />
+      <recent name="G:\Gofit\images\avatar" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.health.html">
@@ -312,7 +405,7 @@
     <configuration default="false" name="health.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:8888/view/health.html">
       <method />
     </configuration>
-    <configuration default="false" name="login.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:8888/view/login.html">
+    <configuration default="false" name="login.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:8888/view/html/login.html">
       <method />
     </configuration>
     <configuration default="false" name="friends.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:8888/view/friends.html">
@@ -449,20 +542,23 @@
       <workItem from="1488594095536" duration="77000" />
       <workItem from="1489391384080" duration="2245000" />
       <workItem from="1489630759915" duration="433000" />
+      <workItem from="1489638712346" duration="2000" />
+      <workItem from="1489672305983" duration="494000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="306116000" />
+    <option name="totallyTimeSpent" value="306612000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <frame x="0" y="0" width="1440" height="896" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17310444" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13721186" sideWeight="0.5083333" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25364584" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33260155" sideWeight="0.4875" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -486,7 +582,6 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27113062" sideWeight="0.49166667" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33260155" sideWeight="0.4875" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -511,20 +606,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/routes/friends_routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="584">
-          <caret line="90" column="40" selection-start-line="90" selection-start-column="40" selection-end-line="90" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/HealthController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="58" column="35" selection-start-line="58" selection-start-column="35" selection-end-line="58" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/6cb73dc0/519f22d6-98f6-45fe-89b7-11acbd06518b/user" />
     <entry file="dbDummy://dbtable:/6cb73dc0/519f22d6-98f6-45fe-89b7-11acbd06518b/user" />
     <entry file="dbDummy://dbtable:/6cb73dc0/519f22d6-98f6-45fe-89b7-11acbd06518b/user" />
@@ -680,15 +761,9 @@
     <entry file="file://$PROJECT_DIR$/testUser.php" />
     <entry file="file://$PROJECT_DIR$/db_connect.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1248">
+        <state relative-caret-position="780">
           <caret line="52" column="23" selection-start-line="52" selection-start-column="23" selection-end-line="52" selection-end-column="23" />
-          <folding>
-            <marker date="1480422795644" expanded="true" signature="1319:1551" ph="INSERT INTO user... " />
-            <marker date="1480422795644" expanded="true" signature="2071:2230" ph="INSERT INTO sports_record... " />
-            <marker date="1480422795644" expanded="true" signature="2738:2885" ph="INSERT INTO sleep_condition... " />
-            <marker date="1480422795644" expanded="true" signature="3271:3322" ph="UPDATE user " />
-            <marker date="1480422795644" expanded="true" signature="3785:3945" ph="INSERT INTO sports_record... " />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -736,7 +811,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/view/other_profile.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
+        <state relative-caret-position="375">
           <caret line="25" column="10" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
           <folding />
         </state>
@@ -749,17 +824,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/js/activity_edit.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="984">
+        <state relative-caret-position="615">
           <caret line="41" column="29" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
           <folding />
         </state>
@@ -767,7 +834,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/activity_routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3000">
+        <state relative-caret-position="1875">
           <caret line="131" column="23" selection-start-line="131" selection-start-column="23" selection-end-line="131" selection-end-column="23" />
           <folding />
         </state>
@@ -776,7 +843,7 @@
     <entry file="dbDummy://dbtable:/f71cba50/519f22d6-98f6-45fe-89b7-11acbd06518b/user" />
     <entry file="file://$PROJECT_DIR$/view/health.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
+        <state relative-caret-position="135">
           <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
           <folding />
         </state>
@@ -784,16 +851,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/view/activity.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
+        <state relative-caret-position="165">
           <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/newUI/activity.html">
+    <entry file="file://$PROJECT_DIR$/newUI/activity.html" />
+    <entry file="file://$PROJECT_DIR$/newUI/html/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="109" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/css/bootstrap/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/html/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1215">
+          <caret line="81" column="89" selection-start-line="81" selection-start-column="89" selection-end-line="81" selection-end-column="89" />
           <folding />
         </state>
       </provider>

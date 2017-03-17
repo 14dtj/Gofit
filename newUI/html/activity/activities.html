@@ -1,37 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Detail Admin - My Activities</title>
-    
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	
+    <title>Detail Admin - My Activities</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+
+    <link rel="stylesheet" href="../../css/activity_global_deployed.css" type="text/css"/>
+    <link rel="stylesheet" href="../../css/activity_homepage_deployed.css" type="text/css"/>
+
+
     <!-- bootstrap -->
-    <link href="../../css/bootstrap/bootstrap.css" rel="stylesheet" />
-    <link href="../../css/bootstrap/bootstrap-responsive.css" rel="stylesheet" />
-    <link href="../../css/bootstrap/bootstrap-overrides.css" type="text/css" rel="stylesheet" />
+    <link href="../../css/bootstrap/bootstrap.css" rel="stylesheet"/>
+    <link href="../../css/bootstrap/bootstrap-responsive.css" rel="stylesheet"/>
+    <link href="../../css/bootstrap/bootstrap-overrides.css" type="text/css" rel="stylesheet"/>
 
     <!-- libraries -->
-    <link href="../../css/lib/bootstrap-wysihtml5.css" type="text/css" rel="stylesheet" />
-    <link href="../../css/lib/uniform.default.css" type="text/css" rel="stylesheet" />
-    <link href="../../css/lib/select2.css" type="text/css" rel="stylesheet" />
-    <link href="../../css/lib/bootstrap.datepicker.css" type="text/css" rel="stylesheet" />
-    <link href="../../css/lib/font-awesome.css" type="text/css" rel="stylesheet" />
+    <link href="../../css/lib/bootstrap-wysihtml5.css" type="text/css" rel="stylesheet"/>
+    <link href="../../css/lib/uniform.default.css" type="text/css" rel="stylesheet"/>
+    <link href="../../css/lib/select2.css" type="text/css" rel="stylesheet"/>
+    <link href="../../css/lib/bootstrap.datepicker.css" type="text/css" rel="stylesheet"/>
+    <link href="../../css/lib/font-awesome.css" type="text/css" rel="stylesheet"/>
+
+
+
 
     <!-- global styles -->
-    <link rel="stylesheet" type="text/css" href="../../css/layout.css" />
-    <link rel="stylesheet" type="text/css" href="../../css/elements.css" />
-    <link rel="stylesheet" type="text/css" href="../../css/icons.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../../css/layout.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/elements.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/icons.css"/>
+
     <!-- this page specific styles -->
-    <link rel="stylesheet" href="../../css/compiled/form-showcase.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="../../css/compiled/form-showcase.css" type="text/css" media="screen"/>
 
     <!-- open sans font -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+          rel='stylesheet' type='text/css'/>
 
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+
+
+    <script src="../../js/modernizr.js"></script>
+    <script src="../../js/jquery-3.1.1.min.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+</head>
 <body>
 
 <!-- navbar -->
@@ -151,330 +162,165 @@
 
 
 <!-- sidebar -->
-    <div id="sidebar-nav">
-        <ul id="dashboard-menu">
-            <li >
+<div id="sidebar-nav">
+    <ul id="dashboard-menu">
+        <li>
 
-                <a href="../health.html">
-                    <i class="icon-home"></i>
-                    <span>Health</span>
-                </a>
-            </li>
-            <li >
-                <a href="../sports.html">
-                    <i class="icon-signal"></i>
-                    <span>Sports</span>
-                </a>
-            </li>
-            <li class="active">
-                <div class="pointer">
-                    <div class="arrow"></div>
-                    <div class="arrow_border"></div>
-                </div>
-                <a class="dropdown-toggle" href="#">
-                    <i class="icon-edit"></i>
-                    <span>Activity</span>
-                    <i class="icon-chevron-down"></i>
-                </a>
-                <ul class="submenu active">
-                    <li><a href="activities.html" class="active">My Activities</a></li>
-                    <li><a href="newActivity.html">New Activity</a></li>
-                </ul>
-            </li>
-            <li>
-                <a class="dropdown-toggle" href="#">
-                    <i class="icon-group"></i>
-                    <span>Users</span>
-                    <i class="icon-chevron-down"></i>
-                </a>
-                <ul class="submenu">
-                    <li><a href="../user/ranking.html">Ranking</a></li>
-                    <li><a href="../user/myFollowing.html">My following</a></li>
-                    <li><a href="../user/myFollowers.html">My followers</a></li>
-                </ul>
-            </li>
+            <a href="../health.html">
+                <i class="icon-home"></i>
+                <span>Health</span>
+            </a>
+        </li>
+        <li>
+            <a href="../sports.html">
+                <i class="icon-signal"></i>
+                <span>Sports</span>
+            </a>
+        </li>
+        <li class="active">
+            <div class="pointer">
+                <div class="arrow"></div>
+                <div class="arrow_border"></div>
+            </div>
+            <a class="dropdown-toggle" href="#">
+                <i class="icon-edit"></i>
+                <span>Activity</span>
+                <i class="icon-chevron-down"></i>
+            </a>
+            <ul class="submenu active">
+                <li><a href="activities.html" class="active">My Activities</a></li>
+                <li><a href="newActivity.html">New Activity</a></li>
+            </ul>
+        </li>
+        <li>
+            <a class="dropdown-toggle" href="#">
+                <i class="icon-group"></i>
+                <span>Users</span>
+                <i class="icon-chevron-down"></i>
+            </a>
+            <ul class="submenu">
+                <li><a href="../user/ranking.html">Ranking</a></li>
+                <li><a href="../user/myFollowing.html">My following</a></li>
+                <li><a href="../user/myFollowers.html">My followers</a></li>
+            </ul>
+        </li>
 
-            <li>
-                <a href="../myInfo.html">
-                    <i class="icon-cog"></i>
-                    <span>My Info</span>
+        <li>
+            <a href="../myInfo.html">
+                <i class="icon-cog"></i>
+                <span>My Info</span>
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-toggle ui-elements" href="#">
+                <i class="icon-code-fork"></i>
+                <span>UI Elements</span>
+                <i class="icon-chevron-down"></i>
+            </a>
+            <ul class="submenu">
+                <li><a href="../originalFile/ui-elements.html">UI Elements</a></li>
+                <li><a href="../originalFile/icons.html">Icons</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<!-- end sidebar -->
+
+
+<!-- main container -->
+<div class="content">
+
+    <div class="container-fluid">
+        <div id="pad-wrapper" class="form-page">
+
+
+            <div class="small-12 medium-6 large-4 columns imagetext  padpromo">
+                <a href="#" title="CrossFit"
+                   style="background-image: url('/newUI/img/activity/activity_img1.jpg');"
+                   class="lazyload top-cities-link promopanel ">
+                    <span>CrossFit
+                    <span class="promo-subheading">The best activities that you will have experienced </span>
+                    </span>
                 </a>
-            </li>
-            <li>
-                <a class="dropdown-toggle ui-elements" href="#">
-                    <i class="icon-code-fork"></i>
-                    <span>UI Elements</span>
-                    <i class="icon-chevron-down"></i>
+            </div>
+
+
+
+            <div class="small-12 medium-6 large-8 columns imagetext  padpromo">
+                <a href="#" title="CrossFit"
+                   style="background-image: url('/newUI/img/activity/activity_img1.jpg');"
+                   class="lazyload top-cities-link promopanel ">
+                    <span>CrossFit
+                    <span class="promo-subheading">The best activities that you will have experienced </span>
+                    </span>
                 </a>
-                <ul class="submenu">
-                    <li><a href="../originalFile/ui-elements.html">UI Elements</a></li>
-                    <li><a href="../originalFile/icons.html">Icons</a></li>
-                </ul>
-            </li>
-        </ul>
-    </div>
-    <!-- end sidebar -->
+            </div>
+
+            <div class="small-12 medium-6 large-8 columns imagetext  padpromo">
+                <a href="#" title="CrossFit"
+                   style="background-image: url('/newUI/img/activity/activity_img1.jpg');"
+                   class="lazyload top-cities-link promopanel ">
+                    <span>CrossFit
+                    <span class="promo-subheading">The best activities that you will have experienced </span>
+                    </span>
+                </a>
+            </div>
 
 
-	<!-- main container -->
-    <div class="content">
 
-        <div class="container-fluid">
-            <div id="pad-wrapper" class="form-page">
-                <div class="row-fluid form-wrapper">
-                    <!-- left column -->
-                    <div class="span8 column">
-                        <form />
-                            <div class="field-box">
-                                <label>Normal input:</label>
-                                <input class="span8" type="text" />
-                            </div>
-                            <div class="field-box">
-                                <label>Inline input:</label>
-                                <input class="span8 inline-input" placeholder=".inline-input" type="text" />
-                            </div>                            
-                            <div class="field-box">
-                                <label>Inline Password:</label>
-                                <input class="span8 inline-input" type="password" value="blablabla" />
-                            </div>
-                            <div class="field-box">
-                                <label>Read only:</label>
-                                <input class="span8 inline-input" type="text" readonly="readonly" value="read only input" />
-                            </div>
-                            <div class="field-box">
-                                <label>With tooltip:</label>
-                                <input class="span8 inline-input" data-toggle="tooltip" data-trigger="focus" title="Please insert a valid email address" data-placement="right" type="text" />
-                            </div>
-                            <div class="field-box">
-                                <label>Predefined value:</label>
-                                <div class="predefined">
-                                    <span class="value">http://</span>
-                                    <input class="span8 inline-input" type="text" />
-                                </div>                                
-                            </div>
-                            <div class="field-box">
-                                <label>With max length:</label>
-                                <input class="span8 inline-input" type="text" placeholder="max 20 characters here" maxlength="20" />
-                            </div>                            
-                            <div class="field-box">
-                                <label>Textarea:</label>
-                                <textarea class="span8" rows="4"></textarea>
-                            </div>
-                            <div class="field-box">
-                                <label>Checkboxes:</label>
-                                <label class="checkbox">
-                                    <input type="checkbox" /> Option 1
-                                </label>
-                                <label class="checkbox">
-                                    <input type="checkbox" /> Option 2
-                                </label>
-                                <label class="checkbox">
-                                    <input type="checkbox" /> Option 3
-                                </label>
-                            </div>
-                            <div class="field-box">
-                                <label>Radiobuttons:</label>
-                                <div class="span8">
-                                    <label class="radio">
-                                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="" />
-                                        Option one is this and that—be sure to include why it's great
-                                    </label>
-                                    <label class="radio">
-                                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" />
-                                        Option two can be something else and selecting it will deselect option one
-                                    </label>
-                                </div>                                
-                            </div>
-                            <div class="field-box">
-                                <label>Wysiwyg:</label>
-                                <div class="wysi-column">
-                                    <textarea id="wysi" class="span10 wysihtml5" rows="5"></textarea>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
+            <div class="small-12 medium-6 large-4 columns imagetext  padpromo">
+                <a href="#" title="CrossFit"
+                   style="background-image: url('/newUI/img/activity/activity_img1.jpg');"
+                   class="lazyload top-cities-link promopanel ">
+                    <span>CrossFit
+                    <span class="promo-subheading">The best activities that you will have experienced </span>
+                    </span>
+                </a>
+            </div>
 
-                    <!-- right column -->
-                    <div class="span4 column pull-right">
-                        <form />
-                            <div class="field-box">
-                                <label>Select:</label>
-                                <div class="ui-select">
-                                    <select>
-                                        <option selected="" />Dropdown
-                                        <option />Custom selects
-                                        <option />Pure css styles
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="field-box">
-                                <label>Select2 plugin styled:</label>
-                                <select style="width:250px" class="select2">
-                                    <option />
-                                    <option value="AK" />Alaska
-                                    <option value="HI" />Hawaii
-                                    <option value="CA" />California
-                                    <option value="NV" />Nevada
-                                    <option value="OR" />Oregon
-                                    <option value="WA" />Washington
-                                    <option value="AZ" />Arizona
-                                    <option value="CO" />Colorado
-                                    <option value="ID" />Idaho
-                                    <option value="MT" />Montana
-                                    <option value="NE" />Nebraska
-                                    <option value="NM" />New Mexico
-                                    <option value="ND" />North Dakota
-                                    <option value="UT" />Utah
-                                    <option value="WY" />Wyoming
-                                    <option value="AL" />Alabama
-                                    <option value="AR" />Arkansas
-                                    <option value="IL" />Illinois
-                                    <option value="IA" />Iowa
-                                    <option value="KS" />Kansas
-                                    <option value="KY" />Kentucky
-                                    <option value="LA" />Louisiana
-                                    <option value="MN" />Minnesota
-                                    <option value="MS" />Mississippi
-                                    <option value="MO" />Missouri
-                                    <option value="OK" />Oklahoma
-                                    <option value="SD" />South Dakota
-                                    <option value="TX" />Texas
-                                    <option value="TN" />Tennessee
-                                    <option value="WI" />Wisconsin
-                                    <option value="CT" />Connecticut
-                                    <option value="DE" />Delaware
-                                    <option value="FL" />Florida
-                                    <option value="GA" />Georgia
-                                    <option value="IN" />Indiana
-                                    <option value="ME" />Maine
-                                    <option value="MD" />Maryland
-                                    <option value="MA" />Massachusetts
-                                    <option value="MI" />Michigan
-                                    <option value="NH" />New Hampshire
-                                    <option value="NJ" />New Jersey
-                                    <option value="NY" />New York
-                                    <option value="NC" />North Carolina
-                                    <option value="OH" />Ohio
-                                    <option value="PA" />Pennsylvania
-                                    <option value="RI" />Rhode Island
-                                    <option value="SC" />South Carolina
-                                    <option value="VT" />Vermont
-                                    <option value="VA" />Virginia
-                                    <option value="WV" />West Virginia
-                                </select>
-                            </div>
-                            <div class="field-box">
-                                <label>Select2 multiselect:</label>
-                                <select style="width:250px" multiple="" class="select2">
-                                    <option />
-                                    <option value="AK" />Alaska
-                                    <option value="HI" selected="" />Hawaii
-                                    <option value="CA" />California
-                                    <option value="NV" />Nevada
-                                    <option value="OR" />Oregon
-                                    <option value="WA" />Washington
-                                    <option value="AZ" />Arizona
-                                    <option value="CO" />Colorado
-                                    <option value="ID" />Idaho
-                                    <option value="MT" />Montana
-                                    <option value="NE" />Nebraska
-                                    <option value="NM" />New Mexico
-                                    <option value="ND" />North Dakota
-                                    <option value="UT" />Utah
-                                    <option value="WY" />Wyoming
-                                    <option value="AL" />Alabama
-                                    <option value="AR" />Arkansas
-                                    <option value="IL" />Illinois
-                                    <option value="IA" />Iowa
-                                    <option value="KS" />Kansas
-                                    <option value="KY" />Kentucky
-                                    <option value="LA" />Louisiana
-                                    <option value="MN" />Minnesota
-                                    <option value="MS" />Mississippi
-                                    <option value="MO" />Missouri
-                                    <option value="OK" />Oklahoma
-                                    <option value="SD" />South Dakota
-                                    <option value="TX" />Texas
-                                    <option value="TN" />Tennessee
-                                    <option value="WI" />Wisconsin
-                                    <option value="CT" />Connecticut
-                                    <option value="DE" />Delaware
-                                    <option value="FL" />Florida
-                                    <option value="GA" />Georgia
-                                    <option value="IN" />Indiana
-                                    <option value="ME" />Maine
-                                    <option value="MD" />Maryland
-                                    <option value="MA" />Massachusetts
-                                    <option value="MI" />Michigan
-                                    <option value="NH" />New Hampshire
-                                    <option value="NJ" />New Jersey
-                                    <option value="NY" />New York
-                                    <option value="NC" />North Carolina
-                                    <option value="OH" />Ohio
-                                    <option value="PA" />Pennsylvania
-                                    <option value="RI" />Rhode Island
-                                    <option value="SC" />South Carolina
-                                    <option value="VT" />Vermont
-                                    <option value="VA" />Virginia
-                                    <option value="WV" />West Virginia
-                                </select>
-                            </div>
-                            <div class="field-box">
-                                <label>Input prepend & append:</label>
-                                <div class="input-prepend">
-                                    <span class="add-on">@</span>
-                                    <input class="input-large" type="text" />
-                                </div>
-                                <div class="input-append">
-                                    <input class="input-large" type="text" />
-                                    <span class="add-on">.00</span>
-                                </div>
-                            </div>
-                            <div class="field-box">
-                                <label>Datepicker:</label>
-                                <input type="text" value="03/29/2014" class="input-large datepicker" />
-                            </div>
-                        </form>
-                    </div>
-                </div>
+            <div class="small-12 medium-6 large-4 columns imagetext  padpromo">
+                <a href="#" title="CrossFit"
+                   style="background-image: url('/newUI/img/activity/activity_img1.jpg');"
+                   class="lazyload top-cities-link promopanel ">
+                    <span>CrossFit
+                    <span class="promo-subheading">The best activities that you will have experienced </span>
+                    </span>
+                </a>
+            </div>
+            <div class="small-12 medium-6 large-4 columns imagetext  padpromo">
+                <a href="#" title="CrossFit"
+                   style="background-image: url('/newUI/img/activity/activity_img1.jpg');"
+                   class="lazyload top-cities-link promopanel ">
+                    <span>CrossFit
+                    <span class="promo-subheading">The best activities that you will have experienced </span>
+                    </span>
+                </a>
+            </div>
+            <div class="small-12 medium-6 large-4 columns imagetext  padpromo">
+                <a href="#" title="CrossFit"
+                   style="background-image: url('/newUI/img/activity/activity_img1.jpg');"
+                   class="lazyload top-cities-link promopanel ">
+                    <span>CrossFit
+                    <span class="promo-subheading">The best activities that you will have experienced </span>
+                    </span>
+                </a>
             </div>
         </div>
     </div>
-    <!-- end main container -->
+</div>
+<!-- end main container -->
 
-	<!-- scripts for this page -->
-    <script src="../../js/wysihtml5-0.3.0.js"></script>
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script src="../../js/bootstrap.min.js"></script>
-    <script src="../../js/bootstrap-wysihtml5-0.0.2.js"></script>
-    <script src="../../js/bootstrap.datepicker.js"></script>
-    <script src="../../js/jquery.uniform.min.js"></script>
-    <script src="../../js/select2.min.js"></script>
-    <script src="../../js/theme.js"></script>
-
-    <!-- call this page plugins -->
-    <script type="text/javascript">
-        $(function () {
-
-            // add uniform plugin styles to html elements
-            $("input:checkbox, input:radio").uniform();
-
-            // select2 plugin for select elements
-            $(".select2").select2({
-                placeholder: "Select a State"
-            });
-
-            // datepicker plugin
-            $('.datepicker').datepicker().on('changeDate', function (ev) {
-                $(this).datepicker('hide');
-            });
-
-            // wysihtml5 plugin on textarea
-            $(".wysihtml5").wysihtml5({
-                "font-styles": false
-            });
-        });
-    </script>
-<div style="display:none"><script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script></div>
+<!-- scripts for this page -->
+<script src="../../js/wysihtml5-0.3.0.js"></script>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
+<script src="../../js/bootstrap-wysihtml5-0.0.2.js"></script>
+<script src="../../js/bootstrap.datepicker.js"></script>
+<script src="../../js/jquery.uniform.min.js"></script>
+<script src="../../js/select2.min.js"></script>
+<script src="../../js/theme.js"></script>
+<div style="display:none">
+    <script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script>
+</div>
 </body>
 </html>

@@ -328,7 +328,7 @@
             barRatio: 0.4,
             xLabelMargin: 10,
             hideHover: 'auto',
-            barColors: ["#3d88ba"]
+            barColors: ["#ee8324"]
         });
 
 
@@ -341,7 +341,7 @@
                 {label: 'Search engines', value: 25 },
                 {label: 'Unique visitors', value: 10 }
             ],
-            colors: ["#30a1ec", "#76bdee", "#c4dafe"],
+            colors: ["#ee8324", "#c56a46", "#ee5520"],
             formatter: function (y) { return y + "%" }
         });
 
@@ -363,7 +363,8 @@
             xkey: 'period',
             xLabels: "month",
             ykeys: ['visits', 'signups'],
-            labels: ['Visits', 'User signups']
+            labels: ['Visits', 'User signups'],
+            lineColors: ["#ee8324", "#c56a46"]
         });
 
 
@@ -388,7 +389,7 @@
             labels: ['iPhone', 'iPad', 'iPod Touch'],
             lineWidth: 2,
             hideHover: 'auto',
-            lineColors: ["#81d5d9", "#a6e182", "#67bdf8"]
+            lineColors: ["#ee8324", "#c56a46", "#ee5520"]
           });
 
 
@@ -420,14 +421,14 @@
                 },
                 grid: { hoverable: true, 
                        clickable: true, 
-                       tickColor: "#f9f9f9",
+                       tickColor: "#c56a46",
                        borderWidth: 0
                     },
                 legend: {
                         // show: false
                         labelBoxBorderColor: "#fff"
                     },  
-                colors: ["#a7b5c5", "#30a0eb"],
+                colors: ["#ee8324", "#c56a46"],
                 xaxis: {
                     ticks: [[1, "JAN"], [2, "FEB"], [3, "MAR"], [4,"APR"], [5,"MAY"], [6,"JUN"], 
                            [7,"JUL"], [8,"AUG"], [9,"SEP"], [10,"OCT"], [11,"NOV"], [12,"DEC"]],
@@ -435,13 +436,13 @@
                         size: 12,
                         family: "Open Sans, Arial",
                         variant: "small-caps",
-                        color: "#9da3a9"
+                        color: "#c56a46"
                     }
                 },
                 yaxis: {
                     ticks:3, 
                     tickDecimals: 0,
-                    font: {size:12, color: "#9da3a9"}
+                    font: {size:12, color: "#c56a46"}
                 }
              });
 

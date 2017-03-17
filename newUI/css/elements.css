@@ -273,38 +273,38 @@
 	background: -webkit-linear-gradient(top, rgb(67, 76, 88) 0%,rgb(66, 74, 83) 100%);
 }
 .btn-glow.primary{
-	border-color: #2480c2;
+	border-color: #c56a46;
 	color: #fff;
 	text-shadow: rgba(0,0,0,0.35) 0 1px 0;
 	box-shadow: inset 0px 1px 0px 0px rgba(255,255,255,0.5);	
-	background: #54b3ff;
-	background: -moz-linear-gradient(top, #54b3ff 0%, #0078d9 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#54b3ff), color-stop(100%,#0078d9));
-	background: -webkit-linear-gradient(top, #54b3ff 0%,#0078d9 100%);
-	background: linear-gradient(#54b3ff,#0078d9);
-	background: -o-linear-gradient(top, #54b3ff 0%,#0078d9 100%);
-	background: -ms-linear-gradient(top, #54b3ff 0%,#0078d9 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#54b3ff', endColorstr='#0078d9',GradientType=0 );
+	background: #ff9157;
+	background: -moz-linear-gradient(top, #ff9157 0%, #ff7922 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff9157), color-stop(100%,#ff7922));
+	background: -webkit-linear-gradient(top, #ff9157 0%,#ff7922 100%);
+	background: linear-gradient(#ff9157,#ff7922);
+	background: -o-linear-gradient(top, #ff9157 0%,#ff7922 100%);
+	background: -ms-linear-gradient(top, #ff9157 0%,#ff7922 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff9157', endColorstr='#ff7922',GradientType=0 );
 }
 .btn-glow.primary:hover {	
-	background: rgb(56, 155, 235);
-	background: -moz-linear-gradient(top, rgb(56, 155, 235) 0%, #0078d9 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(56, 155, 235)), color-stop(100%,#0078d9));
-	background: -webkit-linear-gradient(top, rgb(56, 155, 235) 0%,#0078d9 100%);
-	background: linear-gradient(rgb(56, 155, 235),#0078d9);
-	background: -o-linear-gradient(top, rgb(56, 155, 235) 0%,#0078d9 100%);
-	background: -ms-linear-gradient(top, rgb(56, 155, 235) 0%,#0078d9 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgb(56, 155, 235)', endColorstr='#0078d9',GradientType=0 );
+	background: #c56a46;
+	background: -moz-linear-gradient(top, rgb(235, 140, 73) 0%, #ff7922 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(235, 140, 73)), color-stop(100%,#ff7922));
+	background: -webkit-linear-gradient(top, rgb(235, 140, 73) 0%,#ff7922 100%);
+	background: linear-gradient(rgb(235, 140, 73),#ff7922);
+	background: -o-linear-gradient(top, rgb(235, 140, 73) 0%,#ff7922 100%);
+	background: -ms-linear-gradient(top, rgb(235, 140, 73) 0%,#ff7922 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgb(235, 140, 73)', endColorstr='#ff7922',GradientType=0 );
 }
 .btn-glow.primary:active {
-	background: rgb(56, 155, 235);
-	background: -moz-linear-gradient(top, rgb(56, 155, 235) 0%, #0078d9 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(56, 155, 235)), color-stop(100%,#0078d9));
-	background: -webkit-linear-gradient(top, rgb(56, 155, 235) 0%,#0078d9 100%);
-	background: linear-gradient(rgb(56, 155, 235),#0078d9);
-	background: -o-linear-gradient(top, rgb(56, 155, 235) 0%,#0078d9 100%);
-	background: -ms-linear-gradient(top, rgb(56, 155, 235) 0%,#0078d9 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgb(56, 155, 235)', endColorstr='#0078d9',GradientType=0 );
+	background: rgb(235, 140, 73);
+	background: -moz-linear-gradient(top, rgb(235, 140, 73) 0%, #ff7922 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(235, 140, 73)), color-stop(100%,#ff7922));
+	background: -webkit-linear-gradient(top, rgb(235, 140, 73) 0%,#ff7922 100%);
+	background: linear-gradient(rgb(235, 140, 73),#ff7922);
+	background: -o-linear-gradient(top, rgb(235, 140, 73) 0%,#ff7922 100%);
+	background: -ms-linear-gradient(top, rgb(235, 140, 73) 0%,#ff7922 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgb(235, 140, 73)', endColorstr='#ff7922',GradientType=0 );
 }
 .btn-glow.primary[disabled] {
 	border: 0px;

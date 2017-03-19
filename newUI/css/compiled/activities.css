@@ -1,3 +1,23 @@
+.cover {
+  height: 320px;
+  background-size: cover;
+  background-position: center;
+}
+
+.caption p {
+  height: 120px;
+  overflow: hidden;
+}
+
+.carousel-cover {
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+
+}
+
+
+
 .form-page .form-wrapper {
   margin-bottom: 40px; }
   .form-page .form-wrapper .field-box {
@@ -60,3 +80,6 @@
 @media (max-width: 767px) {
   .form-page .form-wrapper label.radio {
     left: 0px; } }
+
+
+

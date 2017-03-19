@@ -1,39 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Detail Admin - New Activity</title>
-    
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	
+    <title>Detail Admin - New Activity</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
     <!-- bootstrap -->
-    <link href="../../css/bootstrap/bootstrap.css" rel="stylesheet" />
-    <link href="../../css/bootstrap/bootstrap-responsive.css" rel="stylesheet" />
-    <link href="../../css/bootstrap/bootstrap-overrides.css" type="text/css" rel="stylesheet" />
+    <link href="../../css/bootstrap/bootstrap.css" rel="stylesheet"/>
+    <link href="../../css/bootstrap/bootstrap-responsive.css" rel="stylesheet"/>
+    <link href="../../css/bootstrap/bootstrap-overrides.css" type="text/css" rel="stylesheet"/>
 
     <!-- libraries -->
-    <link href="../../css/lib/bootstrap-wysihtml5.css" type="text/css" rel="stylesheet" />
-    <link href="../../css/lib/uniform.default.css" type="text/css" rel="stylesheet" />
-    <link href="../../css/lib/select2.css" type="text/css" rel="stylesheet" />
+    <link href="../../css/lib/bootstrap-wysihtml5.css" type="text/css" rel="stylesheet"/>
+    <link href="../../css/lib/uniform.default.css" type="text/css" rel="stylesheet"/>
+    <link href="../../css/lib/select2.css" type="text/css" rel="stylesheet"/>
+    <link href="../../css/lib/bootstrap.datepicker.css" type="text/css" rel="stylesheet"/>
+    <link href="../../css/lib/font-awesome.css" type="text/css" rel="stylesheet"/>
     <link href="../../css/lib/bootstrap.datepicker.css" type="text/css" rel="stylesheet" />
-    <link href="../../css/lib/font-awesome.css" type="text/css" rel="stylesheet" />
 
     <!-- global styles -->
-    <link rel="stylesheet" type="text/css" href="../../css/layout.css" />
-    <link rel="stylesheet" type="text/css" href="../../css/elements.css" />
-    <link rel="stylesheet" type="text/css" href="../../css/icons.css" />
-    
-    <!-- this page specific styles -->
-    <link rel="stylesheet" href="../../css/compiled/form-wizard.css" type="text/css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../../css/layout.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/elements.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/icons.css"/>
 
-    <link rel="stylesheet" href="//scd.hwstatic.com/static/styles/cdn/3.28.3.1/global_deployed.css" type="text/css" />
-    <link rel="stylesheet" href="//scd.hwstatic.com/static/styles/cdn/3.28.3.1/homepage_deployed.css" type="text/css" />
+    <!-- this page specific styles -->
+    <link rel="stylesheet" href="../../css/compiled/newActivities.css" type="text/css" media="screen"/>
 
 
     <!-- open sans font -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+          rel='stylesheet' type='text/css'/>
 
     <![endif]-->
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+</head>
 <body>
 
 <!-- navbar -->
@@ -153,182 +153,200 @@
 
 
 <!-- sidebar -->
-    <div id="sidebar-nav">
-        <ul id="dashboard-menu">
-            <li >
+<div id="sidebar-nav">
+    <ul id="dashboard-menu">
+        <li>
 
-                <a href="../health.html">
-                    <i class="icon-home"></i>
-                    <span>Health</span>
-                </a>
-            </li>
-            <li >
-                <a href="../sports.html">
-                    <i class="icon-signal"></i>
-                    <span>Sports</span>
-                </a>
-            </li>
-            <li class="active">
-                <div class="pointer">
-                    <div class="arrow"></div>
-                    <div class="arrow_border"></div>
-                </div>
-                <a class="dropdown-toggle" href="#">
-                    <i class="icon-edit"></i>
-                    <span>Activity</span>
-                    <i class="icon-chevron-down"></i>
-                </a>
-                <ul class="submenu active">
-                    <li><a href="activities.html">My Activities</a></li>
-                    <li><a href="newActivity.html" class="active">New Activity</a></li>
-                </ul>
-            </li>
-            <li >
-                <a class="dropdown-toggle" href="#">
-                    <i class="icon-group"></i>
-                    <span>Users</span>
-                    <i class="icon-chevron-down"></i>
-                </a>
-                <ul class="submenu">
-                    <li><a href="../user/ranking.html">Ranking</a></li>
-                    <li><a href="../user/myFollowing.html">My following</a></li>
-                    <li><a href="../user/myFollowers.html">My followers</a></li>
-                </ul>
-            </li>
+            <a href="../health.html">
+                <i class="icon-home"></i>
+                <span>Health</span>
+            </a>
+        </li>
+        <li>
+            <a href="../sports.html">
+                <i class="icon-signal"></i>
+                <span>Sports</span>
+            </a>
+        </li>
+        <li class="active">
+            <div class="pointer">
+                <div class="arrow"></div>
+                <div class="arrow_border"></div>
+            </div>
+            <a class="dropdown-toggle" href="#">
+                <i class="icon-edit"></i>
+                <span>Activity</span>
+                <i class="icon-chevron-down"></i>
+            </a>
+            <ul class="submenu active">
+                <li><a href="activities.html">My Activities</a></li>
+                <li><a href="newActivity.html" class="active">New Activity</a></li>
+            </ul>
+        </li>
+        <li>
+            <a class="dropdown-toggle" href="#">
+                <i class="icon-group"></i>
+                <span>Users</span>
+                <i class="icon-chevron-down"></i>
+            </a>
+            <ul class="submenu">
+                <li><a href="../user/ranking.html">Ranking</a></li>
+                <li><a href="../user/myFollowing.html">My following</a></li>
+                <li><a href="../user/myFollowers.html">My followers</a></li>
+            </ul>
+        </li>
 
-            <li>
-                <a href="../myInfo.html">
-                    <i class="icon-cog"></i>
-    <span>My Info</span>
-    </a>
-    </li>
-    <li>
-        <a class="dropdown-toggle ui-elements" href="#">
-            <i class="icon-code-fork"></i>
-            <span>UI Elements</span>
-            <i class="icon-chevron-down"></i>
-        </a>
-        <ul class="submenu">
-            <li><a href="../originalFile/ui-elements.html">UI Elements</a></li>
-            <li><a href="../originalFile/icons.html">Icons</a></li>
-        </ul>
-    </li>
+        <li>
+            <a href="../myInfo.html">
+                <i class="icon-cog"></i>
+                <span>My Info</span>
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-toggle ui-elements" href="#">
+                <i class="icon-code-fork"></i>
+                <span>UI Elements</span>
+                <i class="icon-chevron-down"></i>
+            </a>
+            <ul class="submenu">
+                <li><a href="../originalFile/ui-elements.html">UI Elements</a></li>
+                <li><a href="../originalFile/icons.html">Icons</a></li>
+            </ul>
+        </li>
     </ul>
-    </div>
-    <!-- end sidebar -->
+</div>
+<!-- end sidebar -->
 
 
-	<!-- main container -->
-    <div class="content">
-        <div class="container-fluid">
-            <div id="pad-wrapper">
+<!-- main container -->
+<div class="content">
+    <div class="container-fluid">
+        <div id="pad-wrapper" class="new-user">
+            <div class="row-fluid header">
+                <h3>Create a new activity</h3>
+            </div>
 
-
-                <div class="topcity_伦敦 small-12 medium-6 large-4 columns imagetext">
-                    <a href="http://www.chinese.hostelworld.com/lushe/lundun/yinggelan" title="伦敦" data-src="//ucd.hwstatic.com/hw/location-images/city/london_s.jpg"  class="lazyload top-cities-link">
-                        <span>伦敦旅舍</span>
-                    </a>
+            <div class="row-fluid form-wrapper">
+                <!-- left column -->
+                <div class="span9 with-sidebar">
+                    <div class="container">
+                        <form class="new_user_form inline-input"/>
+                        <div class="span12 field-box">
+                            <label>Name:</label>
+                            <input class="span9" type="text"/>
+                        </div>
+                        <div class="span12 field-box">
+                            <label>Type:</label>
+                            <div class="ui-select span5">
+                                <select>
+                                    <option value="AK"/>
+                                    Running
+                                    <option value="HI"/>
+                                    Basketball
+                                    <option value="CA"/>
+                                    Football
+                                    <option value="NV"/>
+                                    Other
+                                    <option value="OR"/>
+                                    Swimming
+                                </select>
+                            </div>
+                        </div>
+                        <div class="span6 field-box">
+                            <label>Start Date:</label>
+                            <input type="text" value="03/29/2014" class="input-large datepicker" />
+                        </div>
+                        <div class="span6 field-box">
+                            <label>End Date:</label>
+                            <input type="text" value="03/29/2014" class="input-large datepicker" />
+                        </div>
+                        <div class="span12 field-box">
+                            <label>Phone:</label>
+                            <input class="span9" type="text"/>
+                        </div>
+                        <div class="span12 field-box">
+                            <label>Website:</label>
+                            <input class="span9" type="text"/>
+                        </div>
+                        <div class="span12 field-box">
+                            <label>Address:</label>
+                            <div class="address-fields">
+                                <input class="span12" type="text" placeholder="Street address"/>
+                                <input class="span12 small" type="text" placeholder="City"/>
+                                <input class="span12 small" type="text" placeholder="State"/>
+                                <input class="span12 small last" type="text" placeholder="Postal Code"/>
+                            </div>
+                        </div>
+                        <div class="span12 field-box textarea">
+                            <label>Notes:</label>
+                            <textarea class="span9"></textarea>
+                            <span class="charactersleft">90 characters remaining. Field limited to 100 characters</span>
+                        </div>
+                        <div class="span11 field-box actions">
+                            <input type="button" class="btn-glow primary" value="Create user"/>
+                            <span>OR</span>
+                            <input type="reset" value="Cancel" class="reset"/>
+                        </div>
+                        </form>
+                    </div>
                 </div>
 
-                <div class="topcity_阿姆斯特丹 small-12 medium-6 large-8 columns imagetext">
-                    <a href="http://www.chinese.hostelworld.com/lushe/amusitedan/helan" title="阿姆斯特丹" data-src="//ucd.hwstatic.com/hw/location-images/city/amsterdam_s.jpg"  class="lazyload top-cities-link">
-                        <span>阿姆斯特丹旅舍</span>
-                    </a>
+                <!-- side right column -->
+                <div class="span3 form-sidebar pull-right">
+                    <div class="btn-group toggle-inputs hidden-tablet">
+                        <button class="glow left active" data-input="inline">INLINE INPUTS</button>
+                        <button class="glow right" data-input="normal">NORMAL INPUTS</button>
+                    </div>
+                    <div class="alert alert-info hidden-tablet">
+                        <i class="icon-lightbulb pull-left"></i>
+                        Click above to see difference between inline and normal inputs on a form
+                    </div>
+                    <h6>Sidebar text for instructions</h6>
+                    <p>Add multiple users at once</p>
+                    <p>Choose one of the following file types:</p>
+                    <ul>
+                        <li><a href="#">Upload a vCard file</a></li>
+                        <li><a href="#">Import from a CSV file</a></li>
+                        <li><a href="#">Import from an Excel file</a></li>
+                    </ul>
                 </div>
-
-                <div class="topcity_巴塞罗那 small-12 medium-6 large-4 columns imagetext">
-                    <a href="http://www.chinese.hostelworld.com/lushe/basailuona/xibanya" title="巴塞罗那" data-src="//ucd.hwstatic.com/hw/location-images/city/barcelona_s.jpg"  class="lazyload top-cities-link">
-                        <span>巴塞罗那旅舍</span>
-                    </a>
-                </div>
-
-                <div class="topcity_巴黎 small-12 medium-6 large-4 columns imagetext">
-                    <a href="http://www.chinese.hostelworld.com/lushe/bali/faguo" title="巴黎" data-src="//ucd.hwstatic.com/hw/location-images/city/paris_s.jpg"  class="lazyload top-cities-link">
-                        <span>巴黎旅舍</span>
-                    </a>
-                </div>
-
-                <div class="topcity_柏林 small-12 medium-6 large-4 columns imagetext">
-                    <a href="http://www.chinese.hostelworld.com/lushe/bailin/deguo" title="柏林" data-src="//ucd.hwstatic.com/hw/location-images/city/berlin_s.jpg"  class="lazyload top-cities-link">
-                        <span>柏林旅舍</span>
-                    </a>
-                </div>
-
-                <div class="topcity_布拉格 small-12 medium-6 large-8 columns imagetext">
-                    <a href="http://www.chinese.hostelworld.com/lushe/bulage/jieke" title="布拉格" data-src="//ucd.hwstatic.com/hw/location-images/city/prague_s.jpg"  class="lazyload top-cities-link">
-                        <span>布拉格旅舍</span>
-                    </a>
-                </div>
-
-                <div class="topcity_罗马 small-12 medium-6 large-4 columns imagetext">
-                    <a href="http://www.chinese.hostelworld.com/lushe/luoma/yidali" title="罗马" data-src="//ucd.hwstatic.com/hw/location-images/city/rome_s.jpg"  class="lazyload top-cities-link">
-                        <span>罗马旅舍</span>
-                    </a>
-                </div>
-
-                <div class="topcity_都柏林 small-12 medium-6 large-4 columns imagetext">
-                    <a href="http://www.chinese.hostelworld.com/lushe/doubailin/aierlan" title="都柏林" data-src="//ucd.hwstatic.com/hw/location-images/city/dublin_s.jpg"  class="lazyload top-cities-link">
-                        <span>都柏林旅舍</span>
-                    </a>
-                </div>
-
-                <div class="topcity_布达佩斯 small-12 medium-6 large-4 columns imagetext">
-                    <a href="http://www.chinese.hostelworld.com/lushe/budapeisi/xiongyali" title="布达佩斯" data-src="//ucd.hwstatic.com/hw/location-images/city/budapest_s.jpg"  class="lazyload top-cities-link">
-                        <span>布达佩斯旅舍</span>
-                    </a>
-                </div>
-
-                <div class="topcity_马德里 small-12 medium-6 large-4 columns imagetext">
-                    <a href="http://www.chinese.hostelworld.com/lushe/madeli/xibanya" title="马德里" data-src="//ucd.hwstatic.com/hw/location-images/city/madrid_s.jpg"  class="lazyload top-cities-link">
-                        <span>马德里旅舍</span>
-                    </a>
-                </div>
-
-
             </div>
         </div>
     </div>
-    <!-- end main container -->
+</div>
+<!-- end main container -->
 
-	<!-- scripts for this page -->
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script src="../../js/bootstrap.min.js"></script>
-    <script src="../../js/theme.js"></script>
-    <script src="../../js/fuelux.wizard.js"></script>
+<!-- scripts for this page -->
+<script src="../../js/wysihtml5-0.3.0.js"></script>
+<script src="../../js/jquery-3.1.1.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
+<script src="../../js/bootstrap-wysihtml5-0.0.2.js"></script>
+<script src="../../js/bootstrap.datepicker.js"></script>
+<script src="../../js/jquery.uniform.min.js"></script>
+<script src="../../js/select2.min.js"></script>
+<script src="../../js/theme.js"></script>
 
-    <script type="text/javascript">
-        $(function () {
-            var $wizard = $('#fuelux-wizard'),
-                $btnPrev = $('.wizard-actions .btn-prev'),
-                $btnNext = $('.wizard-actions .btn-next'),
-                $btnFinish = $(".wizard-actions .btn-finish");
+<script type="text/javascript">
+    // add uniform plugin styles to html elements
+    $("input:checkbox, input:radio").uniform();
 
-            $wizard.wizard().on('finished', function(e) {
-                // wizard complete code
-            }).on("changed", function(e) {
-                var step = $wizard.wizard("selectedItem");
-                // reset states
-                $btnNext.removeAttr("disabled");
-                $btnPrev.removeAttr("disabled");
-                $btnNext.show();
-                $btnFinish.hide();
+    // select2 plugin for select elements
+    $(".select2").select2({
+        placeholder: "Select a State"
+    });
 
-                if (step.step === 1) {
-                    $btnPrev.attr("disabled", "disabled");
-                } else if (step.step === 4) {
-                    $btnNext.hide();
-                    $btnFinish.show();
-                }
-            });
+    // datepicker plugin
+    $('.datepicker').datepicker().on('changeDate', function (ev) {
+        $(this).datepicker('hide');
+    });
 
-            $btnPrev.on('click', function() {
-                $wizard.wizard('previous');
-            });
-            $btnNext.on('click', function() {
-                $wizard.wizard('next');
-            });
-        });
-    </script>
-<div style="display:none"><script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script></div>
+    // wysihtml5 plugin on textarea
+    $(".wysihtml5").wysihtml5({
+        "font-styles": false
+    });
+</script>
+<div style="display:none">
+    <script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script>
+</div>
 </body>
 </html>

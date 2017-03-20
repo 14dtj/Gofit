@@ -29,7 +29,9 @@
     <link rel="stylesheet" type="text/css" href="../../css/icons.css"/>
 
     <!-- this page specific styles -->
-    <link rel="stylesheet" href="../../css/compiled/activities.css" type="text/css"/>
+    <link href="../../css/compiled/ui-elements.css" type="text/css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../../css/compiled/user-list.css" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="../../css/compiled/activities.css" type="text/css" media="screen"/>
 
     <!-- open sans font -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
@@ -51,7 +53,7 @@
             <span class="icon-bar"></span>
         </button>
 
-        <a class="brand" href="../health.html"><img src="../../img/logo.png"/></a>
+        <a class="brand" href="../sports.html"><img src="../../img/logo.png"/></a>
 
         <ul class="nav pull-right">
             <li class="hidden-phone">
@@ -163,15 +165,15 @@
     <ul id="dashboard-menu">
         <li>
 
-            <a href="../health.html">
+            <a href="../sports.html">
                 <i class="icon-home"></i>
-                <span>Health</span>
+                <span>Sports</span>
             </a>
         </li>
         <li>
-            <a href="../sports.html">
+            <a href="../health.html">
                 <i class="icon-signal"></i>
-                <span>Sports</span>
+                <span>Health</span>
             </a>
         </li>
         <li class="active">
@@ -229,12 +231,28 @@
 
     <div class="container-fluid">
         <div id="pad-wrapper" class="form-page">
-
-            <!-- header -->
             <div class="row-fluid header">
-                <div class="span8">
-                    <h3 class="name">Ongoing Activities</h3>
+                <h3>Activities</h3>
+                <div class="span10 pull-right">
+                    <input type="text" class="span5 search" placeholder="Type an activity's name..."/>
+                    <div class="ui-dropdown" style="margin-left: 20px">
+
+                        <div class="ui-select">
+
+                            <select>
+                                <option selected="" />All activities
+                                <option />My Activities
+                                <option />Ongoing Activities
+                            </select>
+                        </div>
+                    </div>
+
+
                 </div>
+
+            </div>
+            <div class="field-box">
+
             </div>
 
             <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -248,21 +266,24 @@
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner" role="listbox">
                     <div class="item active cover">
-                        <div class="carousel-cover" style="background-image:url(../../img/activity/activity1.jpg)"></div>
+                        <div class="carousel-cover"
+                             style="background-image:url(../../img/activity/activity1.jpg)"></div>
                         <div class="carousel-caption">
                             <h3 style="color: #DCDEE0">The Nanjing Runner Club</h3>
                             <p>Join us to enjoy the best running experience</p>
                         </div>
                     </div>
                     <div class="item cover">
-                        <div class="carousel-cover " style="background-image:url('../../img/activity/activity_img1.jpg')"></div>
+                        <div class="carousel-cover "
+                             style="background-image:url('../../img/activity/activity_img1.jpg')"></div>
                         <div class="carousel-caption">
                             <h3 style="color: #DCDEE0"> The Nanjing Runner Club</h3>
                             <p>Join us to enjoy the best running experience</p>
                         </div>
                     </div>
                     <div class="item cover">
-                        <div class="carousel-cover" style="background-image:url('../../img/activity/activity1.jpg')"></div>
+                        <div class="carousel-cover"
+                             style="background-image:url('../../img/activity/activity1.jpg')"></div>
                         <div class="carousel-caption">
                             <h3 style="color: #DCDEE0">The Nanjing Runner Club</h3>
                             <p>Join us to enjoy the best running experience</p>
@@ -353,6 +374,19 @@
                     </span>
                 </a>
             </div>
+
+
+            <div class="medium-offset-8 large-offset-10 small-12 medium-4 large-4 pagination inverse pull-left"
+                 style="margin-top: 20px">
+                <ul>
+                    <li><a href="#">&#8249;</a></li>
+                    <li><a class="active" href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">&#8250;</a></li>
+                </ul>
+            </div>
         </div>
     </div>
 </div>
@@ -367,15 +401,18 @@
 <script src="../../js/jquery.uniform.min.js"></script>
 <script src="../../js/select2.min.js"></script>
 <script src="../../js/theme.js"></script>
+<script src="../../js/jquery-ui-1.10.2.custom.min.js"></script>
+
 <!--<script type='text/javascript'>-->
-    <!--$(document).ready(function () {-->
-        <!--$('.carousel').carousel({-->
-            <!--interval: 2000-->
-        <!--})-->
-    <!--});-->
+<!--$(document).ready(function () {-->
+<!--$('.carousel').carousel({-->
+<!--interval: 2000-->
+<!--})-->
+<!--});-->
 <!--</script>-->
 <div style="display:none">
-    <script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script>
+    <script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript'
+            charset='gb2312'></script>
 </div>
 </body>
 </html>

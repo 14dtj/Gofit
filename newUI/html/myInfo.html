@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>GoFit - My Info</title>
+    <title>Detail Admin - User Profile</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
@@ -10,27 +10,25 @@
     <link href="../css/bootstrap/bootstrap-responsive.css" rel="stylesheet"/>
     <link href="../css/bootstrap/bootstrap-overrides.css" type="text/css" rel="stylesheet"/>
 
+    <!-- libraries -->
+    <link href="../css/lib/font-awesome.css" type="text/css" rel="stylesheet"/>
+
     <!-- global styles -->
     <link rel="stylesheet" type="text/css" href="../css/layout.css"/>
     <link rel="stylesheet" type="text/css" href="../css/elements.css"/>
     <link rel="stylesheet" type="text/css" href="../css/icons.css"/>
 
-    <!-- libraries -->
-    <link rel="stylesheet" type="text/css" href="../css/lib/font-awesome.css"/>
-
     <!-- this page specific styles -->
-    <link rel="stylesheet" href="../css/compiled/personal-info.css" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="../css/compiled/user-profile.css" type="text/css" media="screen"/>
 
     <!-- open sans font -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
           rel='stylesheet' type='text/css'/>
 
-    <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 </head>
 <body>
+
 <!-- navbar -->
 <div class="navbar navbar-inverse">
     <div class="navbar-inner">
@@ -40,7 +38,7 @@
             <span class="icon-bar"></span>
         </button>
 
-        <a class="brand" href="health.html"><img src="../img/logo.png"/></a>
+        <a class="brand" href="sports.html"><img src="../img/logo.png"/></a>
 
         <ul class="nav pull-right">
             <li class="hidden-phone">
@@ -150,20 +148,20 @@
 <!-- sidebar -->
 <div id="sidebar-nav">
     <ul id="dashboard-menu">
-        <li >
+        <li>
 
-            <a href="health.html">
-                <i class="icon-home"></i>
-                <span>Health</span>
-            </a>
-        </li>
-        <li >
             <a href="sports.html">
-                <i class="icon-signal"></i>
+                <i class="icon-home"></i>
                 <span>Sports</span>
             </a>
         </li>
-        <li >
+        <li>
+            <a href="health.html">
+                <i class="icon-signal"></i>
+                <span>Health</span>
+            </a>
+        </li>
+        <li>
             <a class="dropdown-toggle" href="#">
                 <i class="icon-edit"></i>
                 <span>Activity</span>
@@ -174,7 +172,7 @@
                 <li><a href="activity/newActivity.html">New Activity</a></li>
             </ul>
         </li>
-        <li >
+        <li>
             <a class="dropdown-toggle" href="#">
                 <i class="icon-group"></i>
                 <span>Users</span>
@@ -212,57 +210,224 @@
 </div>
 <!-- end sidebar -->
 
-<!-- main container .wide-content is used for this layout without sidebar :)  -->
-<div class="content">
-    <div class="container-fluid">
-        <div class="settings-wrapper" id="pad-wrapper">
-            <!-- avatar column -->
-            <div class="span3 avatar-box">
-                <div class="personal-image">
-                    <img src="../img/personal-info.png" class="avatar img-circle"/>
-                    <p>Upload a different photo...</p>
 
-                    <input type="file"/>
+<!-- main container -->
+<div class="content">
+
+    <div class="container-fluid">
+        <div id="pad-wrapper" class="user-profile">
+            <!-- header -->
+            <div class="row-fluid header">
+                <div class="span2 avatar-box">
+                    <div class="personal-image">
+                        <img src="../img/personal-info.png" class="avatar img-circle"/>
+                        <p>Upload a new photo</p>
+                        <input type="file"/>
+                    </div>
                 </div>
+                <div class="span7">
+                    <!--<img src="../img/contact-profile.png" class="avatar img-circle"/>-->
+                    <h3 class="name">Alejandra Galván Castillo</h3>
+                    <span class="area">Graphic Designer</span>
+                </div>
+                <a class="btn-flat icon pull-right delete-user" data-toggle="tooltip" title="Delete user"
+                   data-placement="top">
+                    <i class="icon-trash"></i>
+                </a>
+                <a class="btn-flat icon large pull-right edit" data-toggle="modal" data-target="#myModal" >
+                    Edit Your Profile
+                </a>
             </div>
 
-            <!-- edit form column -->
-            <div class="span7 personal-info">
+            <div class="row-fluid profile">
+                <!-- bio, new note & orders column -->
+                <div class="span9 bio">
+                    <div class="profile-box">
+                        <!-- Person info -->
+                        <div class="span12 section">
+                            <h6>Motto</h6>
+                            <p>Life lies in movement!</p>
+                        </div>
 
-                <h5 class="personal-title">Personal info</h5>
+                        <h6>Basic Information</h6>
+                        <br/>
+                        <div class="container-fluid">
+                            <div class="row-fluid">
+                                <div class="span6">
+                                    <dl class="dl-horizontal">
+                                        <dt>
+                                            My favorite Sports
+                                        </dt>
+                                        <dd>
+                                            football
+                                        </dd>
+                                        <dt>
+                                            Born date
+                                        </dt>
+                                        <dd>
+                                            2016-11-29
+                                        </dd>
+                                        <dt>
+                                            Email
+                                        </dt>
+                                        <dd>
+                                            Kindle
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="span6">
+                                    <dl class="dl-horizontal">
+                                        <dt>
+                                            My favorite Sports
+                                        </dt>
+                                        <dd>
+                                            football
+                                        </dd>
+                                        <dt>
+                                            Born date
+                                        </dt>
+                                        <dd>
+                                            2016-11-29
+                                        </dd>
+                                        <dt>
+                                            Email
+                                        </dt>
+                                        <dd>
+                                            Kindle
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+
+                        </div>
+                        <hr>
 
 
-                <form method="post" action="/editProfile">
-                    <div class="field-box">
-                        <label>name</label>
-                        <input class="span5 inline-input" id="name" name="name" type="text" />
+                        <h6>Recent activities</h6>
+                        <br/>
+                        <!-- recent orders table -->
+                        <table class="table table-hover">
+                            <thead>
+                            <tr>
+                                <th class="span4">
+                                    Activity Image
+                                </th>
+                                <th class="span4">
+                                    Activity Name
+                                </th>
+                                <th class="span3">
+                                    <span class="line"></span>
+                                    Join Time
+                                </th>
+                                <th class="span3">
+                                    <span class="line"></span>
+                                    Location
+                                </th>
+                                <th class="span3">
+                                    <span class="line"></span>
+                                    Status
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <div class="img">
+                                        <img src="../img/activity/activity_img1.jpg" style="height: 100px"/>
+                                    </div>
+
+                                </td>
+                                <td><a href="#">There are many variations </a></td>
+                                <td class="description">
+                                    2016-11-29
+                                </td>
+                                <td>
+                                    Nanjing
+                                </td>
+                                <td>
+                                    <span class="label label-success">Active</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="img">
+                                        <img src="../img/activity/activity_img1.jpg" style="height: 100px"/>
+                                    </div>
+
+                                </td>
+                                <td><a href="#">There are many variations </a></td>
+                                <td class="description">
+                                    2016-11-29
+                                </td>
+                                <td>
+                                    Nanjing
+                                </td>
+                                <td>
+                                    <span class="label label-info">Waiting to start</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="img">
+                                        <img src="../img/activity/activity_img1.jpg" style="height: 100px"/>
+                                    </div>
+
+                                </td>
+                                <td><a href="#">There are many variations </a></td>
+                                <td class="description">
+                                    2016-11-29
+                                </td>
+                                <td>
+                                    Nanjing
+                                </td>
+                                <td>
+                                    <span class="label label-warning">Overdue</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="img">
+                                        <img src="../img/activity/activity_img1.jpg" style="height: 100px"/>
+                                    </div>
+
+                                </td>
+                                <td><a href="#">There are many variations </a></td>
+                                <td class="description">
+                                    2016-11-29
+                                </td>
+                                <td>
+                                    Nanjing
+                                </td>
+                                <td>
+                                    <span class="label label-success">Active</span>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+
                     </div>
-                    <div class="field-box">
-                        <label>gender</label>
-                        <input class="span5 inline-input" id="gender" name="gender" type="text">
-                    </div>
-                    <div class="field-box">
-                        <label>birth</label>
-                        <input class="span5 inline-input" id="birth" name="birth" type="date" />
-                    </div>
-                    <div class="field-box">
-                        <label>location</label>
-                        <input class="span5 inline-input" id="location" name="location" type="text" >
-                    </div>
-                    <div class="field-box">
-                        <label>interest</label>
-                        <input class="span5 inline-input" id="location" name="location" type="text" />
-                    </div>
-                    <div class="field-box">
-                        <label>sports motto</label>
-                        <input class="span5 inline-input" id="motto" name="motto" class="w3-input w3-border" type="text" />
-                    </div>
-                    <div class="span6 field-box actions">
-                        <input type="button" class="btn-glow primary" value="Save Changes"/>
-                        <span>OR</span>
-                        <input type="reset" value="Cancel" class="reset"/>
-                    </div>
-                </form>
+                </div>
+
+                <!-- side address column -->
+                <div class="span3 address pull-right">
+                    <h6>Address</h6>
+                    <iframe width="300" height="133" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                            src="https://maps.google.com.mx/?ie=UTF8&amp;t=m&amp;ll=19.715081,-155.071421&amp;spn=0.010746,0.025749&amp;z=14&amp;output=embed"></iframe>
+                    <ul>
+                        <li>2301 East Lamar Blvd. Suite 140.</li>
+                        <li>City, Arlington. United States,</li>
+                        <li>Zip Code, TX 76006.</li>
+                        <li class="ico-li">
+                            <i class="ico-phone"></i>
+                            1817 274 2933
+                        </li>
+                        <li class="ico-li">
+                            <i class="ico-mail"></i>
+                            <a href="#">alejandra@detailcanvas.com</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -270,37 +435,78 @@
 <!-- end main container -->
 
 
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Edit Profile</h4>
+            </div>
+
+            <form class="modal-form">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="userName">New UserName</label>
+                        <input type="text" class="form-control" id="userName" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Location</label>
+                        <input type="text" class="form-control" id="location" placeholder="Location">
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Check me out
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </div>
+
+            </form>
+
+            <!--<form class="form-horizontal" action="#"  method="post">-->
+                <!--<div class="modal-body">-->
+
+
+                    <!--<div class="form-group">-->
+                        <!--<label for="nameM" class="col-sm-2 control-label">Your points</label>-->
+                        <!--&lt;!&ndash;<div class="col-sm-10">&ndash;&gt;-->
+                            <!--<input type="number" class="form-control"-->
+                                    <!--readonly="readonly" id="nameM"/>-->
+                        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                    <!--</div>-->
+                    <!--<div class="form-group">-->
+                        <!--<label for="pointConvertValue" class="col-sm-2 control-label">Amount</label>-->
+                        <!--<div class="col-sm-10">-->
+                            <!--<input type="number" class="form-control" name="convertValue" id="pointConvertValue"-->
+                                   <!--placeholder="1 point can be converted to 1 $"/>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+
+                <!--<div class="modal-footer">-->
+                    <!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
+                    <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+                <!--</div>-->
+
+            <!--</form>-->
+
+
+
+
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
 <!-- scripts -->
-<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="../js/jquery-3.1.1.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
 <script src="../js/theme.js"></script>
-<!--<script src="js/bootstrap.datepicker.js"></script>-->
-<script type="text/javascript">
-    $(function () {
-
-        // Inline datepicker
-        $("#birth").datepicker();
-
-    });
-
-    $(document).ready(function () {
-        $.ajax("/showBasicInfo", {
-            type: 'GET',
-            dataType: 'json',
-            success: function (data) {
-                $('#name').val(data.name);
-                $('#gender').val(data.gender);
-                $('#location').val(data.location);
-                $('#birth').val(data.birth);
-                $('#interest').val(data.interest);
-                $('#motto').val(data.motto);
-            }
-        });
-    });
-    function previewImage() {
-
-    }
-</script>
 <div style="display:none">
     <script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script>
 </div>

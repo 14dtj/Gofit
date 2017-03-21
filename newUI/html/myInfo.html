@@ -20,6 +20,7 @@
 
     <!-- this page specific styles -->
     <link rel="stylesheet" href="../css/compiled/user-profile.css" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="../css/compiled/gallery.css" type="text/css" media="screen"/>
 
     <!-- open sans font -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
@@ -215,14 +216,12 @@
 <div class="content">
 
     <div class="container-fluid">
-        <div id="pad-wrapper" class="user-profile">
+        <div id="pad-wrapper" class="user-profile gallery">
             <!-- header -->
             <div class="row-fluid header">
                 <div class="span2 avatar-box">
                     <div class="personal-image">
                         <img src="../img/personal-info.png" class="avatar img-circle"/>
-                        <p>Upload a new photo</p>
-                        <input type="file"/>
                     </div>
                 </div>
                 <div class="span7">
@@ -234,9 +233,62 @@
                    data-placement="top">
                     <i class="icon-trash"></i>
                 </a>
-                <a class="btn-flat icon large pull-right edit" data-toggle="modal" data-target="#myModal" >
+                <a class="btn-flat icon large pull-right edit" data-toggle="modal" data-target="#myModal">
                     Edit Your Profile
                 </a>
+                <div class="container-fluid">
+                    <div class="row-fluid">
+                        <div class="span4">
+                            <dl class="dl-horizontal">
+                                <dt>
+                                    Gender
+                                </dt>
+                                <dd>
+                                    Female
+                                </dd>
+                                <dt>
+                                    Birth Date
+                                </dt>
+                                <dd>
+                                    1982-10-12
+                                </dd>
+                                <dt>
+                                    Location
+                                </dt>
+                                <dd>
+                                    San Francisco, USA
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="span4">
+                            <dl class="dl-horizontal">
+                                <dt>
+                                    Favourite Sports
+                                </dt>
+                                <dd>
+                                    Swimming
+                                </dd>
+                                <dt>
+                                    Best Sports
+                                </dt>
+                                <dd>
+                                    Swimming
+                                </dd>
+                                <dt>
+                                    Social Media
+                                </dt>
+                                <dd>
+                                    <i class="icon-facebook"></i>
+                                    <span>&nbsp;</span>
+                                    <i class="icon-twitter"></i>
+                                    <span>&nbsp;</span>
+                                    <i class="icon-google-plus"></i>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+
+                </div>
             </div>
 
             <div class="row-fluid profile">
@@ -246,60 +298,94 @@
                         <!-- Person info -->
                         <div class="span12 section">
                             <h6>Motto</h6>
-                            <p>Life lies in movement!</p>
+                            <p>Life lies in movement! Qualifying for the games is more or less a pipe dream for anyone
+                                unwilling or unable to make the sport their full-time career, according to Austin
+                                Malleolo, a five-time CrossFit Games competitor and CrossFit HQ coach who has watched
+                                the level of competition soar during his eight years in the global-fitness
+                                movement-slash-sport. “It’s statistically impossible,” he says.</p>
                         </div>
 
-                        <h6>Basic Information</h6>
-                        <br/>
-                        <div class="container-fluid">
-                            <div class="row-fluid">
-                                <div class="span6">
-                                    <dl class="dl-horizontal">
-                                        <dt>
-                                            My favorite Sports
-                                        </dt>
-                                        <dd>
-                                            football
-                                        </dd>
-                                        <dt>
-                                            Born date
-                                        </dt>
-                                        <dd>
-                                            2016-11-29
-                                        </dd>
-                                        <dt>
-                                            Email
-                                        </dt>
-                                        <dd>
-                                            Kindle
-                                        </dd>
-                                    </dl>
-                                </div>
-                                <div class="span6">
-                                    <dl class="dl-horizontal">
-                                        <dt>
-                                            My favorite Sports
-                                        </dt>
-                                        <dd>
-                                            football
-                                        </dd>
-                                        <dt>
-                                            Born date
-                                        </dt>
-                                        <dd>
-                                            2016-11-29
-                                        </dd>
-                                        <dt>
-                                            Email
-                                        </dt>
-                                        <dd>
-                                            Kindle
-                                        </dd>
-                                    </dl>
+                        <div class="span12 section">
+                            <h6>Gallary</h6>
+                                        <!--Popover on 左侧-->
+                                        <!--</button>-->
+                                        <!-- gallery wrapper -->
+                                        <div class="gallery-wrapper">
+                                            <div class="row gallery-row">
+                                                <!-- single image -->
+                                                <div class="span4 img-container">
+                                        <div class="img-box">
+                                            <span class="icon edit">
+                                                <a href="#" data-html="true" data-toggle="popover" data-trigger="click"  title="<b>Example popover</b> - title"  data-content="Hello world" ></a>
+                                                <i class="gallery-edit" ></i>
+                                            </span>
+                                            <span class="icon trash">
+                                                <i class="gallery-trash"></i>
+                                            </span>
+                                            <img src="../img/gallery3.jpg"/>
+                                            <p class="title">
+                                                Beach pic title
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!-- single image -->
+                                    <div class="span4 img-container">
+                                        <div class="img-box">
+                                            <span class="icon edit">
+                                                <i class="gallery-edit"></i>
+                                            </span>
+                                            <span class="icon trash">
+                                                <i class="gallery-trash"></i>
+                                            </span>
+                                            <img src="../img/gallery2.jpg"/>
+                                            <p class="title">
+                                                Beach pic title 2
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!-- single image -->
+                                    <div class="span4 img-container">
+                                        <div class="img-box">
+                                            <span class="icon edit">
+                                                <i class="gallery-edit"></i>
+                                            </span>
+                                            <span class="icon trash">
+                                                <i class="gallery-trash"></i>
+                                             </span>
+                                            <img src="../img/gallery1.jpg"/>
+                                            <p class="title">
+                                                Beach pic title 3
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!-- single image -->
+                                    <!--<div class="span3 img-container">-->
+                                    <!--<div class="img-box">-->
+                                    <!--<span class="icon edit">-->
+                                    <!--<i class="gallery-edit"></i>-->
+                                    <!--</span>-->
+                                    <!--<span class="icon trash">-->
+                                    <!--<i class="gallery-trash"></i>-->
+                                    <!--</span>-->
+                                    <!--<img src="../img/gallery2.jpg"/>-->
+                                    <!--<p class="title">-->
+                                    <!--Beach pic title 2-->
+                                    <!--</p>-->
+                                    <!--</div>-->
+                                    <!--</div>-->
+
+                                    <!--&lt;!&ndash; new image button &ndash;&gt;-->
+                                    <!--<div class="span3 new-img">-->
+                                    <!--<img src="../img/new-gallery-img.png"/>-->
+                                    <!--</div>-->
+
+
                                 </div>
                             </div>
-
+                            <!-- end gallery wrapper -->
                         </div>
+
+
                         <hr>
 
 
@@ -467,40 +553,41 @@
                 </div>
 
             </form>
-
-            <!--<form class="form-horizontal" action="#"  method="post">-->
-                <!--<div class="modal-body">-->
-
-
-                    <!--<div class="form-group">-->
-                        <!--<label for="nameM" class="col-sm-2 control-label">Your points</label>-->
-                        <!--&lt;!&ndash;<div class="col-sm-10">&ndash;&gt;-->
-                            <!--<input type="number" class="form-control"-->
-                                    <!--readonly="readonly" id="nameM"/>-->
-                        <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                    <!--</div>-->
-                    <!--<div class="form-group">-->
-                        <!--<label for="pointConvertValue" class="col-sm-2 control-label">Amount</label>-->
-                        <!--<div class="col-sm-10">-->
-                            <!--<input type="number" class="form-control" name="convertValue" id="pointConvertValue"-->
-                                   <!--placeholder="1 point can be converted to 1 $"/>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-
-                <!--<div class="modal-footer">-->
-                    <!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
-                    <!--<button type="button" class="btn btn-primary">Save changes</button>-->
-                <!--</div>-->
-
-            <!--</form>-->
-
-
-
-
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
+
+
+<!-- edit image pop up -->
+<div class="popup fade" id="myPopUP">
+    <div class="pointer">
+        <div class="arrow"></div>
+        <div class="arrow_border"></div>
+    </div>
+    <i class="close-pop table-delete"></i>
+    <h5>Edit Image</h5>
+    <div class="thumb">
+        <img src="../img/gallery-preview.jpg"/>
+    </div>
+    <div class="title">
+        <input type="text" class="inline-input" placeholder="Title"/>
+        <div class="ui-select">
+            <select>
+                <option/>
+                Category
+                <option/>
+                Mountains
+                <option/>
+                Lake and rivers
+            </select>
+        </div>
+    </div>
+    <div class="description">
+        <h6>Description</h6>$
+        <textarea></textarea>
+        <input type="submit" value="Save" class="btn-glow primary"/>
+    </div>
+</div>
 
 
 <!-- scripts -->
@@ -510,5 +597,8 @@
 <div style="display:none">
     <script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script>
 </div>
+
 </body>
+
+
 </html>

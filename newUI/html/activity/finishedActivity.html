@@ -302,15 +302,14 @@
                         <div class="container-fluid">
                             <div class="gallery-wrapper">
                                 <div class="row gallery-row">
-                                    <!-- single image -->
                                     <div class="span3 img-container">
                                         <div class="img-box">
-                                <span class="icon edit">
-                                    <i class="gallery-edit"></i>
-                                </span>
+                                             <span class="icon edit">
+                                                 <i class="gallery-edit"></i>
+                                            </span>
                                             <span class="icon trash">
-                                    <i class="gallery-trash"></i>
-                                </span>
+                                                <i class="gallery-trash"></i>
+                                            </span>
                                             <img src="../../img/activity/runningPic3.jpg"/>
                                             <p class="title">
                                                 Start
@@ -395,9 +394,9 @@
                         <div class="span12 section comment">
                             <h6>Add a comment</h6>
                             <p>Add a comment about this activity to keep a history of your interactions.</p>
-                            <textarea></textarea>
+                            <textarea id="comment"></textarea>
                             <div class="span12 submit-box pull-right">
-                                <input type="submit" class="btn-glow primary" value="Add Note"/>
+                                <input type="submit" id="addComment" class="btn-glow primary" value="Add Note"/>
                                 <span>OR</span>
                                 <input type="reset" value="Cancel" class="reset"/>
                             </div>
@@ -424,28 +423,28 @@
                                     <td>
                                         <img src="../../img/contact-img.png"
                                              class="img-circle avatar hidden-phone"/>
-                                        <a href="user-profile.html" class="name">Alejandra Galvan Castillo</a>
+                                        <a href="../myInfo.html" class="name">Alejandra Galvan Castillo</a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
                                         <img src="../../img/contact-img.png"
                                              class="img-circle avatar hidden-phone"/>
-                                        <a href="user-profile.html" class="name">Alejandra Galvan Castillo</a>
+                                        <a href="../myInfo.html" class="name">Alejandra Galvan Castillo</a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
                                         <img src="../../img/contact-img.png"
                                              class="img-circle avatar hidden-phone"/>
-                                        <a href="user-profile.html" class="name">Alejandra Galvan Castillo</a>
+                                        <a href="../myInfo.html" class="name">Alejandra Galvan Castillo</a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
                                         <img src="../../img/contact-img.png"
                                              class="img-circle avatar hidden-phone"/>
-                                        <a href="user-profile.html" class="name">Alejandra Galvan Castillo</a>
+                                        <a href="../myInfo.html" class="name">Alejandra Galvan Castillo</a>
                                     </td>
                                 </tr>
                                 </tbody>
@@ -469,5 +468,13 @@
     <script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript'
             charset='gb2312'></script>
 </div>
+<script>
+    $('#addComment').on('click', function (e) {
+        e.preventDefault();
+        $('#comment').html()
+    });
+
+
+</script>
 </body>
 </html>

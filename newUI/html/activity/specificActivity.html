@@ -298,23 +298,23 @@
                         </div>
                         <hr>
                         <h6>Comments</h6>
-                        <div class="container-fluid">
+                        <div class="container-fluid" id="commentsTable">
                             <dl class="comment_item_comment_topic">
-                                <dt class="comment_head"><a>tj</a> 2017-03-01 20:49</dt>
+                                <dt class="comment_head"><a>tj</a> 3/21/2017, 3:51:41 PM</dt>
                                 <dd class="comment_userface"><img src="../../img/contact-img2.png"
                                                                   class="img-circle avatar hidden-phone"/></dd>
                                 <br>
                                 <dd class="comment_body">Nice activity!</dd>
                             </dl>
                             <dl class="comment_item_comment_topic">
-                                <dt class="comment_head"><a>gakki</a> 2017-03-01 13:49</dt>
+                                <dt class="comment_head"><a>gakki</a> 3/21/2017, 3:51:41 PM</dt>
                                 <dd class="comment_userface"><img src="../../img/contact-img.png"
                                                                   class="img-circle avatar hidden-phone"/></dd>
                                 <br>
                                 <dd class="comment_body">Nice activity!</dd>
                             </dl>
                             <dl class="comment_item_comment_topic">
-                                <dt class="comment_head"><a>Jenny</a> 2017-03-01 15:49</dt>
+                                <dt class="comment_head"><a>Jenny</a> 3/21/2017, 3:51:41 PM</dt>
                                 <dd class="comment_userface"><img src="../../img/contact-img2.png"
                                                                   class="img-circle avatar hidden-phone"/></dd>
                                 <br>
@@ -325,9 +325,9 @@
                         <div class="span12 section comment">
                             <h6>Add a comment</h6>
                             <p>Add a comment about this activity to keep a history of your interactions.</p>
-                            <textarea></textarea>
+                            <textarea id="comment"></textarea>
                             <div class="span12 submit-box pull-right">
-                                <input type="submit" class="btn-glow primary" value="Add Note"/>
+                                <input type="submit" id="addComment" class="btn-glow primary" value="Add Note"/>
                                 <span>OR</span>
                                 <input type="reset" value="Cancel" class="reset"/>
                             </div>
@@ -388,11 +388,22 @@
 
 
 <!-- scripts -->
-<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="../../js/jquery-3.1.1.min.js"></script>
 <script src="../../js/bootstrap.min.js"></script>
 <script src="../../js/theme.js"></script>
 <div style="display:none">
     <script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script>
 </div>
+<script>
+    $('#addComment').on('click', function (e) {
+        e.preventDefault();
+        var user = 'tj';
+        var time = new Date().toLocaleString();
+        var commentVal = $('#comment').val();
+        $('#commentsTable').append('<dl class="comment_item_comment_topic">  <dt class="comment_head"><a>'+ user + '</a>&nbsp;&nbsp;'+ time    + '</dt> <dd class="comment_userface"><img src="../../img/contact-img2.png"class="img-circle avatar hidden-phone"/></dd> <br> <dd class="comment_body"> '  +  commentVal  + '</dd> </dl>'      );
+    });
+
+
+</script>
 </body>
 </html>

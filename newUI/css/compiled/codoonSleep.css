@@ -1,0 +1,324 @@
+
+#sports_v_nav {
+    margin: 20px 0;
+}
+
+h3 {
+    font-size: 24px;
+    padding: 0 0 0 38px;
+}
+
+#sports_v_nav ul {
+    margin: 10px;
+}
+
+#sports_v_nav li {
+    display: block;
+    margin: 20px 0;
+}
+
+#sports_v_nav a {
+    padding: 5px 30px;
+    display: block;
+    width: 140px;
+}
+
+#sports_v_nav a:hover {
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    background-color: #A2AD8B;
+    text-decoration: none;
+    color: #fff;
+}
+
+#sports_v_nav a:active {
+    background: #39471B;
+    color: #fff;
+}
+
+#sports_v_nav h5 {
+    float: left;
+    margin-left: 20px;
+    padding: 11px 0;
+}
+
+#sports_v_nav img {
+    float: left;
+    padding: 11px 0;
+}
+
+h2 {
+    text-align: left;
+    font-size: 20px;
+}
+
+#sleep_stat {
+    width: 650px;
+    margin: 20px auto;
+    background-color: #f3f3f3;
+    border-radius: 7px;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+}
+
+#sleep_info {
+    padding-left: 20px;
+}
+
+#deep_rate {
+    height: 135px;
+    width: 135px;
+    text-align: center;
+    background-position: -3px -177px;
+}
+
+#deep_rate span {
+    color: #fff;
+    padding-top: 5px;
+    display: inline-block;
+}
+
+.with_border_right {
+    border-right: 1px solid #d5d5d5;
+    padding: 0 20px;
+}
+
+.with_border_right p {
+    line-height: 25px;
+}
+
+.rightest {
+    padding-left: 20px;
+    color: #dc8e5e;
+}
+
+.rightest p {
+    line-height: 25px;
+}
+
+#sleep_ins {
+    width: 450px;
+    background-color: #E4E4E4;
+    padding: 20px 100px;
+}
+
+/*#sleep_ins li{float: left;}*/
+#quote {
+    height: 20px;
+    width: 20px;
+}
+
+li.ins_text {
+    width: 420px;
+}
+
+#sleep_stat h5 {
+    font-size: 14px;
+    margin: 20px 20px 50px;
+}
+
+#sleep_chart {
+    width: 525px;
+    height: 200px;
+}
+
+/*图标label样式*/
+#sleep_chart .jqplot-point-label {
+    color: #fff;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    width: 105px;
+    height: 37px;
+    background: url("../../image/universal/ico3.png") no-repeat scroll -5px -25px;
+    visibility: hidden;
+    background-position: -176px -238px;
+}
+
+#sleep_chart .showtip {
+    visibility: visible;
+    margin-top: 10px;
+    z-index: 999;
+}
+
+#sleep_logs {
+    width: 650px;
+    overflow: hidden;
+}
+
+#sleep_logs h3 {
+    padding: 0;
+}
+
+a.sleep_list_a {
+    display: block;
+    height: 23px;
+    text-indent: 1000px;
+    width: 30px;
+}
+
+a.sleep_calendar_a {
+    display: block;
+    height: 23px;
+    text-indent: 1000px;
+    width: 30px;
+}
+
+a.list_selected {
+    background: url("../../image/universal/ico3.png") no-repeat scroll -178px -65px transparent;
+}
+
+a.list_not_selected {
+    background: url("../../image/universal/ico3.png") no-repeat scroll -178px -96px transparent;
+}
+
+a.calendar_selected {
+    background: url("../../image/universal/ico3.png") no-repeat scroll -209px -96px transparent;
+}
+
+a.calendar_not_selected {
+    background: url("../../image/universal/ico3.png") no-repeat scroll -209px -65px transparent;
+}
+
+p.cal_month {
+    background-color: #709E18;
+    color: #fff;
+    -webkit-border-top-left-radius: 6px;
+    -webkit-border-top-right-radius: 6px;
+    -moz-border-radius-topleft: 6px;
+    -moz-border-radius-topright: 6px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+p.cal_day {
+    border: 1px solid #A2AD8B;
+    height: 28px;
+    -webkit-border-bottom-right-radius: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+    -moz-border-radius-bottomright: 3px;
+    -moz-border-radius-bottomleft: 3px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    -moz-box-shadow: 1px 1px 2px #888;
+    -webkit-box-shadow: 1px 1px 2px #888;
+    box-shadow: 1px 1px 2px #888;
+    font-size: 20px;
+    padding: 5px;
+    font-weight: bold;
+    color: #B1B1B1;
+}
+
+div.log_info {
+    height: 100px;
+    float: left;
+    padding: 0 50px;
+    width: 490px;
+}
+
+/*定位*/
+.i_b {
+    display: inline-block;
+}
+
+.select_time {
+    width: 93px;
+    height: 35px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    background-color: #AAAAAA;
+    padding-left: 7px;
+    cursor: pointer;
+    position: relative;
+}
+
+.arrows_down {
+    width: 8px;
+    height: 5px;
+    background-position: -133px -283px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.rpArea .home_marks {
+    height: 20px;
+    width: 23px;
+    background-position: -277px -66px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.awake_line {
+    width: 505px;
+    height: 2px;
+    position: relative;
+    z-index: 10;
+    margin-left: 10px;
+}
+
+.jqplot-series-canvas {
+    z-index: 20;
+}
+
+.awake_line span {
+    width: 100px;
+    text-align: right;
+    position: absolute;
+    top: -10px;
+    left: -115px;
+}
+
+.sleep_chart_help {
+    z-index: 2;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 650px;
+    display: none;
+}
+
+.mild {
+    background-color: #a1e3f5;
+    display: none;
+}
+
+.depth {
+    background-color: #8ac1d2;
+    display: none;
+}
+
+.sleep_img {
+    width: 35px;
+    height: 35px;
+    background-position: -197px -195px;
+}
+
+.sleep_list div {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.sleep_list .on {
+    cursor: default;
+    width: 52px;
+    height: 29px;
+    background-position: -289px -194px;
+    padding-left: 25px;
+    line-height: 22px;
+}
+
+.sleep_index {
+    width: 52px;
+    height: 22px;
+    background-position: -319px 0;
+    cursor: pointer;
+    padding-left: 25px;
+    line-height: 22px;
+}
+
+.round {
+    background: url(../../img/round.png) no-repeat;
+    overflow: hidden;
+}

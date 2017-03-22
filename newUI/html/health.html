@@ -420,14 +420,16 @@
             $('#startTime').bootstrapMaterialDatePicker
             ({
                 date: false,
-                shortTime: false,
-                format: 'HH:mm'
+                shortTime: true,
+                format: 'HH:mm',
+                clearButton: false
             });
             $('#endTime').bootstrapMaterialDatePicker
             ({
                 date: false,
-                shortTime: false,
-                format: 'HH:mm'
+                shortTime: true,
+                format: 'HH:mm',
+                clearButton: false
             });
             $.material.init();
         });

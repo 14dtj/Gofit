@@ -4,21 +4,23 @@
 Messenger.options = {
     extraClasses: 'messenger-fixed messenger-on-top messenger-on-right',
     theme: 'flat',
-    hideAfter: '1'
+    hideAfter: 1
 
 };
 function showError(msg) {
     Messenger().post({
         message: msg,
         type: 'error',
-        showCloseButton: true
+        showCloseButton: true,
+        hideAfter:1
     });
 }
 function showSuccess(msg) {
 
     Messenger().post({
         message: msg,
-        showCloseButton: true
+        showCloseButton: true,
+        hideAfter:1
 
 
     });

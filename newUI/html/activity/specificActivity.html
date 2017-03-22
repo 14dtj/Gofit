@@ -12,6 +12,8 @@
 
     <!-- libraries -->
     <link href="../../css/lib/font-awesome.css" type="text/css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../../css/messenger/messenger.css" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="../../css/messenger/messenger-theme-flat.css" type="text/css" media="screen"/>
 
     <!-- global styles -->
     <link rel="stylesheet" type="text/css" href="../../css/layout.css"/>
@@ -391,6 +393,8 @@
 <script src="../../js/jquery-3.1.1.min.js"></script>
 <script src="../../js/bootstrap.min.js"></script>
 <script src="../../js/theme.js"></script>
+<script src="../../js/messenger.min.js"></script>
+<script src="../../js/showTip.js"></script>
 <div style="display:none">
     <script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script>
 </div>
@@ -401,6 +405,7 @@
         var time = new Date().toLocaleString();
         var commentVal = $('#comment').val();
         $('#commentsTable').append('<dl class="comment_item_comment_topic">  <dt class="comment_head"><a>'+ user + '</a>&nbsp;&nbsp;'+ time    + '</dt> <dd class="comment_userface"><img src="../../img/contact-img2.png"class="img-circle avatar hidden-phone"/></dd> <br> <dd class="comment_body"> '  +  commentVal  + '</dd> </dl>'      );
+        showSuccess('Add Comment Success!')
     });
 
 

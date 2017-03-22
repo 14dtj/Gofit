@@ -350,9 +350,10 @@
                             <label for="height">height</label>
                             <input type="text" class="form-control" id="height"> m
                         </div>
-                        <button type="submit" class="btn btn-default" onclick="change()">Submit</button>
+                        <button type="submit" id="changeBMI" class="btn btn-default">Submit</button>
                     </div>
                 </form>
+
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
@@ -371,14 +372,19 @@
     <script src="../js/morris.min.js"></script>
     <!-- call all plugins -->
     <script src="../js/theme.js"></script>
-    <script>
-        function change() {
+    <script type="text/javascript">
+
+        $('#changeBMI').on('click' , function (e) {
+            e.preventDefault();
             var weight = parseFloat($('#weight').val());
             var height = parseFloat($('#height').val());
             var bmi = weight / (height * height);
+            console.log("sfsdaf");
             $('#bmi1').text("BMI " + bmi);
             $('#bmi2').text(bmi);
-        }
+        })
+
+
     </script>
     <!-- build the charts -->
     <script type="text/javascript">
@@ -433,5 +439,6 @@
         <script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript'
                 charset='gb2312'></script>
     </div>
+</div>
 </body>
 </html>

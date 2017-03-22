@@ -410,8 +410,14 @@
         showSuccess('Add Comment Success!')
     });
     function test() {
-        $('#button').text("Exit");
-        showSuccess('Joined successfully!')
+        var text = $('#button').text();
+        if (text == 'Join') {
+            showSuccess('Joined successfully!');
+            $('#button').text("Exit");
+        } else {
+            showSuccess('Exited successfully!');
+            $('#button').text("Join");
+        }
     }
 
 </script>

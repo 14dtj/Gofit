@@ -322,3 +322,78 @@ div.log_info {
     background: url(../../img/round.png) no-repeat;
     overflow: hidden;
 }
+
+.bmi_box1 .bmi_pie {
+    width: 135px;
+    height: 95px;
+    background-position: -142px -176px;
+    margin-left: -68px;
+    padding-top: 40px;
+    position: relative;
+    margin-right: 34px;
+}
+
+.bmi_box1 {
+    width: 2000px;
+    height: 135px;
+    margin-left: 90px;
+}
+
+.bmi_box2 {
+    width: 1000px;
+    height: 135px;
+    position: relative;
+}
+
+.bmi_pointer {
+    top: 17px;
+    left: 26.0364px;
+    width: 38px;
+    height: 44px;
+    background: url(../../img/ico4.png) no-repeat;
+    text-align: center;
+    line-height: 35px;
+}
+
+.ico3 {
+    background: url(../../img/ico3.png) no-repeat;
+    overflow: hidden;
+}
+
+.fb {
+    font-weight: bold;
+}
+
+.co3 {
+    color: #fff;
+}
+
+.bmi_bg {
+    width: 312px;
+    height: 18px;
+    background-position: -6px -4px;
+}
+
+.ico3 {
+    background: url(../../img/ico3.png) no-repeat;
+    overflow: hidden;
+}
+
+.bmi_p {
+    width: 40px;
+    height: 100px;
+    top: 120px;
+    left: 55px;
+    background-position: -7px -245px;
+}
+
+.bmi_box1 .health_lv {
+    font-size: 30px;
+    line-height: 40px;
+}
+.bmi_marks {
+    width: 23px;
+    height: 20px;
+    background-position: -277px -66px;
+    display: inline-block;
+}

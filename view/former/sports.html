@@ -1,0 +1,242 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Gofit</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="description" content="sports sharing"/>
+    <meta name="keywords" content=""/>
+    <link rel="stylesheet" href="css/w3.css">
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900,300italic" rel="stylesheet"/>
+    <script src="/view/js/jquery.min.js"></script>
+    <script src="/view/js/jquery.dropotron.js"></script>
+    <script src="/view/js/config.js"></script>
+    <script src="/view/js/skel.min.js"></script>
+    <script src="/view/js/skel-panels.min.js"></script>
+    <noscript>
+        <link rel="stylesheet" href="css/skel-noscript.css"/>
+        <link rel="stylesheet" href="css/style.css"/>
+        <link rel="stylesheet" href="css/style-desktop.css"/>
+    </noscript>
+    <!--[if lte IE 8]>
+    <script src="js/html5shiv.js"></script>
+    <link rel="stylesheet" href="css/ie8.css"/>
+    <![endif]-->
+    <style>
+        .w3-myfont {
+            font-family: "Comic Sans MS", cursive, sans-serif;
+        }
+
+        #save_button {
+            margin: 0 0 0 2em;
+        }
+    </style>
+</head>
+<body class="right-sidebar">
+
+<!-- Header Wrapper -->
+<div id="header-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="12u">
+
+                <!-- Header -->
+                <section id="header">
+
+                    <!-- Logo -->
+                    <h1><a href="#">Gofit</a></h1>
+
+                    <!-- Nav -->
+                    <nav id="nav">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="health.html">Health</a></li>
+                            <li class="current_page_item"><a href="sports.html">Sports</a></li>
+                            <li><a href="activity.html">Activity</a></li>
+                            <li><a href="friends.html">Friends</a></li>
+                        </ul>
+                    </nav>
+
+                </section>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Main Wrapper -->
+<div id="main-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="12u">
+
+                <!-- Portfolio -->
+                <section>
+                    <div class="w3-container w3-myfont">
+                        <div class="row">
+                            <div class="8u skel-cell-mainContent">
+
+                                <!-- Content -->
+                                <article class="box is-post">
+                                    <header>
+                                        <h2>Your sports record</h2>
+                                    </header>
+                                    <hr style=" height:2px;border:none;border-top:2px double grey;"/>
+                                    <section>
+                                        <header>
+                                            <h3>In Gofit</h3>
+                                        </header>
+                                        <h4><font color="#e9967a" id="goalNum">You have achieved 0 goals</font></h4><br>
+                                        <table border="1">
+                                            <tr>
+                                                <td><img src="images/distance_icon.png" class="image image-icon"/></td>
+                                                <td>Accumulative running distance</td>
+                                                <td><img src="images/time_icon.png" class="image image-icon"/></td>
+                                                <td>Accumulative exercise time</td>
+                                                <td><img src="images/calorie_icon.png" class="image image-icon"/></td>
+                                                <td>Accumulative burning calories</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td id="distance">0 km</td>
+                                                <td></td>
+                                                <td id="time">0</td>
+                                                <td></td>
+                                                <td id="calorie">0</td>
+                                            </tr>
+                                        </table>
+                                    </section>
+                                    <section>
+                                        <hr style=" height:2px;border:none;border-top:2px double grey;"/>
+                                        <header>
+                                            <h3>Body building record</h3>
+                                        </header>
+                                        <div>
+                                            <h4>Daily goal</h4><br>
+                                            <select id="selectid">
+                                                <option value="steps">steps</option>
+                                                <option value="km">distance</option>
+                                                <option value="kcal">calorie</option>
+                                            </select>
+                                            <input id="goalValue" type="text" name="steps"/>
+                                            <label id="unit">steps</label>
+                                            <button class="w3-btn w3-red" id="save_button" onclick="saveGoal()">Save
+                                            </button>
+                                            <script>
+                                                var y = document.getElementById("selectid");
+                                                y.onchange = _f;
+                                                function _f() {
+                                                    x = document.getElementById("unit")
+                                                    x.innerHTML = y.value;
+                                                }
+                                            </script>
+                                        </div>
+                                        <br>
+                                        <div class="w3-container w3-light-grey">
+                                            <br>
+                                            <div><input id="sportsDate" type="date"></div>
+                                            <br>
+                                            <table border="1">
+                                                <tr>
+                                                    <td>Running distance</td>
+                                                    <td>Exercise time</td>
+                                                    <td>Burning calories</td>
+                                                    <td>Running steps</td>
+                                                </tr>
+                                                <tr>
+                                                    <td id="day_distance">0 km</td>
+                                                    <td id="day_time">0 h 0 min</td>
+                                                    <td id="day_calorie">0 kcal</td>
+                                                    <td id="day_step">0 steps</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </section>
+                                </article>
+
+                            </div>
+                            <div class="4u">
+
+                                <!-- Sidebar -->
+                                <section class="box">
+                                    <a class="image image-full" id="avatar"></a>
+                                    <header>
+                                        <a href="my_profile.html"><h3 id="username">gakki</h3></a>
+                                        <a href="/view/html/login.html">logout</a>
+                                    </header>
+                                    <div>
+                                        <div id="friends"><img src="images/friend_icon.png" class="image image-icon"/>
+                                            friends:
+                                        </div>
+                                        <br>
+                                        <div id="level"><img src="images/level_icon.png" class="image image-icon"/>
+                                            level:
+                                        </div>
+                                        <br>
+                                        <div id="credit"><img src="images/money_icon.png" class="image image-icon"/>
+                                            credit:
+                                        </div>
+                                        <br>
+                                    </div>
+                                </section>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer Wrapper -->
+<div id="footer-wrapper">
+
+    <!-- Footer -->
+    <section id="footer" class="container">
+        <div class="row">
+            <div class="12u">
+
+                <!-- Copyright -->
+                <div id="copyright">
+                    <ul class="links">
+                        &copy; Copyright &copy; 2016.TJStudio All rights reserved.
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</div>
+<script src="/view/js/sports.js"></script>
+<script>
+    $(document).ready(function () {
+        $.ajax("/getBriefInfo", {
+            type: 'GET',
+            dataType: 'json',
+            success: function (data) {
+                $('#username').html(data.username);
+                $('#friends').append(data.friends);
+                $('#credit').append(data.credit);
+                $('#level').append(data.level);
+                $('#avatar').append("<img src=\"images/avatar/" + data.avatar + "\" />");
+            }
+        });
+    });
+
+    function saveGoal() {
+        $.ajax("/sports/saveGoal", {
+            type: 'POST',
+            data: {
+                "type": $('#selectid').val(),
+                "value": $('#goalValue').val()
+            },
+            success: function (data) {
+                alert("Set goals successfully!");
+            }
+        })
+    }
+</script>
+</body>
+</html>

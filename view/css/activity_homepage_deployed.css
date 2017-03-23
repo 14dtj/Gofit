@@ -1,0 +1,1198 @@
+.homebackground {
+    margin-bottom: 6rem;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 5rem
+}
+
+.homehero-overlay {
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(17, 17, 17, 1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(17, 17, 17, 1)));
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(17, 17, 17, 1) 100%);
+    background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(17, 17, 17, 1) 100%);
+    background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(17, 17, 17, 1) 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(17, 17, 17, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#111111', GradientType=0);
+    width: 100%;
+    height: 180px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    opacity: 1
+}
+
+.dark-overlay {
+    background-color: #111;
+    width: 100%;
+    height: 1300px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    opacity: .35
+}
+
+.greybackground {
+    background-image: url(http://icd.hwstatic.com/static/images/3.28.3.1/3.12.4.0/content_back.jpg);
+    background-repeat: repeat-x
+}
+
+.searchrow {
+    z-index: 2
+}
+
+.homepage-slider {
+    position: relative;
+    text-align: center;
+    z-index: 1
+}
+
+.homepage-slider-links {
+    text-align: center;
+    position: relative;
+    z-index: 1
+}
+
+.homepage-slider-links ul {
+    margin-bottom: 0;
+    margin-top: 1rem
+}
+
+.homepage-slider-links li {
+    display: inline-block;
+    margin-left: .3rem;
+    margin-right: .3rem;
+    cursor: pointer
+}
+
+
+
+#slide-content1, #slide-content2, #slide-content3, #slide-content4, #slide-content5 {
+    display: none
+}
+
+.homepage-slider-content {
+    display: inline-block
+}
+
+.homepage-slider-placeholder, .homepage-slider-content {
+    height: 63px
+}
+
+.homepage-slider-content-text {
+    display: inline-block;
+    margin-left: 1rem;
+    text-align: left
+}
+
+
+
+.homepage-slider-content span {
+    margin-top: .7rem;
+    display: block
+}
+
+
+
+td.search_td {
+    display: none !important
+}
+
+.darkbanner {
+    background-color: #313131;
+    border-bottom: 4px solid #ff7346;
+    height: 5rem;
+    display: none
+}
+
+.whitedivider {
+    position: absolute !important;
+    left: 0;
+    bottom: 0;
+    width: 100%
+}
+
+.topcities {
+    padding-bottom: 2rem
+}
+
+.coverlocation {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: .7rem;
+    z-index: 9;
+    padding: 1rem;
+    bottom: 0;
+    display: none
+}
+
+.coverlocation a {
+    color: #fff
+}
+
+h1.large {
+    font-size: 2.85rem;
+    text-align: center
+}
+
+.topbackground {
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    min-height: auto !important
+}
+
+.topbackground:after {
+    top: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(49, 49, 49, 0);
+    border-top-color: #101010;
+    border-width: 30px;
+    margin-left: -30px
+}
+
+.homehostels {
+    padding-top: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 9;
+    padding-bottom: 2rem
+}
+
+.homehostels div.row {
+    position: relative
+}
+
+.leftarrow {
+    position: absolute;
+    top: 110px;
+    left: -40px;
+    width: 36px;
+    font-size: 3rem;
+    display: none
+}
+
+.rightarrow {
+    position: absolute;
+    top: 110px;
+    right: -40px;
+    width: 36px;
+    font-size: 3rem;
+    display: none
+}
+
+.leftarrow a, .rightarrow a {
+    color: #CCC
+}
+
+.leftarrow a:hover, .rightarrow a:hover {
+    color: #aaa !important
+}
+
+.homehostels li {
+    border-right: 1px dotted #ccc
+}
+
+.homehostels li h2 {
+    margin-bottom: 0
+}
+
+.homehostels li h2 a {
+    color: #444
+}
+
+.homehostels li span {
+    display: block;
+    color: #999;
+    font-size: .7rem;
+    margin-bottom: .5rem
+}
+
+.homehostels li p {
+    margin-top: .5rem;
+    line-height: 1.3rem
+}
+
+.homehostels li.noborder {
+    position: relative
+}
+
+.homehostels li.noborder div.promobox {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 0 .625rem 1.25rem;
+    width: 100%;
+    background-color: #fff;
+    display: none
+}
+
+div.promobox a {
+    width: auto;
+    height: auto;
+    background-color: transparent
+}
+
+.newsletterrow {
+    display: block
+}
+
+.topbackground {
+    margin-top: -130px
+}
+
+.userback {
+    background-color: transparent
+}
+
+.usps-subtext {
+    text-align: center;
+    color: #444;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    display: block
+}
+
+h2.usps-heading {
+    margin-bottom: 0rem;
+    color: #444;
+    font-family: "hw-ultra", "Noto", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-top: 1rem;
+    font-size: 1.8rem
+}
+
+.imagetext {
+    height: 230px;
+    text-align: center;
+    padding: .2rem;
+    background-position: center center;
+    background-size: cover
+}
+
+.imagetext a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.15);
+    text-align: left;
+    position: relative;
+    background-position: center center;
+    background-size: cover
+}
+
+.imagetext a span {
+    color: #fff;
+    display: inline-block;
+    font-size: 1rem;
+    text-align: left;
+    max-width: 90%;
+    font-weight: bold;
+    font-size: 1rem;
+    text-shadow: 0 0 10px #000;
+    padding: .5rem;
+    background-color: #313131;
+    background-color: rgba(0, 0, 0, 0.35);
+    position: relative;
+    z-index: 2
+}
+
+.imagetext a span strong {
+    display: block;
+    font-size: .6rem;
+    font-weight: normal;
+    color: #efefef
+}
+
+.imagetext a:hover {
+    background-color: transparent
+}
+
+.imagetext a:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.15);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    z-index: 1
+}
+
+.imagetext a:hover:after {
+    background-color: rgba(0, 0, 0, 0)
+}
+
+.promopanel span.promo-subheading {
+    background-color: transparent;
+    display: block;
+    padding: 0;
+    margin-top: .5rem;
+    font-weight: normal
+}
+
+.inspirecontent {
+    background-image: url(http://ucd.hwstatic.com/promos/homepage_2959.png);
+    background-repeat: repeat;
+    position: relative;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    text-align: center
+}
+
+.inspirecontentoverlay {
+    position: absolute;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: -moz-linear-gradient(top, rgba(229, 227, 227, 0) 0, rgba(229, 227, 227, 1) 99%);
+    background: -webkit-linear-gradient(top, rgba(229, 227, 227, 0) 0, rgba(229, 227, 227, 1) 99%);
+    background: linear-gradient(to bottom, rgba(229, 227, 227, 0) 0, rgba(229, 227, 227, 1) 99%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00e5e3e3', endColorstr='#e5e3e3', GradientType=0);
+    z-index: 1
+}
+
+.inspirecontentcontainer {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 3rem
+}
+
+.inspirecontentcontainer .large-12, .inspirecontentcontainer .padpromo {
+    margin-top: 2rem
+}
+
+.topcities {
+    position: relative;
+    z-index: 2;
+    background-color: transparent !important
+}
+
+.slidercontainer {
+    background-color: #e5e3e3;
+    padding-left: 0 !important;
+    padding-right: 0 !important
+}
+
+.hostelslide {
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    height: 450px
+}
+
+.hostelslide .dark-overlay {
+    top: 0;
+    height: auto;
+    opacity: .25
+}
+
+.hostelslide a {
+    width: 100%;
+    display: block;
+    margin-top: 8rem
+}
+
+.slide-content-text {
+    position: relative;
+    padding: .5rem;
+    text-align: center;
+    max-width: 50%
+}
+
+.slideimage {
+    height: 200px
+}
+
+.slideimage span {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.15);
+    text-align: left
+}
+
+.hostelslide .sliderlocation {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: .65rem;
+    font-weight: bold
+}
+
+.hostelslide h2 {
+    color: #444;
+    margin-top: .5rem;
+    font-weight: bold;
+    margin-bottom: .3rem;
+    font-size: 1rem;
+    text-align: left
+}
+
+.hostelslide h2 a {
+    color: #444
+}
+
+.hostelslide p {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-top: .5rem;
+    line-height: 1.4rem;
+    text-shadow: 0 0 20px #000;
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.hostelslide h3 {
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    z-index: 1;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 0 0 20px #000;
+    font-family: "hw-ultra", "Noto", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-top: 1rem;
+    font-size: 1.8rem
+}
+
+span.slide-subheading {
+    font-size: .85rem;
+    display: block
+}
+
+.hostelslide .columns {
+    padding: 0;
+    border: 5px solid #313131;
+    background-position: center center;
+    background-size: cover
+}
+
+.hostelslide .infobutton {
+    font-weight: bold
+}
+
+.orbitSlider {
+    text-align: center;
+    position: relative
+}
+
+.orbit-bullets {
+    margin: 1rem 1rem 2rem 1rem;
+    top: 0
+}
+
+.orbit-bullets li {
+    width: 1.3rem;
+    height: 1.3rem;
+    background: transparent;
+    border: 2px solid #ccc
+}
+
+.orbit-bullets li.active {
+    border: 2px solid #ff7346;
+    background: transparent
+}
+
+.orbit-slide-number {
+    display: none
+}
+
+.orbit-container .orbit-prev, .orbit-container .orbit-next {
+    margin-top: -15px;
+    text-indent: 0 !important;
+    font-size: 3.5rem;
+    background-color: rgba(0, 0, 0, 0.55);
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    padding-top: 18px;
+    border-radius: 50%
+}
+
+.orbit-container .orbit-prev:hover, .orbit-container .orbit-next:hover {
+    background-color: rgba(0, 0, 0, 0.55);
+    color: #ff7346
+}
+
+.orbit-container .orbit-prev span, .orbit-container .orbit-next span {
+    display: none !important
+}
+
+.orbit-container .orbit-next {
+    right: 10%
+}
+
+.orbit-container .orbit-prev {
+    left: 10%
+}
+
+.orbit-container .orbit-next:before {
+    position: relative;
+    right: -5px
+}
+
+.orbit-container .orbit-prev:before {
+    position: relative;
+    left: -5px
+}
+
+.orbit-container .orbit-prev > span {
+    border-right-color: #ff7346
+}
+
+.orbit-container .orbit-next > span {
+    border-left-color: #ff7346
+}
+
+.orbit-container .orbit-slides-container {
+    height: 300px
+}
+
+.orbit-bullets-container {
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0
+}
+
+.orbit-container:before {
+    top: 0;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(49, 49, 49, 0);
+    border-top-color: #e5e3e3;
+    border-width: 30px;
+    margin-left: -30px;
+    z-index: 9
+}
+
+.orbit-timer {
+    display: none
+}
+
+.slider-overlay {
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(17, 17, 17, 1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(17, 17, 17, 1)));
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(17, 17, 17, 1) 100%);
+    background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(17, 17, 17, 1) 100%);
+    background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(17, 17, 17, 1) 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(17, 17, 17, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#111111', GradientType=0);
+    width: 100%;
+    height: 180px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    opacity: 1
+}
+
+.featureboxes {
+    background-color: #313131;
+    padding-bottom: 4.5rem;
+    padding-top: 3rem;
+    position: relative;
+    background-image: url(http://ucd.hwstatic.com/promos/homepage_2958.png);
+    background-repeat: repeat;
+    position: relative
+}
+
+.featureboxes .row {
+    position: relative;
+    z-index: 2
+}
+
+.featureboxes:before {
+    top: 0;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(229, 227, 227, 0);
+    border-top-color: #e5e3e3;
+    border-width: 30px;
+    margin-left: -30px;
+    z-index: 9
+}
+
+html:lang(en) .featureboxes:before {
+    border-color: rgba(49, 49, 49, 0);
+    border-top-color: #111
+}
+
+html:lang(de) .featureboxes:before {
+    border-color: rgba(49, 49, 49, 0);
+    border-top-color: #111
+}
+
+html:lang(pt-br) .featureboxes:before {
+    border-color: rgba(49, 49, 49, 0);
+    border-top-color: #111
+}
+
+html:lang(it) .featureboxes:before {
+    border-color: rgba(49, 49, 49, 0);
+    border-top-color: #111
+}
+
+.featureboxes:after {
+    top: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(49, 49, 49, 0);
+    border-top-color: #111;
+    border-width: 30px;
+    margin-left: -30px;
+    z-index: 9
+}
+
+.featureboxes h1 {
+    margin-bottom: 0;
+    color: #ff6a3a;
+    font-family: "hw-ultra", "Noto", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    text-transform: uppercase
+}
+
+.featureboxes .usps-subtext {
+    text-align: center;
+    color: #fff;
+    font-size: 1rem;
+    margin-bottom: 2.5rem
+}
+
+.featureboxes h3, .featureboxes i, .featureboxes p {
+    color: #fff
+}
+
+.featureboxes h3 {
+    font-weight: bold
+}
+
+.featureboxes p {
+    width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.featureboxes i {
+    margin-right: 0;
+    font-size: 4rem;
+    line-height: 3.5rem
+}
+
+.featureboxes div div {
+    border-right: 0
+}
+
+.mobilerow {
+    padding-top: 2rem
+}
+
+.no-link {
+    cursor: default !important
+}
+
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+    .homehostels li:nth-last-child(2) {
+        border: 0
+    }
+
+    .coverlocation {
+        border: 0
+    }
+
+    div.topcities {
+        margin-top: 2rem
+    }
+
+    .featureboxes div {
+        margin-bottom: 0
+    }
+
+    div.inspirecontentcontainer .medium-6:last-child {
+        display: none
+    }
+
+    div.inspirecontentcontainer .medium-6.padpromo {
+        display: block
+    }
+
+    .hostelslide h3 {
+        margin-bottom: 1rem
+    }
+
+    .hostelslide p {
+        display: none
+    }
+}
+
+@media only screen and (max-width: 40em) {
+    .smartBanner {
+        display: block
+    }
+
+    .hero-overlay {
+        background-position: left -50px;
+        z-index: 1;
+        height: 290px;
+        overflow: hidden
+    }
+
+    h1.large {
+        font-size: 1.9rem;
+        margin-top: 1rem;
+        text-align: center;
+        margin-bottom: .5rem
+    }
+
+    .featureboxes h1.large {
+        margin-top: 0rem;
+        margin-bottom: 1.5rem
+    }
+
+    .featureboxes h3 {
+        font-size: 1rem
+    }
+
+    .searchbox div.topmargin {
+        margin-top: 1rem
+    }
+
+    .homehostels li {
+        border: 0;
+        border-bottom: 2px dotted #ccc;
+        margin-bottom: 1.25rem
+    }
+}
+
+.topbackground {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 99;
+    padding-bottom: 2rem
+}
+
+.forminputlabel {
+    text-align: left;
+    color: #fff;
+    width: 100%
+}
+
+.homesearch {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    z-index: 9;
+    position: relative;
+    margin-top: 180px;
+    margin-bottom: 0
+}
+
+.homesearch h1 {
+    color: #fff;
+    font-size: 3.5rem;
+    line-height: 5rem;
+    font-weight: bold;
+    font-family: "hw-ultra", "Noto", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    text-shadow: 1px 0 9px #6e6e6e
+}
+
+.homesearch h1 a {
+    color: #fff
+}
+
+.homesearch h4 {
+    color: #fff;
+    text-shadow: 1px 0 6px #000;
+    margin-bottom: .5rem;
+    z-index: 1
+}
+
+.homesearch form {
+    position: relative
+}
+
+#sb-search h4 i {
+    font-size: .5rem;
+    top: -3px;
+    margin-left: .5rem;
+    margin-right: .5rem;
+    position: relative;
+    display: inline-block
+}
+
+.homesearch .tagline {
+    text-align: center;
+    width: 83.33333%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem
+}
+
+.homesearch .tagline img {
+    width: 80%
+}
+
+.homesearch .searchbox {
+    padding: 1rem;
+    position: relative;
+    -webkit-border-radius: 3px !important;
+    -moz-border-radius: 3px !important;
+    border-radius: 3px !important
+}
+
+.homesearch input, .homesearch select {
+    box-shadow: none
+}
+
+.homesearch .searchbox div.step2, .bpg.step2 {
+    display: none;
+    position: relative
+}
+
+.homesearch .searchbox div.topmargin {
+    margin-top: 1rem
+}
+
+.homesearch .searchbox div select, .homesearch .searchbox div input {
+    color: #444;
+    font-size: .85rem;
+    margin: 0
+}
+
+.homesearch .searchbox .dp-checkout {
+    position: relative
+}
+
+.homesearch .searchbox .dp-checkin {
+    position: relative
+}
+
+.homesearch .searchbox div.checkboxes input {
+    height: auto
+}
+
+.homesearch .searchbox div.checkboxes label {
+    font-size: .8rem;
+    margin-left: .3rem
+}
+
+.homesearch .searchbox div.checkboxes label.lastlabel {
+    margin: 0
+}
+
+.groupbooking {
+    margin-top: 1rem
+}
+
+.homesearch .groupbooking fieldset {
+    margin-top: 1rem;
+    padding: .5rem;
+    padding-top: 1rem
+}
+
+.homesearch .groupbooking fieldset input {
+    margin-bottom: 1rem
+}
+
+.homesearch .ageranges {
+    padding: 0;
+    padding-top: 1rem;
+    margin: 0;
+    text-align: center;
+    overflow: hidden
+}
+
+.homesearch .ageranges legend {
+    background: transparent;
+    text-align: left;
+    width: 100%;
+    display: block
+}
+
+.homesearch .mylocation {
+    position: absolute;
+    right: 1.5rem;
+    top: .4rem;
+    font-size: 1.5rem;
+    background-color: #fff
+}
+
+.homesearch .mylocation a {
+    color: #666
+}
+
+.homesearch .autocomplete {
+    height: 3rem !important
+}
+
+.homesearch .orange_button {
+    margin: 0;
+    margin-top: 1.5rem;
+    box-shadow: 0 0 5px #333;
+    -webkit-box-shadow: 0 0 5px #333;
+    -moz-box-shadow: 0 0 5px #333
+}
+
+.homesearch input.dp-checkin[readonly="readonly"] {
+    -webkit-box-shadow: 0 0 5px #333;
+    -moz-box-shadow: 0 0 5px #333
+}
+
+@media only screen and (min-width: 64.064em) and (max-width: 8200em) {
+    .groupsearch {
+        margin-top: 100px;
+        margin-bottom: 152px
+    }
+}
+
+.homesearch .searchbox {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: .5rem
+}
+
+.checkTitle {
+    margin-top: 10px;
+    border-bottom: 1px dotted #ccc;
+    padding-bottom: 10px;
+    font-weight: bold;
+    text-align: center;
+    color: #444;
+    font-size: .8rem
+}
+
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+    .homesearch h1 {
+        font-size: 3rem !important;
+        line-height: 4rem !important
+    }
+
+    .homesearch h4 {
+        font-size: .8rem !important
+    }
+
+    .homesearch {
+        margin-top: 100px;
+        margin-bottom: 190px
+    }
+
+    .groupsearch {
+        margin-top: 60px;
+        margin-bottom: 147px
+    }
+
+    .homesearch {
+        margin-top: 225px
+    }
+}
+
+@media only screen and (max-width: 40em) {
+    .homesearch .tagline {
+        width: 100%
+    }
+
+    .homesearch {
+        margin-top: 50px;
+        margin-bottom: 80px
+    }
+
+    .groupsearch {
+        margin-top: 50px;
+        margin-bottom: 80px
+    }
+
+    .homesearch .small-12 {
+        float: none
+    }
+
+    .homesearch .searchbox div.topmargin {
+        margin-top: 1rem
+    }
+
+    .homesearch h1 {
+        font-size: 2rem !important;
+        line-height: 2.5rem;
+        margin-bottom: 1rem
+    }
+
+    .homesearch h4 {
+        font-size: .8rem !important;
+        display: none
+    }
+
+    .homesearch h4 {
+        font-size: .8rem;
+        margin-bottom: 1.5rem
+    }
+
+    .homesearch .searchbox {
+        padding: .5rem
+    }
+
+    .homesearch .searchbox div select, .homesearch .searchbox div input {
+        height: auto;
+        margin-bottom: 1rem;
+        font-size: .95rem
+    }
+
+    .homesearch .autocomplete {
+        margin-bottom: 0 !important;
+        height: 2.5rem !important
+    }
+
+    .homesearch .searchbox div input.date {
+        background-position: right -1071px
+    }
+
+    .groupbooking {
+        margin-top: 0 !important
+    }
+
+    .homesearch .mylocation {
+        top: .15rem
+    }
+
+    .homesearch {
+        margin-top: 200px;
+        margin-bottom: 200px
+    }
+}
+
+.userback {
+    background-color: transparent
+}
+
+.headerback {
+    background-color: transparent !important;
+    border: 0
+}
+
+.headerback table.topmenu {
+    margin-top: 2.55rem
+}
+
+.headerback table.topmenu .iconholder {
+    background-color: rgba(0, 0, 0, 0.3)
+}
+
+.logo {
+    height: 64px;
+    width: 300px;
+    margin-top: 1.5rem
+}
+
+.logo a {
+    background-position: left center
+}
+
+.breadcrumbs > * {
+    color: #fff !important
+}
+
+.breadcrumbs > *:before {
+    color: #fff
+}
+
+.breadcrumbs > * a, .breadcrumbs > * span {
+    color: #fff
+}
+
+.breadcrumbs > *.current {
+    color: #fff
+}
+
+.breadcrumbs > *.current a {
+    color: #fff
+}
+
+.breadcrumbs > *.unavailable {
+    color: #fff
+}
+
+.breadcrumbs > *.unavailable a {
+    color: #fff
+}
+
+.breadcrumbs > *.unavailable:hover, .breadcrumbs > *.unavailable:hover a, .breadcrumbs > *.unavailable:focus, .breadcrumbs > *.unavailable a:focus {
+    color: #fff !important
+}
+
+.breadcrumbs-back {
+    background-color: #fff
+}
+
+ul.breadcrumbs li a:hover {
+    color: #fff !important
+}
+
+#topsearch-search {
+    margin-top: 0 !important
+}
+
+@media only screen and (max-width: 40em) {
+    .headerback table.topmenu {
+        margin-top: 1.35rem
+    }
+
+    .logo {
+        margin-top: 1rem;
+        padding-top: 0;
+        width: 200px;
+        height: 43px
+    }
+
+    body.opensearch .globalsearch {
+        margin-top: 4rem
+    }
+}
+
+img.nl-loader {
+    display: block;
+    margin: auto
+}
+
+div#nl-signup-loader {
+    display: none;
+    padding-top: 15px
+}
+
+p#nl-signup-success {
+    display: none
+}
+
+input#nl-signup-name {
+    margin-bottom: .5rem
+}

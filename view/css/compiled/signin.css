@@ -1,7 +1,7 @@
 .login-bg {
-  background: url("../../img/bgs/landscape.jpg") no-repeat center center fixed;
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/bgs/landscape.jpg', sizingMethod='scale');
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/bgs/landscape.jpg', sizingMethod='scale')";
+  background: url("../../img/bgs/8.jpg") no-repeat center center fixed;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/bgs/8.jpg', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/bgs/8.jpg', sizingMethod='scale')";
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -60,7 +60,7 @@
       text-align: right;
       font-style: italic;
       text-decoration: underline;
-      color: #3d88ba;
+      color: #4a576a;
       font-size: 13px;
       margin-bottom: 6px; }
     .login-wrapper .box .remember {

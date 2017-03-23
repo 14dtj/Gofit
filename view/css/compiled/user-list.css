@@ -24,7 +24,7 @@
   position: relative;
   top: 8px; }
 .users-list .table a.name {
-  color: #3389d1;
+  color: #d16821;
   display: block;
   font-weight: 600;
   font-size: 14px;
@@ -32,7 +32,7 @@
 .users-list .table .subtext {
   font-size: 12px;
   margin-left: 0;
-  color: #778391;
+  color: #916453;
   font-style: italic;
   margin-top: 0; }
 .users-list .pagination {

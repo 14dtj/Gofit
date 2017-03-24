@@ -10,6 +10,7 @@ $(document).ready(function () {
             $('#height').val(data.height);
             var temp = (data.height / 100) * (data.height / 100);
             var bmi = data.weight / temp;
+            bmi = bmi.toFixed(2);
             $('#bmi1').html("BMI " + bmi);
             $('#bmi2').html(bmi);
         }

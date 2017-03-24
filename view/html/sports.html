@@ -131,7 +131,7 @@
             </li>
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle hidden-phone" data-toggle="dropdown">
-                    Welcome, Smith
+                    Welcome, <span id="barUserName">Smith</span>
                     <b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu">
@@ -312,232 +312,233 @@
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
 </div>
-    <!-- scripts -->
-    <script src="../js/jquery-3.1.1.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/jquery-ui-1.10.2.custom.min.js"></script>
+<!-- scripts -->
+<script src="../js/jquery-3.1.1.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/jquery-ui-1.10.2.custom.min.js"></script>
 
-    <!-- knob -->
-    <script src="../js/jquery.knob.js"></script>
-    <!-- flot charts -->
-    <script src="../js/jquery.flot.js"></script>
-    <script src="../js/jquery.flot.stack.js"></script>
-    <script src="../js/jquery.flot.resize.js"></script>
-    <script src="../js/morris.min.js"></script>
-    <script src="../js/theme.js"></script>
-    <script src="../js/pages/sports.js"></script>
-    <script type="text/javascript">
-        changetoDis();
-        function changetoDis() {
-            // jQuery Flot Chart
-            var total = [[1, 50], [2, 40], [3, 45], [4, 23], [5, 55], [6, 65], [7, 61], [8, 70], [9, 65], [10, 75], [11, 57], [12, 59]];
-            var running = [[1, 25], [2, 50], [3, 23], [4, 48], [5, 38], [6, 40], [7, 47], [8, 55], [9, 43], [10, 50], [11, 47], [12, 39]];
+<!-- knob -->
+<script src="../js/jquery.knob.js"></script>
+<!-- flot charts -->
+<script src="../js/jquery.flot.js"></script>
+<script src="../js/jquery.flot.stack.js"></script>
+<script src="../js/jquery.flot.resize.js"></script>
+<script src="../js/morris.min.js"></script>
+<script src="../js/theme.js"></script>
+<script src="../js/pages/sports.js"></script>
+<script src="../js/pages/showUserInfo.js"></script>
+<script type="text/javascript">
+    changetoDis();
+    function changetoDis() {
+        // jQuery Flot Chart
+        var total = [[1, 50], [2, 40], [3, 45], [4, 23], [5, 55], [6, 65], [7, 61], [8, 70], [9, 65], [10, 75], [11, 57], [12, 59]];
+        var running = [[1, 25], [2, 50], [3, 23], [4, 48], [5, 38], [6, 40], [7, 47], [8, 55], [9, 43], [10, 50], [11, 47], [12, 39]];
 
-            var plot = $.plot($("#statsChart"),
-                    //传进来运动数据
-                    [{data: total, label: "Total Distance"},
-                        {data: running, label: "Running Distances"}], {
-                        series: {
-                            lines: {
-                                show: true,
-                                lineWidth: 1,
-                                fill: true,
-                                fillColor: {colors: [{opacity: 0.1}, {opacity: 0.13}]}
-                            },
-                            points: {
-                                show: true,
-                                lineWidth: 2,
-                                radius: 3
-                            },
-                            shadowSize: 0,
-                            stack: true
+        var plot = $.plot($("#statsChart"),
+                //传进来运动数据
+                [{data: total, label: "Total Distance"},
+                    {data: running, label: "Running Distances"}], {
+                    series: {
+                        lines: {
+                            show: true,
+                            lineWidth: 1,
+                            fill: true,
+                            fillColor: {colors: [{opacity: 0.1}, {opacity: 0.13}]}
                         },
-                        grid: {
-                            hoverable: true,
-                            clickable: true,
-                            tickColor: "#f9f9f9",
-                            borderWidth: 0
+                        points: {
+                            show: true,
+                            lineWidth: 2,
+                            radius: 3
                         },
-                        legend: {
-                            // show: false
-                            labelBoxBorderColor: "#fff"
-                        },
-                        colors: ["#ee8324", "#c56a46"],
-                        xaxis: {
-                            ticks: [[1, "JAN"], [2, "FEB"], [3, "MAR"], [4, "APR"], [5, "MAY"], [6, "JUN"],
-                                [7, "JUL"], [8, "AUG"], [9, "SEP"], [10, "OCT"], [11, "NOV"], [12, "DEC"]],
-                            font: {
-                                size: 12,
-                                family: "Open Sans, Arial",
-                                variant: "small-caps",
-                                color: "#697695"
-                            }
-                        },
-                        yaxis: {
-                            ticks: 3,
-                            tickDecimals: 0,
-                            font: {size: 12, color: "#9da3a9"}
+                        shadowSize: 0,
+                        stack: true
+                    },
+                    grid: {
+                        hoverable: true,
+                        clickable: true,
+                        tickColor: "#f9f9f9",
+                        borderWidth: 0
+                    },
+                    legend: {
+                        // show: false
+                        labelBoxBorderColor: "#fff"
+                    },
+                    colors: ["#ee8324", "#c56a46"],
+                    xaxis: {
+                        ticks: [[1, "JAN"], [2, "FEB"], [3, "MAR"], [4, "APR"], [5, "MAY"], [6, "JUN"],
+                            [7, "JUL"], [8, "AUG"], [9, "SEP"], [10, "OCT"], [11, "NOV"], [12, "DEC"]],
+                        font: {
+                            size: 12,
+                            family: "Open Sans, Arial",
+                            variant: "small-caps",
+                            color: "#697695"
                         }
-                    });
-        }
+                    },
+                    yaxis: {
+                        ticks: 3,
+                        tickDecimals: 0,
+                        font: {size: 12, color: "#9da3a9"}
+                    }
+                });
+    }
 
 
-        $(".knob").knob();
-        function changetoStep() {
-            // jQuery Flot Chart
-            var total = [[1, 50], [2, 40], [3, 45], [4, 23], [5, 55], [6, 65], [7, 61], [8, 70], [9, 65], [10, 75], [11, 57], [12, 59]];
+    $(".knob").knob();
+    function changetoStep() {
+        // jQuery Flot Chart
+        var total = [[1, 50], [2, 40], [3, 45], [4, 23], [5, 55], [6, 65], [7, 61], [8, 70], [9, 65], [10, 75], [11, 57], [12, 59]];
 
-            var plot = $.plot($("#statsChart"),
-                    //传进来运动数据
-                    [{data: total, label: "Total Steps"}], {
-                        series: {
-                            lines: {
-                                show: true,
-                                lineWidth: 1,
-                                fill: true,
-                                fillColor: {colors: [{opacity: 0.1}, {opacity: 0.13}]}
-                            },
-                            points: {
-                                show: true,
-                                lineWidth: 2,
-                                radius: 3
-                            },
-                            shadowSize: 0,
-                            stack: true
+        var plot = $.plot($("#statsChart"),
+                //传进来运动数据
+                [{data: total, label: "Total Steps"}], {
+                    series: {
+                        lines: {
+                            show: true,
+                            lineWidth: 1,
+                            fill: true,
+                            fillColor: {colors: [{opacity: 0.1}, {opacity: 0.13}]}
                         },
-                        grid: {
-                            hoverable: true,
-                            clickable: true,
-                            tickColor: "#f9f9f9",
-                            borderWidth: 0
+                        points: {
+                            show: true,
+                            lineWidth: 2,
+                            radius: 3
                         },
-                        legend: {
-                            // show: false
-                            labelBoxBorderColor: "#fff"
-                        },
-                        colors: ["#ee8324", "#c56a46"],
-                        xaxis: {
-                            ticks: [[1, "JAN"], [2, "FEB"], [3, "MAR"], [4, "APR"], [5, "MAY"], [6, "JUN"],
-                                [7, "JUL"], [8, "AUG"], [9, "SEP"], [10, "OCT"], [11, "NOV"], [12, "DEC"]],
-                            font: {
-                                size: 12,
-                                family: "Open Sans, Arial",
-                                variant: "small-caps",
-                                color: "#697695"
-                            }
-                        },
-                        yaxis: {
-                            ticks: 3,
-                            tickDecimals: 0,
-                            font: {size: 12, color: "#9da3a9"}
+                        shadowSize: 0,
+                        stack: true
+                    },
+                    grid: {
+                        hoverable: true,
+                        clickable: true,
+                        tickColor: "#f9f9f9",
+                        borderWidth: 0
+                    },
+                    legend: {
+                        // show: false
+                        labelBoxBorderColor: "#fff"
+                    },
+                    colors: ["#ee8324", "#c56a46"],
+                    xaxis: {
+                        ticks: [[1, "JAN"], [2, "FEB"], [3, "MAR"], [4, "APR"], [5, "MAY"], [6, "JUN"],
+                            [7, "JUL"], [8, "AUG"], [9, "SEP"], [10, "OCT"], [11, "NOV"], [12, "DEC"]],
+                        font: {
+                            size: 12,
+                            family: "Open Sans, Arial",
+                            variant: "small-caps",
+                            color: "#697695"
                         }
-                    });
-        }
-        function changetoStep() {
-            // jQuery Flot Chart
-            var total = [[1, 50], [2, 40], [3, 45], [4, 23], [5, 55], [6, 65], [7, 61], [8, 70], [9, 65], [10, 75], [11, 57], [12, 59]];
+                    },
+                    yaxis: {
+                        ticks: 3,
+                        tickDecimals: 0,
+                        font: {size: 12, color: "#9da3a9"}
+                    }
+                });
+    }
+    function changetoStep() {
+        // jQuery Flot Chart
+        var total = [[1, 50], [2, 40], [3, 45], [4, 23], [5, 55], [6, 65], [7, 61], [8, 70], [9, 65], [10, 75], [11, 57], [12, 59]];
 
-            var plot = $.plot($("#statsChart"),
-                    //传进来运动数据
-                    [{data: total, label: "Total Steps"}], {
-                        series: {
-                            lines: {
-                                show: true,
-                                lineWidth: 1,
-                                fill: true,
-                                fillColor: {colors: [{opacity: 0.1}, {opacity: 0.13}]}
-                            },
-                            points: {
-                                show: true,
-                                lineWidth: 2,
-                                radius: 3
-                            },
-                            shadowSize: 0,
-                            stack: true
+        var plot = $.plot($("#statsChart"),
+                //传进来运动数据
+                [{data: total, label: "Total Steps"}], {
+                    series: {
+                        lines: {
+                            show: true,
+                            lineWidth: 1,
+                            fill: true,
+                            fillColor: {colors: [{opacity: 0.1}, {opacity: 0.13}]}
                         },
-                        grid: {
-                            hoverable: true,
-                            clickable: true,
-                            tickColor: "#f9f9f9",
-                            borderWidth: 0
+                        points: {
+                            show: true,
+                            lineWidth: 2,
+                            radius: 3
                         },
-                        legend: {
-                            // show: false
-                            labelBoxBorderColor: "#fff"
-                        },
-                        colors: ["#ee8324", "#c56a46"],
-                        xaxis: {
-                            ticks: [[1, "JAN"], [2, "FEB"], [3, "MAR"], [4, "APR"], [5, "MAY"], [6, "JUN"],
-                                [7, "JUL"], [8, "AUG"], [9, "SEP"], [10, "OCT"], [11, "NOV"], [12, "DEC"]],
-                            font: {
-                                size: 12,
-                                family: "Open Sans, Arial",
-                                variant: "small-caps",
-                                color: "#697695"
-                            }
-                        },
-                        yaxis: {
-                            ticks: 3,
-                            tickDecimals: 0,
-                            font: {size: 12, color: "#9da3a9"}
+                        shadowSize: 0,
+                        stack: true
+                    },
+                    grid: {
+                        hoverable: true,
+                        clickable: true,
+                        tickColor: "#f9f9f9",
+                        borderWidth: 0
+                    },
+                    legend: {
+                        // show: false
+                        labelBoxBorderColor: "#fff"
+                    },
+                    colors: ["#ee8324", "#c56a46"],
+                    xaxis: {
+                        ticks: [[1, "JAN"], [2, "FEB"], [3, "MAR"], [4, "APR"], [5, "MAY"], [6, "JUN"],
+                            [7, "JUL"], [8, "AUG"], [9, "SEP"], [10, "OCT"], [11, "NOV"], [12, "DEC"]],
+                        font: {
+                            size: 12,
+                            family: "Open Sans, Arial",
+                            variant: "small-caps",
+                            color: "#697695"
                         }
-                    });
-        }
-        function changetoCal() {
+                    },
+                    yaxis: {
+                        ticks: 3,
+                        tickDecimals: 0,
+                        font: {size: 12, color: "#9da3a9"}
+                    }
+                });
+    }
+    function changetoCal() {
 
-            var total = [[1, 5000], [2, 4000], [3, 4500], [4, 2300], [5, 5500], [6, 6500], [7, 6100], [8, 7000], [9, 6500], [10, 750], [11, 570], [12, 590]];
+        var total = [[1, 5000], [2, 4000], [3, 4500], [4, 2300], [5, 5500], [6, 6500], [7, 6100], [8, 7000], [9, 6500], [10, 750], [11, 570], [12, 590]];
 
-            var plot = $.plot($("#statsChart"),
-                    //传进来运动数据
-                    [{data: total, label: "Consumed Calorie"}], {
-                        series: {
-                            lines: {
-                                show: true,
-                                lineWidth: 1,
-                                fill: true,
-                                fillColor: {colors: [{opacity: 0.1}, {opacity: 0.13}]}
-                            },
-                            points: {
-                                show: true,
-                                lineWidth: 2,
-                                radius: 3
-                            },
-                            shadowSize: 0,
-                            stack: true
+        var plot = $.plot($("#statsChart"),
+                //传进来运动数据
+                [{data: total, label: "Consumed Calorie"}], {
+                    series: {
+                        lines: {
+                            show: true,
+                            lineWidth: 1,
+                            fill: true,
+                            fillColor: {colors: [{opacity: 0.1}, {opacity: 0.13}]}
                         },
-                        grid: {
-                            hoverable: true,
-                            clickable: true,
-                            tickColor: "#f9f9f9",
-                            borderWidth: 0
+                        points: {
+                            show: true,
+                            lineWidth: 2,
+                            radius: 3
                         },
-                        legend: {
-                            // show: false
-                            labelBoxBorderColor: "#fff"
-                        },
-                        colors: ["#ee8324", "#c56a46"],
-                        xaxis: {
-                            ticks: [[1, "JAN"], [2, "FEB"], [3, "MAR"], [4, "APR"], [5, "MAY"], [6, "JUN"],
-                                [7, "JUL"], [8, "AUG"], [9, "SEP"], [10, "OCT"], [11, "NOV"], [12, "DEC"]],
-                            font: {
-                                size: 12,
-                                family: "Open Sans, Arial",
-                                variant: "small-caps",
-                                color: "#697695"
-                            }
-                        },
-                        yaxis: {
-                            ticks: 3,
-                            tickDecimals: 0,
-                            font: {size: 12, color: "#9da3a9"}
+                        shadowSize: 0,
+                        stack: true
+                    },
+                    grid: {
+                        hoverable: true,
+                        clickable: true,
+                        tickColor: "#f9f9f9",
+                        borderWidth: 0
+                    },
+                    legend: {
+                        // show: false
+                        labelBoxBorderColor: "#fff"
+                    },
+                    colors: ["#ee8324", "#c56a46"],
+                    xaxis: {
+                        ticks: [[1, "JAN"], [2, "FEB"], [3, "MAR"], [4, "APR"], [5, "MAY"], [6, "JUN"],
+                            [7, "JUL"], [8, "AUG"], [9, "SEP"], [10, "OCT"], [11, "NOV"], [12, "DEC"]],
+                        font: {
+                            size: 12,
+                            family: "Open Sans, Arial",
+                            variant: "small-caps",
+                            color: "#697695"
                         }
-                    });
-        }
-    </script>
-    <div style="display:none">
-        <script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript'
-                charset='gb2312'></script>
-    </div>
+                    },
+                    yaxis: {
+                        ticks: 3,
+                        tickDecimals: 0,
+                        font: {size: 12, color: "#9da3a9"}
+                    }
+                });
+    }
+</script>
+<div style="display:none">
+    <script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript'
+            charset='gb2312'></script>
+</div>
 
 </body>
 </html>

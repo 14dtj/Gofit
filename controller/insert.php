@@ -6,27 +6,38 @@
  * Time: 10:09
  */
 $pdo = new PDO('sqlite:/Users/czq/Development/Gofit/temp.db');
-$statement = $pdo->prepare('select username from user');
-$statement->execute();
-$allUsers = $statement->fetchAll();
-$mayBeDates = ['2016-10-31' , '2017-3-3', '2017-3-5', '2017-4-15', '2017-6-25'];
-$mayBeCalories = ['2333.4', '23221.5','2332.5','5464.9','3412.8'];
-$mayBeSteps = ['2300', '3500','4903','4587','3412'];
-echo sizeof($allUsers);
-for ($i=0 ; $i<sizeof($allUsers) ; $i++){
-//    echo $allUsers[$i][0];
-    $index = rand(0,4);
-    $userName = $allUsers[$i][0];
-    $query = "insert into sports_record VALUES ('$mayBeDates[$index]' , '$mayBeCalories[$index]', '$index','$mayBeCalories[$index]','$mayBeSteps[$index]', '$userName' , '$index')";
-    $statement = $pdo->prepare($query);
-    if (!$statement) {
+//$statement = $pdo->prepare('select username from user');
+//$statement->execute();
+//$allUsers = $statement->fetchAll();
+//$mayBeDates = ['2016-10-31' , '2017-3-3', '2017-3-5', '2017-4-15', '2017-6-25'];
+//$mayBeCalories = ['2333.4', '23221.5','2332.5','5464.9','3412.8'];
+//$mayBeSteps = ['2300', '3500','4903','4587','3412'];
+//echo sizeof($allUsers);
+//for ($i=0 ; $i<sizeof($allUsers) ; $i++){
+////    echo $allUsers[$i][0];
+//    $index = rand(0,4);
+//    $userName = $allUsers[$i][0];
+//    $query = "insert into sports_record VALUES ('$mayBeDates[$index]' , '$mayBeCalories[$index]', '$index','$mayBeCalories[$index]','$mayBeSteps[$index]', '$userName' , '$index')";
+//    $statement = $pdo->prepare($query);
+//    if (!$statement) {
+//        die("Execute query error, because: " . print_r($pdo->errorInfo(), true));
+//    }
+//    echo $statement->execute();
+//}
+
+$username='tj';
+$query = "select user.username,avatar,motto,sum(distance) as sum_distance from user,sports_record where sports_record.username=user.username AND (user.username='$username' OR user.username IN (
+            SELECT following FROM user_following WHERE user_following.username='$username') OR user.username IN (SELECT follower from user_follower WHERE user_follower.username='$username')) GROUP by sports_record.username order by sum_distance DESC ;";
+$statement = $pdo->prepare($query);
+if (!$statement) {
         die("Execute query error, because: " . print_r($pdo->errorInfo(), true));
     }
     echo $statement->execute();
+//$statement->execute();
+$results = $statement->fetchAll();
+for ($i =0 ; $i < sizeof($results); $i++){
+    echo $results[$i][0];
 }
-
-
-
 
 //for ($i = 0; $i < 100; $i++) {
 //    $usernameNew = ['Liz Allen23', 'Donald J. Trumpasdf', 'Dan Scavino Jrsdf.' , 'Dr. Anne Schuchat','Dr. Nancy Messonnier', 'Dale Mantey', 'Austin'];

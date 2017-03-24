@@ -61,7 +61,7 @@ $app->get('/friend/follow/{action}/{name}', function (Request $request, Response
         $controller = new FriendController();
         if ($action == "follow") {
             return $controller->followUser($username, $name);
-        } else if ($action == "unFollow") {
+        } else if ($action == "unfollow") {
             return $controller->unFollow($username, $name);
         }
     } else {
@@ -90,4 +90,17 @@ $app->get('/friend/week', function (Request $request, Response $response) use ($
 $app->get('/friend/month', function (Request $request, Response $response) use ($app) {
     $controller = new FriendController();
     return $controller->getLastMonthRank();
+});
+
+$app->get('/friend/friendsOnly', function (Request $request, Response $response) use ($app) {
+//    $controller = new FriendController();
+//    return $controller->getFriendRank();
+    session_start();
+    if (isset($_SESSION['user'])) {
+        $username = $_SESSION['user'];
+        $controller = new FriendController();
+        return $controller->getFriendRank($username);
+    } else {
+        return $this->view->render($response, 'login.html');
+    }
 });

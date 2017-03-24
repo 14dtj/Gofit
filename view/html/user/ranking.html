@@ -210,49 +210,13 @@
                     <!-- custom popup filter -->
                     <!-- styles are located in css/elements.css -->
                     <!-- script that enables this dropdown is located in js/theme.js -->
-                    <div class="ui-dropdown">
-                        <div class="head" data-toggle="tooltip" title="Click me!">
-                            Filter users
-                            <i class="arrow-down"></i>
-                        </div>
-                        <div class="dialog">
-                            <div class="pointer">
-                                <div class="arrow"></div>
-                                <div class="arrow_border"></div>
-                            </div>
-                            <div class="body">
-                                <p class="title">
-                                    Show users where:
-                                </p>
-                                <div class="form">
-                                    <select>
-                                        <option/>
-                                        Name
-                                        <option/>
-                                        Email
-                                        <option/>
-                                        Number of orders
-                                        <option/>
-                                        Signed up
-                                        <option/>
-                                        Last seen
-                                    </select>
-                                    <select>
-                                        <option/>
-                                        is equal to
-                                        <option/>
-                                        is not equal to
-                                        <option/>
-                                        is greater than
-                                        <option/>
-                                        starts with
-                                        <option/>
-                                        contains
-                                    </select>
-                                    <input type="text"/>
-                                    <a class="btn-flat small">Add filter</a>
-                                </div>
-                            </div>
+                    <div class="ui-dropdown" style="margin-left: 20px">
+
+                        <div class="ui-select">
+                            <select name="type" id="selectid">
+                                <option value="all">All friends</option>
+                                <option value="friends">Only friends</option>
+                            </select>
                         </div>
                     </div>
                 </div>
@@ -469,6 +433,7 @@
 
 
 <!-- scripts -->
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>-->
 <script src="../../js/jquery-3.1.1.min.js"></script>
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 <script src="../../js/bootstrap.min.js"></script>

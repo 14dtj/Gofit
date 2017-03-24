@@ -50,12 +50,19 @@ $(document).ready(function () {
             }
         });
         $('#follow').bind("click", function () {
-            var action = $('#follow').html();
-            $.ajax("/friend/follow/" + action + "/" + name, {
+            var actionName = $('#follow').html();
+            $.ajax("/friend/follow/" + actionName + "/" + name, {
                 type: 'GET',
                 success: function (data) {
-                    showSuccess(data);
-                    history.go(0);
+                    if (actionName == 'follow') {
+                        $('#follow').html('unfollow');
+                    } else {
+                        $('#follow').html('follow');
+                    }
+
+
+                    // showSuccess('Successfully' );
+                    // history.go(0);
                 }
             })
         });

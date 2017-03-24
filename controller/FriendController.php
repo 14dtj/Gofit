@@ -17,7 +17,7 @@ class FriendController
 
     function getFollowing($username)
     {
-        $query = "select avatar,user_following.username,gender,motto,location,interest,level,birth from user,user_following where user_following.username='$username' and user_following.following=user.username;";
+        $query = "select avatar,user_following.following as username,gender,motto,location,interest,level,birth from user,user_following where user_following.username='$username' and user_following.following=user.username;";
         $statement = $this->pdo->prepare($query);
         $statement->execute();
         $results = $statement->fetchAll();
@@ -27,7 +27,7 @@ class FriendController
 
     function getFollower($username)
     {
-        $query = "select avatar,user_follower.username,gender,motto,location,interest,level,birth from user,user_follower where user_follower.username='$username' and user_follower.follower=user.username;";
+        $query = "select avatar,user_follower.follower as username,gender,motto,location,interest,level,birth from user,user_follower where user_follower.username='$username' and user_follower.follower=user.username;";
         $statement = $this->pdo->prepare($query);
         $statement->execute();
         $results = $statement->fetchAll();
@@ -105,7 +105,7 @@ class FriendController
         $statement->execute();
         $row = $statement->fetch(PDO::FETCH_ASSOC);
         if ($row) {
-            return "unFollow";
+            return "unfollow";
         } else {
             return "follow";
         }
@@ -114,7 +114,7 @@ class FriendController
     function getTodayRank()
     {
         $today = date("Y-m-d");
-        $query = "select user.username,avatar,motto,sum(distance) as sum_distance from user,sports_record where sports_record.username=user.username and date='$today' GROUP by sports_record.username order by sum_distance DESC ;";
+        $query = "select user.username,avatar,motto,sum(distance) as sum_distance, location as loca from user,sports_record where sports_record.username=user.username and date='$today' GROUP by sports_record.username order by sum_distance DESC ;";
         $statement = $this->pdo->prepare($query);
         $statement->execute();
         $results = $statement->fetchAll();
@@ -123,7 +123,7 @@ class FriendController
 
     function getLastWeekRank()
     {
-        $query = "select user.username,avatar,motto,sum(distance) as sum_distance from user,sports_record where sports_record.username=user.username GROUP by sports_record.username order by sum_distance DESC ;";
+        $query = "select user.username,avatar,motto,sum(distance) as sum_distance, location as loca from user,sports_record where sports_record.username=user.username GROUP by sports_record.username order by sum_distance DESC ;";
         $statement = $this->pdo->prepare($query);
         $statement->execute();
         $results = $statement->fetchAll();
@@ -132,7 +132,20 @@ class FriendController
 
     function getLastMonthRank()
     {
-        $query = "select user.username,avatar,motto,sum(distance) as sum_distance from user,sports_record where sports_record.username=user.username GROUP by sports_record.username order by sum_distance DESC ;";
+        $query = "select user.username,avatar,motto,sum(distance) as sum_distance,location as loca from user,sports_record where sports_record.username=user.username GROUP by sports_record.username order by sum_distance DESC ;";
+        $statement = $this->pdo->prepare($query);
+        $statement->execute();
+        $results = $statement->fetchAll();
+        return json_encode($results);
+    }
+
+    public function getFriendRank($username)
+    {
+//        $query = "select user.username,avatar,motto,sum(distance) as sum_distance from user,sports_record where sports_record.username=user.username AND (user.username='$username' OR user.username IN (
+//            SELECT following FROM user_following WHERE user_following.username='$username') OR user.username IN (SELECT follower from user_follower WHERE user_follower.username='$username')) GROUP by sports_record.username order by sum_distance DESC ;";
+//        $query = "select user.username,avatar,motto,sum(distance) as sum_distance from user,sports_record where sports_record.username=user.username GROUP by sports_record.username order by sum_distance DESC ;";
+        $query = "select user.username,avatar,motto,sum(distance) as sum_distance, location as loca from user,sports_record where sports_record.username=user.username AND (user.username='$username' OR user.username IN (
+            SELECT following FROM user_following WHERE user_following.username='$username') OR user.username IN (SELECT follower from user_follower WHERE user_follower.username='$username')) GROUP by sports_record.username order by sum_distance DESC ;";
         $statement = $this->pdo->prepare($query);
         $statement->execute();
         $results = $statement->fetchAll();

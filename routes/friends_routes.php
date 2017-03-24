@@ -63,7 +63,10 @@ $app->get('/friend/follow/{action}/{name}', function (Request $request, Response
             return $controller->followUser($username, $name);
         } else if ($action == "unfollow") {
             return $controller->unFollow($username, $name);
+        } else{
+            return "error";
         }
+
     } else {
         return $this->view->render($response, 'login.html');
     }

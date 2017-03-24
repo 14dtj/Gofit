@@ -142,8 +142,8 @@
                 </a>
                 <ul class="dropdown-menu">
                     <li><a href="myInfo.html">Personal info</a></li>
-                    <li><a href="#">Log out</a></li>
-                    <li><a href="#">Switch Account</a></li>
+                    <li><a href="login.html">Log out</a></li>
+                    <li><a href="login.html">Switch Account</a></li>
                 </ul>
             </li>
         </ul>
@@ -200,17 +200,6 @@
                 <i class="icon-cog"></i>
                 <span>My Info</span>
             </a>
-        </li>
-        <li>
-            <a class="dropdown-toggle ui-elements" href="#">
-                <i class="icon-code-fork"></i>
-                <span>UI Elements</span>
-                <i class="icon-chevron-down"></i>
-            </a>
-            <ul class="submenu">
-                <li><a href="originalFile/ui-elements.html">UI Elements</a></li>
-                <li><a href="originalFile/icons.html">Icons</a></li>
-            </ul>
         </li>
     </ul>
 </div>
@@ -385,116 +374,118 @@
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
-    <!-- scripts for this page -->
-    <script src="../js/jquery-3.1.1.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/jquery-ui-1.10.2.custom.min.js"></script>
-    <!-- knob -->
-    <script src="../js/jquery.knob.js"></script>
-    <!-- flot charts -->
-    <script src="../js/jquery.flot.js"></script>
-    <script src="../js/jquery.flot.stack.js"></script>
-    <script src="../js/jquery.flot.resize.js"></script>
-    <!-- morrisjs -->
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-    <script src="../js/morris.min.js"></script>
-    <!-- call all plugins -->
-    <script src="../js/theme.js"></script>
-    <script src="../js/moment.min.js"></script>
-    <script src="../js/bootstrap-material-datetimepicker.js"></script>
+</div>
+<!-- scripts for this page -->
+<script src="../js/jquery-3.1.1.min.js"></script>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/jquery-ui-1.10.2.custom.min.js"></script>
+<!-- knob -->
+<script src="../js/jquery.knob.js"></script>
+<!-- flot charts -->
+<script src="../js/jquery.flot.js"></script>
+<script src="../js/jquery.flot.stack.js"></script>
+<script src="../js/jquery.flot.resize.js"></script>
+<!-- morrisjs -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+<script src="../js/morris.min.js"></script>
+<!-- call all plugins -->
+<script src="../js/theme.js"></script>
+<script src="../js/moment.min.js"></script>
+<script src="../js/bootstrap-material-datetimepicker.js"></script>
 
-    <script src="../js/pages/health.js"></script>
-    <script src="../js/pages/showUserInfo.js"></script>
-    <script type="text/javascript">
-        $('#changeBMI').on('click', function (e) {
-            e.preventDefault();
-            var weight = $('#weight').val();
-            var height = $('#height').val();
-            $.ajax("/health/editBMI/" + weight + "/" + height, {
-                type: 'GET',
-                success: function () {
-                    var temp = (height / 100) * (height / 100);
-                    var bmi = weight / temp;
-                    bmi = bmi.toFixed(2);
-                    $('#bmi1').html("BMI " + bmi);
-                    $('#bmi2').html(bmi);
+<script src="../js/pages/health.js"></script>
+<script src="../js/pages/showUserInfo.js"></script>
+<script type="text/javascript">
+    $('#changeBMI').on('click', function (e) {
+        e.preventDefault();
+        var weight = $('#weight').val();
+        var height = $('#height').val();
+        $.ajax("/health/editBMI/" + weight + "/" + height, {
+            type: 'GET',
+            success: function () {
+                var temp = (height / 100) * (height / 100);
+                var bmi = weight / temp;
+                bmi = bmi.toFixed(2);
+                $('#bmi1').html("BMI " + bmi);
+                $('#bmi2').html(bmi);
+            }
+        });
+    });
+
+    $(document).ready(function () {
+        $('#startTime').bootstrapMaterialDatePicker
+        ({
+            date: false,
+            shortTime: true,
+            format: 'HH:mm',
+            clearButton: false
+        });
+        $('#endTime').bootstrapMaterialDatePicker
+        ({
+            date: false,
+            shortTime: true,
+            format: 'HH:mm',
+            clearButton: false
+        });
+        $.material.init();
+    });
+
+
+</script>
+<!-- build the charts -->
+<script type="text/javascript">
+    var visits = [[1, 5], [2, 4], [3, 4.5], [4, 2.3], [5, 5.5], [6, 6.5], [7, 6.1]];
+
+    var plot = $.plot($("#statsChart"),
+            [{data: visits, label: "sleep time"}], {
+                series: {
+                    lines: {
+                        show: true,
+                        lineWidth: 1,
+                        fill: true,
+                        fillColor: {colors: [{opacity: 0.05}, {opacity: 0.09}]}
+                    },
+                    points: {
+                        show: true,
+                        lineWidth: 2,
+                        radius: 3
+                    },
+                    shadowSize: 0,
+                    stack: true
+                },
+                grid: {
+                    hoverable: true,
+                    clickable: true,
+                    tickColor: "#f9f9f9",
+                    borderWidth: 0
+                },
+                legend: {
+                    // show: false
+                    labelBoxBorderColor: "#fff"
+                },
+                colors: ["#D15714"],
+                xaxis: {
+                    ticks: [[1, "7 days ago"], [2, "6"], [3, "5"], [4, "4"], [5, "3"], [6, "2"],
+                        [7, "1"]],
+                    font: {
+                        size: 12,
+                        family: "Open Sans, Arial",
+                        variant: "small-caps",
+                        color: "#9da3a9"
+                    }
+                },
+                yaxis: {
+                    ticks: 3,
+                    tickDecimals: 0,
+                    font: {size: 12, color: "#9da3a9"}
                 }
             });
-        });
-
-        $(document).ready(function () {
-            $('#startTime').bootstrapMaterialDatePicker
-            ({
-                date: false,
-                shortTime: true,
-                format: 'HH:mm',
-                clearButton: false
-            });
-            $('#endTime').bootstrapMaterialDatePicker
-            ({
-                date: false,
-                shortTime: true,
-                format: 'HH:mm',
-                clearButton: false
-            });
-            $.material.init();
-        });
-
-
-    </script>
-    <!-- build the charts -->
-    <script type="text/javascript">
-        var visits = [[1, 5], [2, 4], [3, 4.5], [4, 2.3], [5, 5.5], [6, 6.5], [7, 6.1]];
-
-        var plot = $.plot($("#statsChart"),
-                [{data: visits, label: "sleep time"}], {
-                    series: {
-                        lines: {
-                            show: true,
-                            lineWidth: 1,
-                            fill: true,
-                            fillColor: {colors: [{opacity: 0.05}, {opacity: 0.09}]}
-                        },
-                        points: {
-                            show: true,
-                            lineWidth: 2,
-                            radius: 3
-                        },
-                        shadowSize: 0,
-                        stack: true
-                    },
-                    grid: {
-                        hoverable: true,
-                        clickable: true,
-                        tickColor: "#f9f9f9",
-                        borderWidth: 0
-                    },
-                    legend: {
-                        // show: false
-                        labelBoxBorderColor: "#fff"
-                    },
-                    colors: ["#D15714"],
-                    xaxis: {
-                        ticks: [[1, "7 days ago"], [2, "6"], [3, "5"], [4, "4"], [5, "3"], [6, "2"],
-                            [7, "1"]],
-                        font: {
-                            size: 12,
-                            family: "Open Sans, Arial",
-                            variant: "small-caps",
-                            color: "#9da3a9"
-                        }
-                    },
-                    yaxis: {
-                        ticks: 3,
-                        tickDecimals: 0,
-                        font: {size: 12, color: "#9da3a9"}
-                    }
-                });
-    </script>
-    <div style="display:none">
-        <script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript'
-                charset='gb2312'></script>
-    </div>
+</script>
+<div style="display:none">
+    <script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript'
+            charset='gb2312'></script>
 </div>
+
 </body>
 </html>

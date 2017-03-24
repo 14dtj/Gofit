@@ -222,21 +222,21 @@
                 <div class="row-fluid stats-row">
                     <div class="span4 stat">
                         <div class="data">
-                            <span class="number">2457</span>
+                            <span class="number" id="showStep">2457</span>
                             Steps
                         </div>
                         <span class="date">Today</span>
                     </div>
                     <div class="span4 stat">
                         <div class="data">
-                            <span class="number">3240</span>
+                            <span class="number" id="showDistance">3240</span>
                             km
                         </div>
                         <span class="date">Accumulative Distance</span>
                     </div>
                     <div class="span4 stat last">
                         <div class="data">
-                            <span class="number">322</span>
+                            <span class="number" id="showCalories">322</span>
                             KJ
                         </div>
                         <span class="date">Accumulative Calories</span>
@@ -311,8 +311,9 @@
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
+</div>
     <!-- scripts -->
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="../js/jquery-3.1.1.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/jquery-ui-1.10.2.custom.min.js"></script>
 
@@ -324,7 +325,7 @@
     <script src="../js/jquery.flot.resize.js"></script>
     <script src="../js/morris.min.js"></script>
     <script src="../js/theme.js"></script>
-
+    <script src="../js/pages/sports.js"></script>
     <script type="text/javascript">
         changetoDis();
         function changetoDis() {
@@ -537,5 +538,6 @@
         <script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript'
                 charset='gb2312'></script>
     </div>
+
 </body>
 </html>

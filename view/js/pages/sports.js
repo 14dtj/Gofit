@@ -7,9 +7,9 @@ $(document).ready(function () {
         dataType: 'json',
         success: function (data) {
             $('#goalNum').html("You have achieved " + data.goalSum + " goals");
-            $('#distance').html(data.distanceSum + " km");
-            $('#time').html(data.timeSum + " h");
-            $('#calorie').html(data.calorieSum + " kcal");
+            $('#showDistance').html(data.distanceSum);
+            $('#showStep').html(data.timeSum);
+            $('#showCalories').html(data.calorieSum);
         }
     });
 

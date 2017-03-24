@@ -1,5 +1,5 @@
 /**
- * Created by tjDu on 2016/11/28.
+ * Created by Qiang on 24/03/2017.
  */
 $(document).ready(function () {
         var str = window.location.search;
@@ -10,11 +10,11 @@ $(document).ready(function () {
             dataType: 'json',
             success: function (data) {
                 $('#name').html(data.name);
-                $('#type').html(data.type);
+                $('#type').append(data.type);
                 $('#introduction').html(data.introduction);
-                $('#time').html(data.start_time + " to " + data.end_time);
-                $('#cover').attr('src', data.picture);
-                $('#award').html(data.award);
+                $('#time').append(data.start_time + " to " + data.end_time);
+                $('#cover').append("<img width='700' height='400' src=\"images/activity/" + data.picture + "\" />");
+                $('#award').append(data.award);
                 $('#number').append(data.number);
                 $('#sports').append(data.sports);
             }
@@ -48,8 +48,12 @@ $(document).ready(function () {
             dataType: 'json',
             success: function (data) {
                 for (var i = 0; i < data.length; i++) {
-                    var userData = data[i];
-                    $('#joinedList').append('<tr> <td> <img src="' + data[i].avatar + '" class="img-circle avatar hidden-phone" style="height: 50px"/> <a href="../otherUser.html?name='+data[i].username+  '" class="name">' + data[i].username + '</a> </td> </tr>');
+                    var a = "<li class=\"w3-padding-16\">" +
+                        "<img src=\"images/avatar/" + data[i].avatar + "\"" +
+                        "class=\"w3-left w3-circle w3-margin-right\" style=\"width:60px\"> " +
+                        "<a href=\"other_profile.html?name=" + data[i].username + "\">" +
+                        "<span class=\"w3-xlarge\">" + data[i].username + "</span></a><br></li>";
+                    $('#list').append(a);
                 }
             }
         });

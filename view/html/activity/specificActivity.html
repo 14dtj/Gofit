@@ -219,9 +219,9 @@
             <!-- header -->
             <div class="row-fluid header">
                 <div class="span8">
-                    <h3 class="name" >Running man</h3>
+                    <h3 class="name" id="name">Running man</h3>
                 </div>
-                <span><img src="../../img/activity/activity1.jpg"/></span>
+                <span><img id="cover" src="../../img/activity/activity1.jpg"/></span>
             </div>
             <div class="row-fluid profile">
                 <!-- bio, new note & orders column -->
@@ -259,19 +259,19 @@
                                         <dt>
                                             Type
                                         </dt>
-                                        <dd>
+                                        <dd id="type">
                                             single competition
                                         </dd>
                                         <dt>
                                             Time
                                         </dt>
-                                        <dd>
+                                        <dd id="time">
                                             Starts from to 2016-11-29 02:00 to 2016-11-29 03:00
                                         </dd>
                                         <dt>
                                             Award
                                         </dt>
-                                        <dd>
+                                        <dd id="award">
                                             Kindle
                                         </dd>
                                     </dl>
@@ -352,32 +352,32 @@
                                     </th>
                                 </tr>
                                 </thead>
-                                <tbody>
+                                <tbody id="joinedList">
                                 <!-- row -->
-                                <tr class="first">
-                                    <td>
-                                        <img src="../../img/contact-img.png" class="img-circle avatar hidden-phone"/>
-                                        <a href="user-profile.html" class="name">Alejandra Galvan Castillo</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <img src="../../img/contact-img.png" class="img-circle avatar hidden-phone"/>
-                                        <a href="user-profile.html" class="name">Alejandra Galvan Castillo</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <img src="../../img/contact-img.png" class="img-circle avatar hidden-phone"/>
-                                        <a href="user-profile.html" class="name">Alejandra Galvan Castillo</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <img src="../../img/contact-img.png" class="img-circle avatar hidden-phone"/>
-                                        <a href="user-profile.html" class="name">Alejandra Galvan Castillo</a>
-                                    </td>
-                                </tr>
+                                <!--<tr class="first">-->
+                                    <!--<td>-->
+                                        <!--<img src="../../img/users/user0.jpg" class="img-circle avatar hidden-phone" style="height: 50px"/>-->
+                                        <!--<a href="../otherUser.html?name=gakki" class="name">gakki</a>-->
+                                    <!--</td>-->
+                                <!--</tr>-->
+                                <!--<tr>-->
+                                    <!--<td>-->
+                                        <!--<img src="../../img/users/user1.jpg" class="img-circle avatar hidden-phone" style="height: 50px"/>-->
+                                        <!--<a href="../otherUser.html?name=Donald J. Trump" class="name">Donald J. Trump</a>-->
+                                    <!--</td>-->
+                                <!--</tr>-->
+                                <!--<tr>-->
+                                    <!--<td>-->
+                                        <!--<img src="../../img/users/user2.jpg" class="img-circle avatar hidden-phone" style="height: 50px"/>-->
+                                        <!--<a href="../otherUser.html?name=Dan Scavino Jr." class="name">Dan Scavino Jr.</a>-->
+                                    <!--</td>-->
+                                <!--</tr>-->
+                                <!--<tr>-->
+                                    <!--<td>-->
+                                        <!--<img src="../../img/users/user3.jpg" class="img-circle avatar hidden-phone" style="height: 50px"/>-->
+                                        <!--<a href="../otherUser.html?name=Dr. Anne Schuchat" class="name">Dr. Anne Schuchat</a>-->
+                                    <!--</td>-->
+                                <!--</tr>-->
                                 </tbody>
                             </table>
                         </div>
@@ -403,19 +403,14 @@
     <script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script>
 </div>
 <script>
-    $('#addComment').on('click', function (e) {
-        e.preventDefault();
-        var user = 'tj';
-        var time = new Date().toLocaleString();
-        var commentVal = $('#comment').val();
-        $('#commentsTable').append('<dl class="comment_item_comment_topic">  <dt class="comment_head"><a>' + user + '</a>&nbsp;&nbsp;' + time + '</dt> <dd class="comment_userface"><img src="../../img/contact-img2.png"class="img-circle avatar hidden-phone"/></dd> <br> <dd class="comment_body"> ' + commentVal + '</dd> </dl>');
-        showSuccess('Add Comment Success!')
-    });
+    ;
     function test() {
         var text = $('#button').text();
         if (text == 'Join') {
             showSuccess('Joined successfully!');
             $('#button').text("Exit");
+
+
         } else {
             showSuccess('Exited successfully!');
             $('#button').text("Join");

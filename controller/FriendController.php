@@ -17,7 +17,7 @@ class FriendController
 
     function getFollowing($username)
     {
-        $query = "select following,avatar,motto from user,user_following where user_following.username='$username' and user_following.following=user.username;";
+        $query = "select avatar,user_following.username,gender,motto,location,interest,level,birth from user,user_following where user_following.username='$username' and user_following.following=user.username;";
         $statement = $this->pdo->prepare($query);
         $statement->execute();
         $results = $statement->fetchAll();
@@ -27,7 +27,7 @@ class FriendController
 
     function getFollower($username)
     {
-        $query = "select follower,avatar,motto from user,user_follower where user_follower.username='$username' and user_follower.follower=user.username;";
+        $query = "select avatar,user_follower.username,gender,motto,location,interest,level,birth from user,user_follower where user_follower.username='$username' and user_follower.follower=user.username;";
         $statement = $this->pdo->prepare($query);
         $statement->execute();
         $results = $statement->fetchAll();

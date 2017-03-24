@@ -14,6 +14,15 @@ $(document).ready(function () {
             $('#motto').val(data.motto);
         }
     });
+
+
+    $.ajax("/getBriefInfo", {
+        type: 'GET',
+        dataType: 'json',
+        success: function (data) {
+            $('#avatar').attr('src', data.avatar);
+        }
+    });
 });
 function previewImage() {
 

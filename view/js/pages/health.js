@@ -39,6 +39,7 @@ $(document).ready(function () {
             }
         })
     });
+
     $.ajax("/health/weekSleep", {
         type: 'GET',
         dataType: "json",

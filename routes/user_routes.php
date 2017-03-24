@@ -74,7 +74,7 @@ $app->get('/showBasicInfo', function (Request $request, Response $response) use 
 $app->post('/uploadAvatar', function (Request $request, Response $response) use ($app) {
     session_start();
     if (isset($_SESSION['user'])) {
-        $target_dir = "view/images/avatar/";
+        $target_dir = "view/img/users/";
         $target_file = $target_dir . basename($_FILES['avatar']['name']);
 
         $check = getimagesize($_FILES['avatar']['tmp_name']);

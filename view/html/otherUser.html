@@ -221,15 +221,20 @@
             <div class="row-fluid header">
                 <div class="span2 avatar-box">
                     <div class="personal-image">
-                        <img src="../img/personal-info.png" class="avatar img-circle"/>
+                        <img id="avatar" src="../img/personal-info.png" class="avatar img-circle"/>
                     </div>
                 </div>
                 <div class="span7">
                     <!--<img src="../img/contact-profile.png" class="avatar img-circle"/>-->
-                    <h3 class="name">Alejandra Galván Castillo</h3>
+                    <h3 id="name" class="name">Alejandra Galván Castillo</h3>
                     <span class="area">Graphic Designer</span>
                 </div>
-                <a id="follow" class="btn-flat icon large pull-right">follow
+                <a class="btn-flat icon pull-right delete-user" data-toggle="tooltip" title="Delete user"
+                   data-placement="top">
+                    <i class="icon-trash"></i>
+                </a>
+                <a class="btn-flat icon large pull-right edit" id="follow" data-toggle="modal" data-target="#myModal">
+                    follow
                 </a>
                 <div class="container-fluid">
                     <div class="row-fluid">
@@ -238,19 +243,19 @@
                                 <dt>
                                     Gender
                                 </dt>
-                                <dd>
+                                <dd id="gender">
                                     Female
                                 </dd>
                                 <dt>
                                     Birth Date
                                 </dt>
-                                <dd>
+                                <dd id="birth">
                                     1982-10-12
                                 </dd>
-                                <dt>
+                                <dt >
                                     Location
                                 </dt>
-                                <dd>
+                                <dd id="userLocation">
                                     San Francisco, USA
                                 </dd>
                             </dl>
@@ -260,13 +265,13 @@
                                 <dt>
                                     Favourite Sports
                                 </dt>
-                                <dd>
+                                <dd id="favourite">
                                     Swimming
                                 </dd>
                                 <dt>
                                     Best Sports
                                 </dt>
-                                <dd>
+                                <dd id="interest">
                                     Swimming
                                 </dd>
                                 <dt>
@@ -293,7 +298,7 @@
                         <!-- Person info -->
                         <div class="span12 section">
                             <h6>Motto</h6>
-                            <p>Life lies in movement! Qualifying for the games is more or less a pipe dream for anyone
+                            <p id="motto">Life lies in movement! Qualifying for the games is more or less a pipe dream for anyone
                                 unwilling or unable to make the sport their full-time career, according to Austin
                                 Malleolo, a five-time CrossFit Games competitor and CrossFit HQ coach who has watched
                                 the level of competition soar during his eight years in the global-fitness
@@ -590,24 +595,27 @@
 <script src="../js/bootstrap.min.js"></script>
 <script src="../js/theme.js"></script>
 <script src="../js/pages/showUserInfo.js"></script>
-<div style="display:none">
-    <script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script>
+<script src="../js/showTip.js"></script>
+<script src="../js/pages/otherUser.js"></script>
+
+    <div style="display:none">
+            <script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script>
 </div>
 <script>
-    var $followLink = $('#follow');
-    $followLink.on('click' , function (e) {
-        e.preventDefault();
-
-        if ( $followLink.html() == 'follow') {
-            $followLink.html('unfollow');
-        } else {
-            $followLink.html('follow');
-        }
-
-
-
-
-    })
+//    var $followLink = $('#follow');
+//    $followLink.on('click' , function (e) {
+//        e.preventDefault();
+//
+//        if ( $followLink.html() == 'follow') {
+//            $followLink.html('unfollow');
+//        } else {
+//            $followLink.html('follow');
+//        }
+//
+//
+//
+//
+//    })
 
 
 </script>

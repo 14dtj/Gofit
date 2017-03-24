@@ -36,7 +36,7 @@ class FriendController
 
     function getUserInfo($username)
     {
-        $query = "select avatar,username,motto,location,interest,level from user where username='$username';";
+        $query = "select avatar,username,gender,motto,location,interest,level,birth from user where username='$username';";
         $statement = $this->pdo->prepare($query);
         $statement->execute();
         $row = $statement->fetch(PDO::FETCH_ASSOC);

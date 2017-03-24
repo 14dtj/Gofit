@@ -26,7 +26,7 @@ $app->post('/login', function (Request $request, Response $response) use ($app) 
         if ($username == "admin") {
             return $response->withStatus(302)->withHeader('Location', '/user/getAllUsers');
         } else {
-            return $this->view->render($response, 'index.html');
+            return $app->$response->redirect('/view/sports.html', 301);
         }
     }
 });

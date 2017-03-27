@@ -17,7 +17,7 @@ class SportsController
 
     function getAchievedGoal($username)
     {
-        $query = "select sum(achieved_goal) as goalSum,sum(distance) as distanceSum,sum(calorie) as calorieSum,sum(time) as timeSum from sports_record where username='$username';";
+        $query = "select sum(achieved_goal) as goalSum,sum(distance) as distanceSum,sum(calorie) as calorieSum,sum(steps) as stepsSum from sports_record where username='$username';";
         $statement = $this->pdo->prepare($query);
         $statement->execute();
         $row = $statement->fetch(PDO::FETCH_ASSOC);

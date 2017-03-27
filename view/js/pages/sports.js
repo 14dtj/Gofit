@@ -8,7 +8,7 @@ $(document).ready(function () {
         success: function (data) {
             $('#goalNum').html("You have achieved " + data.goalSum + " goals");
             $('#showDistance').html(data.distanceSum);
-            $('#showStep').html(data.timeSum);
+            $('#showStep').html(data.stepsSum);
             $('#showCalories').html(data.calorieSum);
         }
     });

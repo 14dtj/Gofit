@@ -60,7 +60,11 @@ $(document).ready(function () {
             var time = new Date().toLocaleString();
             var avatar = userData.avatar;
             var commentVal = $('#comment').val();
-            $('#comment').html('');
+
+            // console.log($('#comment').val())
+            $('#comment').val('');
+            // console.log($('#comment').val())
+
             $('#commentsTable').append('<dl class="comment_item_comment_topic">  <dt class="comment_head"><a>' + user + '</a>&nbsp;&nbsp;' + time + '</dt> <dd class="comment_userface"><img src="'+ avatar + '" class="img-circle avatar hidden-phone" style="height: 60px"/></dd> <br> <dd class="comment_body"> ' + commentVal + '</dd> </dl>');
             showSuccess('Add Comment Success!')
         })

@@ -50,11 +50,15 @@ class FriendController
         $statement->execute();
         $row = $statement->fetch(PDO::FETCH_ASSOC);
         return json_encode($row);
+
+
     }
 
     function getFollowingNum($username)
     {
         $query = "select count(*) as counts from user_following where username='$username';";
+
+
         $statement = $this->pdo->prepare($query);
         $statement->execute();
         $row = $statement->fetch(PDO::FETCH_ASSOC);
@@ -82,7 +86,11 @@ class FriendController
             return 'You have followed him/her already!';
         } else {
             return 'Followed successfully!';
+
         }
+
+
+
     }
 
     function unFollow($username, $following)

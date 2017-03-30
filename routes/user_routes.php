@@ -36,8 +36,9 @@ $app->post('/register', function (Request $request, Response $response) use ($ap
     $password = filter_var($data['password'], FILTER_SANITIZE_STRING);
     $controller = new UserController();
     $controller->register($username, $password);
-    $response->getBody()->write("<script>alert('registered successfully'); history.go(-2);</script>");
-    return $response;
+//    $response->getBody()->write("<script>alert('registered successfully'); history.go(-2);</script>");
+    return $response->withStatus(302)->withHeader('Location', '/view/html/login.html');
+//    return $response;
 });
 
 $app->post('/editProfile', function (Request $request, Response $response) use ($app) {
